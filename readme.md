@@ -1,3 +1,22 @@
+# Corpus Corneille
+
+## Missions
+
+- Capitainiser les textes
+- Attributions des identifiants
+- Développement des métadonnées (y compris l'ensemble des métadonnées DC pour les oeuvres)
+
+Référent : Thibault Clérice, @ponteineptique
+
+- Difficulté : 6/10
+- Répétitivité : 7/10
+- Schéma à utiliser : TEI
+- Minimum à convertir : Totalité
+
+---
+
+Readme original :
+
 # Theatre-classique
 Sources XML du site Théâtre classqie de Paul Fièvre
 Version UTF-8 et automatiquement transformées en TEI-P5 (pas encore de relecture soignée).
