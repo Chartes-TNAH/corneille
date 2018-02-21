@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ti:textgroup xmlns:ti="http://chs.harvard.edu/xmlns/cts" 
- urn="urn:cts:freLit:crnl026799472">
+<ti:textgroup
+  xmlns:ti="http://chs.harvard.edu/xmlns/cts" 
+  urn="urn:cts:freLit:crnl026799472"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:cpt="http://purl.org/capitains/ns/1.0#"
+  xmlns:scm="http://schema.org/">
 
    <ti:groupname xml:lang="eng">Corneille</ti:groupname>
    <ti:groupname xml:lang="fre">Corneille</ti:groupname>
   <cpt:structured-metadata
     xmlns:cpt="http://purl.org/capitains/ns/1.0#"
-    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
     <dc:identifier>https://www.wikidata.org/wiki/Q747</dc:identifier>
-<dc:identifier>https://www.isni.org/isni/0000000121296128</dc:identifier>
+    <dc:identifier>https://www.isni.org/isni/0000000121296128</dc:identifier>
+
+        <scm:birthDate>1606</scm:birthDate>
+        <scm:birthPlace xml:lang="fre">Rouen</scm:birthPlace>
+        <scm:birthPlace>https://www.wikidata.org/wiki/Q30974</scm:birthPlace>
+        <scm:deathDate>1684</scm:deathDate>
+        <scm:deathPlace xml:lang="fre">Paris</scm:deathPlace>
+        <scm:deathPlace>https://www.wikidata.org/wiki/Q90</scm:deathPlace>
 </cpt:structured-metadata>
 </ti:textgroup>
 
