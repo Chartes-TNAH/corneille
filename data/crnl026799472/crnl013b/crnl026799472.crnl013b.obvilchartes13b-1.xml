@@ -48,7 +48,6 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <!-- Nos textes ne se composent que d'un seul niveau, c'est pourquoi nous avons créé deux <cRefPattern> qui récupèrent les vers et les didascalies-->
         <cRefPattern 
           n="level1"
           matchPattern="(\w+)"
@@ -58,7 +57,7 @@
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="crnl026799472.crnl013b.obvilchartes13b-1">
+  <text xml:base="urn:cts:freLit:crnl026799472.crnl013b.obvilchartes13b-1">
     <front>
       <titlePage>
         <docTitle>
