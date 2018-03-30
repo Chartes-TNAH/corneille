@@ -48,23 +48,16 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <!-- Nos textes ne se composent que d'un seul niveau, c'est pourquoi nous avons créé deux <cRefPattern> qui récupèrent les vers et les didascalies-->
         <cRefPattern 
           n="level1"
-          matchPattern="(\w+).(\w+).(\w+)"
-          replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div//tei:l)">
+          matchPattern="(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div//tei:l[@n='$1'])">
           <p>level1 récupère les vers</p>
-        </cRefPattern>
-        <cRefPattern 
-          n="level2"
-          matchPattern="(\w+).(\w+).(\w+)"
-          replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div//tei:stage)">
-          <p>level2 récupère les didascalies</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text>
+  <text xml:base="urn:cts:freLit:crnl026799472.crnl016.obvilchartes16-1">
     <front>
       <titlePage>
         <docTitle>
