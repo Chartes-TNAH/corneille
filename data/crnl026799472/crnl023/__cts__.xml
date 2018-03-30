@@ -8,7 +8,7 @@
 
   <ti:edition workUrn="urn:cts:freLit:crnl026799472.crnl023"
     urn="urn:cts:freLit:crnl026799472.crnl023.obvilchartes23-1">
-    <ti:label>La Conquête de la Toison d'or</ti:label>
+    <ti:label xml:lang="fr">La Conquête de la Toison d'or</ti:label>
     <ti:description xml:lang="fr"> Tragédie mythe grec Cinq actes, un prologue </ti:description>
     <ti:description xml:lang="fr"> Théâtre Classique, publié par Paul FIEVRE, Mai 2006 </ti:description>
   </ti:edition>
