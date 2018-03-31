@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://oeuvres.github.io/Teinte/teinte.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://oeuvres.github.io/Teinte/teinte.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="fr">
+<?xml-model href="http://oeuvres.github.io/Teinte/teinte.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://oeuvres.github.io/Teinte/teinte.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
         <title>Clitandre</title>
         <title type="sub">, tragi-comédie</title>
-        <author academie="1647" born="1606" born_location="Rouen" death="1684" death_location="Paris" key="Corneille, Pierre (1606-1684)">
+        <author academie="1647" born="1606" born_location="Rouen" death="1684"
+          death_location="Paris" key="Corneille, Pierre (1606-1684)">
           <surname>Corneille, Pierre</surname>
           <forename> Pierre</forename>
         </author>
@@ -48,9 +50,7 @@
     <encodingDesc>
       <refsDecl n="CTS">
         <!-- Nos textes ne se composent que d'un seul niveau, c'est pourquoi nous avons créé deux <cRefPattern> qui récupèrent les vers et les didascalies-->
-        <cRefPattern 
-          n="level1"
-          matchPattern="(\w+)"
+        <cRefPattern n="level1" matchPattern="(\w+)"
           replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div//tei:l[@n='$1'])">
           <p>level1 récupère les vers</p>
         </cRefPattern>
@@ -67,22 +67,201 @@
         <docDate value="1682">M. DC. LXXXII. AVEC PRIVILÈGE DU ROI.</docDate>
         <docAuthor bio="corneillep" id="CORNEILLE, Pierre">Pierre Corneille</docAuthor>
         <docImprint>
-          <privilege id=""> <head/> <p/> </privilege>
-          <printer id="TARGA">À PARIS, chez Guillaume de Luyne, libaire jurén au Palais, en la Galerie des Merciers, sous la montée de la Cour des Aides, à la Justice.</printer>
+          <privilege id="">
+            <head/>
+            <p/>
+          </privilege>
+          <printer id="TARGA">À PARIS, chez Guillaume de Luyne, libaire jurén au Palais, en la
+            Galerie des Merciers, sous la montée de la Cour des Aides, à la Justice.</printer>
         </docImprint>
         <performance>
-        <premiere date="1632" location="Hôtel de Bourgogne">Représentée pour la première fois pendant l’hiver 1631-1632 au Théâtre de l’Hôtel de Bourgogne.</premiere>
-      </performance>
-        <note>Texte de 1682, tiré de "Le Théâtre de P. Corneille, revu et corrigé par l’Auteur. I. PARTIE." pp. 79-146.</note>
+          <premiere date="1632" location="Hôtel de Bourgogne">Représentée pour la première fois
+            pendant l’hiver 1631-1632 au Théâtre de l’Hôtel de Bourgogne.</premiere>
+        </performance>
+        <note>Texte de 1682, tiré de "Le Théâtre de P. Corneille, revu et corrigé par l’Auteur. I.
+          PARTIE." pp. 79-146.</note>
       </titlePage>
       <div type="preface">
         <head>PRÉFACE</head>
-        <p>Pour peu de souvenir qu’on ait de Mélite, il sera fort aisé de juger, après la lecture de ce poème, que peut-être jamais deux pièces ne partirent d’une même main plus différentes et d’invention et de style. Il ne faut pas moins d’adresse à réduire un grand sujet qu’à en déduire un petit ; si je m’étais aussi dignement acquitté de celui-ci qu’heureusement de l’autre, j’estimerais avoir, en quelque façon, approché de ce que demande Horace au poète qu’il instruit quand il veut qu’il possède tellement les sujets, qu’il en demeure toujours le maître, et les asservisse à soi-même, sans le laisser emporter par eux. Ceux qui ont blâmé l’autre de peu d’effets auront ici de quoi se satisfaire, si toutefois ils ont l’esprit assez tendu pour me suivre au théâtre, et si la quantité d’intrigues et de rencontres n’accable et ne confond leur mémoire. Que si cela leur arrive, je les supplie de prendre ma justification chez le libraire, et de reconnaître par la lecture que ce n’est pas ma faute. Il faut néanmoins que j’avoue que ceux qui n’ayant vu représenter Clitandre qu’une fois, ne le comprendront pas nettement, seront fort excusables, vu que les narrations qui doivent donner le jour au reste y sont si courtes, que le moindre défaut, ou d’attention du spectateur, ou de mémoire de l’acteur, laisse une obscurité perpétuelle en la fuite, et ôte presque l’entière intelligence de ces grands mouvements dont les pensées ne s’égarent point du fait, et ne font que des raisonnements continus sur ce qui s’est passé. Que si j’ai renfermé cette pièce dans la règle d’un jour, ce n’est pas que je me repente de n’y avoir point mis Mélite, ou que je me sois résolu à m’y attacher dorénavant. Aujourd’hui, quelques-uns adorent cette règle ; beaucoup la méprisent : pour moi, j’ai voulu seulement montrer que si je m’en éloigne, ce n’est faute de la connaître. Il est vrai qu’on pourra m’imputer que m’étant proposé de suivre la régie des anciens, j’ai renversé leur ordre, vu qu’au lieu de messagers qu’ils introduisent à chaque bout de champ pour raconter les choses merveilleuses qui arrivent à leurs personnages, j’ai mis les accidents mêmes sur la scène. Cette nouveauté pourra plaire à quelques-uns ; et quiconque voudra bien peser l’avantage que l’action a sur ces longs et ennuyeux récits, ne trouvera pas étrange que j’aie mieux aimé divertir les yeux qu’importuner les oreilles, et que me tenant dans la contrainte de cette méthode, j’en aie pris la beauté, sans tomber dans les incommodités que les Grecs et les Latins, qui l’ont suivie, n’ont su d’ordinaire, ou du moins n’ont osé éviter. Je me donne ici quelque forte de liberté de choquer les anciens, d’autant qu’ils ne sont plus en état de me répondre, et que je ne veux engager personne en la recherche de mes défauts. Puisque les sciences et les arts ne sont jamais à leur période, il m’est permis de croire qu’ils n’ont pas tout su, et que de leurs instructions on peut tirer des lumières qu’ils n’ont pas eues. Je leur porte du respect comme à des gens qui nous ont frayé le chemin, et qui, après avoir défriché un pays fort rude, nous ont laissé à le cultiver. J’honore les modernes sans les envier, et n’attribuerai jamais au hasard ce qu’ils auront fait par science, ou par des règles particulières qu’ils se seront eux-mêmes prescrites outre que c’est ce qui ne me tombera jamais en la pensée, qu’une pièce de si longue haleine, où il faut coucher l’esprit à tant de reprises, et s’imprimer tant de contraires mouvements, le puisse faire par aventure. Il n’en va pas de la comédie comme d’un songe qui saisit notre imagination tumultuairement et sans notre aveu, ou comme d’un sonnet ou d’une ode, qu’une chaleur extraordinaire peut pousser par boutade, et sans lever la plume. Aussi l’antiquité nous parle bien de l’écume d’un cheval qu’une éponge jetée par dépit sur un tableau exprima parfaitement, après que l’industrie du peintre n’en avait su venir à bout ; mais il ne se lit point que jamais un tableau tout entier ait été produit de cette sorte. Au reste, je laisse le lieu de ma scène au choix du lecteur, bien qu’il ne me coûtât ici qu’à nommer. Si mon sujet est véritable, j’ai raison de le taire ; si c’est une fiction, quelle apparence, pour suivre je ne sais quelle chorographie, de donner un soufflet à l’histoire, d’attribuer à un pays des princes imaginaires, et d’en rapporter des aventures qui ne se lisent point dans les chroniques de leur royaume ? Ma scène est donc en un château d’un roi, proche d’une forêt ; je n’en détermine ni la province ni le royaume où vous l’aurez une fois placée, elle s’y tiendra. Que si l’on remarque des concurrences dans mes vers, qu’on ne les prenne pas pour des larcins. Je n’y en ai point laissé que j’aie connues, et j’ai toujours cru que, pour belle que fut une pensée, tomber en soupçon de la tenir d’un autre, c’est l’acheter plus qu’elle ne vaut ; de sorte qu’en l’état que je donne cette pièce au public, je pense n’avoir rien de commun avec la plupart des écrivains modernes, qu’un peu de vanité que je témoigne ici.</p>
+        <p>Pour peu de souvenir qu’on ait de Mélite, il sera fort aisé de juger, après la lecture de
+          ce poème, que peut-être jamais deux pièces ne partirent d’une même main plus différentes
+          et d’invention et de style. Il ne faut pas moins d’adresse à réduire un grand sujet qu’à
+          en déduire un petit ; si je m’étais aussi dignement acquitté de celui-ci qu’heureusement
+          de l’autre, j’estimerais avoir, en quelque façon, approché de ce que demande Horace au
+          poète qu’il instruit quand il veut qu’il possède tellement les sujets, qu’il en demeure
+          toujours le maître, et les asservisse à soi-même, sans le laisser emporter par eux. Ceux
+          qui ont blâmé l’autre de peu d’effets auront ici de quoi se satisfaire, si toutefois ils
+          ont l’esprit assez tendu pour me suivre au théâtre, et si la quantité d’intrigues et de
+          rencontres n’accable et ne confond leur mémoire. Que si cela leur arrive, je les supplie
+          de prendre ma justification chez le libraire, et de reconnaître par la lecture que ce
+          n’est pas ma faute. Il faut néanmoins que j’avoue que ceux qui n’ayant vu représenter
+          Clitandre qu’une fois, ne le comprendront pas nettement, seront fort excusables, vu que
+          les narrations qui doivent donner le jour au reste y sont si courtes, que le moindre
+          défaut, ou d’attention du spectateur, ou de mémoire de l’acteur, laisse une obscurité
+          perpétuelle en la fuite, et ôte presque l’entière intelligence de ces grands mouvements
+          dont les pensées ne s’égarent point du fait, et ne font que des raisonnements continus sur
+          ce qui s’est passé. Que si j’ai renfermé cette pièce dans la règle d’un jour, ce n’est pas
+          que je me repente de n’y avoir point mis Mélite, ou que je me sois résolu à m’y attacher
+          dorénavant. Aujourd’hui, quelques-uns adorent cette règle ; beaucoup la méprisent : pour
+          moi, j’ai voulu seulement montrer que si je m’en éloigne, ce n’est faute de la connaître.
+          Il est vrai qu’on pourra m’imputer que m’étant proposé de suivre la régie des anciens,
+          j’ai renversé leur ordre, vu qu’au lieu de messagers qu’ils introduisent à chaque bout de
+          champ pour raconter les choses merveilleuses qui arrivent à leurs personnages, j’ai mis
+          les accidents mêmes sur la scène. Cette nouveauté pourra plaire à quelques-uns ; et
+          quiconque voudra bien peser l’avantage que l’action a sur ces longs et ennuyeux récits, ne
+          trouvera pas étrange que j’aie mieux aimé divertir les yeux qu’importuner les oreilles, et
+          que me tenant dans la contrainte de cette méthode, j’en aie pris la beauté, sans tomber
+          dans les incommodités que les Grecs et les Latins, qui l’ont suivie, n’ont su d’ordinaire,
+          ou du moins n’ont osé éviter. Je me donne ici quelque forte de liberté de choquer les
+          anciens, d’autant qu’ils ne sont plus en état de me répondre, et que je ne veux engager
+          personne en la recherche de mes défauts. Puisque les sciences et les arts ne sont jamais à
+          leur période, il m’est permis de croire qu’ils n’ont pas tout su, et que de leurs
+          instructions on peut tirer des lumières qu’ils n’ont pas eues. Je leur porte du respect
+          comme à des gens qui nous ont frayé le chemin, et qui, après avoir défriché un pays fort
+          rude, nous ont laissé à le cultiver. J’honore les modernes sans les envier, et
+          n’attribuerai jamais au hasard ce qu’ils auront fait par science, ou par des règles
+          particulières qu’ils se seront eux-mêmes prescrites outre que c’est ce qui ne me tombera
+          jamais en la pensée, qu’une pièce de si longue haleine, où il faut coucher l’esprit à tant
+          de reprises, et s’imprimer tant de contraires mouvements, le puisse faire par aventure. Il
+          n’en va pas de la comédie comme d’un songe qui saisit notre imagination tumultuairement et
+          sans notre aveu, ou comme d’un sonnet ou d’une ode, qu’une chaleur extraordinaire peut
+          pousser par boutade, et sans lever la plume. Aussi l’antiquité nous parle bien de l’écume
+          d’un cheval qu’une éponge jetée par dépit sur un tableau exprima parfaitement, après que
+          l’industrie du peintre n’en avait su venir à bout ; mais il ne se lit point que jamais un
+          tableau tout entier ait été produit de cette sorte. Au reste, je laisse le lieu de ma
+          scène au choix du lecteur, bien qu’il ne me coûtât ici qu’à nommer. Si mon sujet est
+          véritable, j’ai raison de le taire ; si c’est une fiction, quelle apparence, pour suivre
+          je ne sais quelle chorographie, de donner un soufflet à l’histoire, d’attribuer à un pays
+          des princes imaginaires, et d’en rapporter des aventures qui ne se lisent point dans les
+          chroniques de leur royaume ? Ma scène est donc en un château d’un roi, proche d’une forêt
+          ; je n’en détermine ni la province ni le royaume où vous l’aurez une fois placée, elle s’y
+          tiendra. Que si l’on remarque des concurrences dans mes vers, qu’on ne les prenne pas pour
+          des larcins. Je n’y en ai point laissé que j’aie connues, et j’ai toujours cru que, pour
+          belle que fut une pensée, tomber en soupçon de la tenir d’un autre, c’est l’acheter plus
+          qu’elle ne vaut ; de sorte qu’en l’état que je donne cette pièce au public, je pense
+          n’avoir rien de commun avec la plupart des écrivains modernes, qu’un peu de vanité que je
+          témoigne ici.</p>
       </div>
       <div type="preface">
         <head>ARGUMENT.</head>
-        <p>Rosidor, favori du roi, était si passionnément aimé de deux des filles de la reine, Caliste et Dorise, que celle-ci en dédaignait Pymante, et celle-là Clitandre. Ses affections toutefois n’étaient que pour la première, de sorte que cette amour mutuelle n’eut point eu d’obstacle dans CLiatande. Ce cavalier était mignon du prince, fils unique du roi, qui pouvait tout sur la Reine sa mère, dont cette fille d"pendait ; et de là procédaient les refus de la reine toutes les fois que Rosidor la suppliait d’agréer leur mariage. Ces deux demoiselles, bien que rivales, ne laissaient pas d’être amies, d’autant que Dorise feignait que son amour n’était que par galanterie, et comme pour avoir de quoi répliquer aux importunités de Pymante. De cette façon, elle entrait dans le confidence de Caliste, et le tenant toujours assidue auprès d’elle, elle se donnait plus de moyen de voir Rosidor, qui ne s’en éloignait que le moins qu’il lui était possible. Cependant la jalousie la rongeait au dedans, et excitait en son âme autant de véritables mouvements de haine pour sa compagne qu’elle lui rendait de feints témoignages d’amitié. Un jour que le roi, avec toute la Cour, s’était retiré en un château de plaisance proche d’une forêt, cette fille, entretenant en ces bois les pensées mélancoliques, rencontra par hasard une épée, s’était celle d’un cavalier nomme Arimant, demeurée là par mégarde depuis deux jours qu’il avait été tué en duel, disputant la maîtresse, Daphné contre Éraste. Cette jalouse, dans la profonde rêverie, devenue furieuse, jugea cette occasion propre à perdre sa rivale. Elle la cache donc au même endroit, et et son retour conte à Daliste que Rolidor la trompe, qu’elle a découvert une secrète affection entre Hippolyte et lui, et enfin qu’ils avaient rendez-vous dans les bois le lendemain au lever du soleil pour en venir aux dernières faveurs une offre en outre de les lui faire surprendre éveille la curiosité de cet esprit facile, qui lui promet de le dérober, et le dérobe en effet le lendemain avec elle pour faire ses yeux témoins de cette perfidie. D’autre côté, Pymante, résolu de le défaire de Rosidor, comme du seul qui l’empêchait d’être aimé de Dorise, et ne l’osant attaquer ouvertement, à cause de la faveur auprès du roi, dont il n’eut pu rapprocher, suborne Géronte, écuyer de Clitandre, et Lycaste, page du même. Cet écuyer écrit un cartel à Rosidor au nom de son maître, prend pour prétexte l’affection qu’ils avaient tous deux pour Caliste, contrefait au bas son seing, le fait rendre par ce page, et eux trois le vont attendre masqués et déguisés en paysans. L’heure était la même que Dorise avait donnée à Caliste, à cause que l’un et l’autre voulaient être allés tôt de retour pour le trouver au lever du roi et de la reine après le coup exécuté. Les lieux mêmes n’étaient pas fort éloignés de sorte que Rosidor, poursuivi par ces trois assassins, arrive auprès de ces deux filles comme Dorise avait l’épée à la main, prête de l’enfoncer dans l’estomac de Caliste. Il pare, et blesse, toujours en reculant, et tue enfin ce page, mais si malheureusement, que, retirant son épée elle le rompt contre la branche d’un arbre. En cette extrémité, il voit celle que tient Dorise, et sans la reconnaître, il la lui arrache, et passe tout d’un temps le tronc de la sienne, en la main gauche, à guise d’un poignard, se défend ainsi contre Pymante et Géronte, tue encore ce dernier, et met l’autre en fuite. Dorise fuit aussi, se voyant désarmée par Rosidor ; et Caliste, si tôt qu’elle l’a reconnue, se pâme d’appréhension de son péril. Rosidor démasque les morts, et fulmine contre Clitandre, qu’il prend pour l’auteur de cette perfidie attendu qu’ils sont ses domestiques, et qu’il était venu dans ce bois sur un cartel reçu de sa part. Dans ce moment, il voit Caliste pâmée, et la croit morte ses regrets avec les plaies le font tomber en faiblesse. Caliste revient de pâmoison, et s’entraidant l’un à l’autre à marcher, ils gagnent la maison d’un paysan, où elle lui bande ses blessures. Dorise désespérée, et n’osant retourner à la cour, trouve les vrais habits de ces assassins, et s’accommode de celui de Géronte pour le mieux cacher. Pymante, qui allait rechercher les siens, et cependant, afin de mieux passer pour villageois, avait jeté son masque et son épée dans une caverne, la voit en cet état. Après quelque méconte, Dorise se feint être un jeune gentilhomme, contraint pour quelque occasion de se retirer de la Cour, et le prie de le tenir là quelque temps caché. Pymante lui baille quelque échappatoire ; mais s’étant aperçu de ses discours qu’elle avait vu son crime, et d’ailleurs entré en quelque soupçon que ce fût Dorise, il accorde sa demande, et la mène en cette caverne, résolu, si c’était elle, de se servir de l’occasion, sinon d’ôter du monde un témoin de ton forfait, en ce lieu où il était assuré de retrouver son épée. Sur le chemin, au moyen d’un poinçon qui lui était demeuré dans les cheveux, il la reconnaît et se fait connaître à elle : ses offres de service sont aussi mal reçues que par le passé ; elle persiste toujours ne vouloir chérir que Rosidor. Pymante l’assure qu’il l’a tué; elle entre en furie ce qui n’empêche pas ce paysan déguisé de l’enlever dans cette caverne, où, tâchant d’user de force, cette courageuse fille lui crève un oeil de son poinçon et comme la douleur lui fait y porter les deux mains, elle s’échappe de lui, dont l’amour tourné en rage le fait sortir l’épée à la main de cette caverne, à dessein et de venger cette injure par sa mort, et d’étouffer ensemble l’indice de son crime. Rosidor cependant n’avait pu se dérober si secrètement qu’il ne fut suivi de son écuyer Lysarque, à qui par importunité il conte le sujet de sa sortie. Ce généreux serviteur ne pouvant endurer que la partie s’achevât sans lui, le quitte pour aller engager l’écuyer de Clitandre à servir de second à son maître. En cette résolution, il rencontre un gentilhomme, son particulier ami, nommé Cléon, dont il apprend que Clitandre venait de monter à cheval avec le prince pour aller à la chasse. Cette nouvelle le met en inquiétude ; et, ne sachant tous deux que juger de ce méconte, ils vont de compagnie en avertir le roi. Le roi, qui ne voulait pas perdre ces cavaliers, envoie en même temps Cléon rappeler Clitandre de la chasse, et Lysarque avec une troupe d’archers au lieu de l’assignation, afin que si Clitandre s’était échappé d’auprès du prince pour aller joindre ton rival, il fût assez fort pour les séparer. Lysarque ne trouve que les deux corps des gens de Clitandre, qu’il renvoie par la moitié de les archers, cependant qu’avec l’autre il suit une trace de sang qui le mène jusques au lieu où Rosidor et Caliste s’étaient retirés. La vue de ces corps fait soupçonner au roi quelque supercherie de la part de Clitandre, et l’aigrit tellement contre lui, qu’à son retour de la chasse il le fait mettre en prison, sans qu’on lui en dit même le sujet. Cette colère s’augmente par l’arrivée de Rosidor tout blessé, qui, après le récit de les aventures, présente au roi le cartel de Clitandre, signé de sa main (contrefaite toutefois) et rendu par son page, si bien que le roi ne doutant plus de son crime, le fait venir en son conseil, où, quelque protestation que peut faire son innocence, il le condamne à perdre la tête dans le jour même, de peur de le voir comme forcé de le donner aux prières de son fils, s’il attendait son retour de la chasse. Cléon en apprend la nouvelle ; et redoutant que le prince ne se prît à lui de la perte de ce cavalier qu’il affectionnait, il le va chercher encore une fois à la chasse pour l’en avertir. Tandis que tout ceci se passe, une tempête surprend le prince à la chasse, ses gens, effrayés de la violence des foudres et des orages, qui çà qui là cherchent où le cacher si bien que, demeuré seul, un de coup tonnerre lui tue son cheval sous lui. La tempête finie, il voit un jeune gentilhomme qu’un paysan poursuivait l’épée à la main (c’était Pymante et Dorise). Il était déjà terrassé, et prêt de recevoir le coup de la mort ; mais le prince ne pouvant souffrir une action si méchante, tâche d’empêcher cet assassinat. Pymante, tenant Dorise d’une main, le combat, de l’autre, ne croyant pas de sûreté pour soi, après avoir été vu en cet équipage, que par la mort. Dorise reconnaît le prince, et s’entrelace tellement dans les jambes de ton ravisseur, qu’elle le fait trébucher. Le prince saute aussitôt sur lui, et le désarme l’ayant désarmé, il crie les gens, et enfin deux veneurs paraissent chargés des vrais habits de Pymante, Dorise, et Lycaste. Ils les lui présentent comme un effet extraordinaire du foudre, qui avait confirmé trois corps, à ce qu’ils s’imaginaient, sans toucher à leurs habits. C’est de là que Dorise prend occasion de se faire connaître au prince, et de lui déclarer tout ce qui s’est passé dans ce bois. Le prince étonné commande à ses veneurs de garrotter Pymante avec les couples de leurs chiens en même temps Cléon arrive, qui fait le récit au prince du péril de Clitandre, et du sujet qui l’avait réduit en l’extrémité où il était. Cela lui fait reconnaître Pymante pour l’auteur de ces perfidies ; et l’ayant baillé à tes veneurs à ramener, il pique à toute bride vers le château, arrache Clitandre aux bourreaux, et le va présenter au roi avec les criminels, Pymante et Dorise, arrivés quelque temps après lui. Le roi venait de conclure avec la reine le mariage de Rosidor et de Caliste, sitôt qu’il serait guéri, dont Caliste était allé porter la nouvelle au blessé et après que le prince lui eut fait connaître l’innocence de Clitandre, il le reçoit à bras ouverts, et lui promet toute forte de faveurs pour récompense du tort qu’il lui avait pensé faire.</p>
-        <p>De là, il envoie Pymante à son conseil pour être puni, voulant voir par là de quelle façon ses sujets vengeraient un attentat fait sur leur prince. Le prince obtient un pardon pour Dorise, qui lui avait assuré la vie et la voulant désormais favoriser, en propose le mariage à Clitandre, qui s’en excuse modestement. Rosidor et Caliste viennent remercier le roi, qui les réconcilie avec Clitandre et Dorise, et invite ces derniers, voire même leur commande de s’entr’aimer, puisque lui et le prince le désirent, leur donnant jusqu’à la guérison de Rosidor pour allumer cette flamme,</p>
+        <p>Rosidor, favori du roi, était si passionnément aimé de deux des filles de la reine,
+          Caliste et Dorise, que celle-ci en dédaignait Pymante, et celle-là Clitandre. Ses
+          affections toutefois n’étaient que pour la première, de sorte que cette amour mutuelle
+          n’eut point eu d’obstacle dans CLiatande. Ce cavalier était mignon du prince, fils unique
+          du roi, qui pouvait tout sur la Reine sa mère, dont cette fille d"pendait ; et de là
+          procédaient les refus de la reine toutes les fois que Rosidor la suppliait d’agréer leur
+          mariage. Ces deux demoiselles, bien que rivales, ne laissaient pas d’être amies, d’autant
+          que Dorise feignait que son amour n’était que par galanterie, et comme pour avoir de quoi
+          répliquer aux importunités de Pymante. De cette façon, elle entrait dans le confidence de
+          Caliste, et le tenant toujours assidue auprès d’elle, elle se donnait plus de moyen de
+          voir Rosidor, qui ne s’en éloignait que le moins qu’il lui était possible. Cependant la
+          jalousie la rongeait au dedans, et excitait en son âme autant de véritables mouvements de
+          haine pour sa compagne qu’elle lui rendait de feints témoignages d’amitié. Un jour que le
+          roi, avec toute la Cour, s’était retiré en un château de plaisance proche d’une forêt,
+          cette fille, entretenant en ces bois les pensées mélancoliques, rencontra par hasard une
+          épée, s’était celle d’un cavalier nomme Arimant, demeurée là par mégarde depuis deux jours
+          qu’il avait été tué en duel, disputant la maîtresse, Daphné contre Éraste. Cette jalouse,
+          dans la profonde rêverie, devenue furieuse, jugea cette occasion propre à perdre sa
+          rivale. Elle la cache donc au même endroit, et et son retour conte à Daliste que Rolidor
+          la trompe, qu’elle a découvert une secrète affection entre Hippolyte et lui, et enfin
+          qu’ils avaient rendez-vous dans les bois le lendemain au lever du soleil pour en venir aux
+          dernières faveurs une offre en outre de les lui faire surprendre éveille la curiosité de
+          cet esprit facile, qui lui promet de le dérober, et le dérobe en effet le lendemain avec
+          elle pour faire ses yeux témoins de cette perfidie. D’autre côté, Pymante, résolu de le
+          défaire de Rosidor, comme du seul qui l’empêchait d’être aimé de Dorise, et ne l’osant
+          attaquer ouvertement, à cause de la faveur auprès du roi, dont il n’eut pu rapprocher,
+          suborne Géronte, écuyer de Clitandre, et Lycaste, page du même. Cet écuyer écrit un cartel
+          à Rosidor au nom de son maître, prend pour prétexte l’affection qu’ils avaient tous deux
+          pour Caliste, contrefait au bas son seing, le fait rendre par ce page, et eux trois le
+          vont attendre masqués et déguisés en paysans. L’heure était la même que Dorise avait
+          donnée à Caliste, à cause que l’un et l’autre voulaient être allés tôt de retour pour le
+          trouver au lever du roi et de la reine après le coup exécuté. Les lieux mêmes n’étaient
+          pas fort éloignés de sorte que Rosidor, poursuivi par ces trois assassins, arrive auprès
+          de ces deux filles comme Dorise avait l’épée à la main, prête de l’enfoncer dans l’estomac
+          de Caliste. Il pare, et blesse, toujours en reculant, et tue enfin ce page, mais si
+          malheureusement, que, retirant son épée elle le rompt contre la branche d’un arbre. En
+          cette extrémité, il voit celle que tient Dorise, et sans la reconnaître, il la lui
+          arrache, et passe tout d’un temps le tronc de la sienne, en la main gauche, à guise d’un
+          poignard, se défend ainsi contre Pymante et Géronte, tue encore ce dernier, et met l’autre
+          en fuite. Dorise fuit aussi, se voyant désarmée par Rosidor ; et Caliste, si tôt qu’elle
+          l’a reconnue, se pâme d’appréhension de son péril. Rosidor démasque les morts, et fulmine
+          contre Clitandre, qu’il prend pour l’auteur de cette perfidie attendu qu’ils sont ses
+          domestiques, et qu’il était venu dans ce bois sur un cartel reçu de sa part. Dans ce
+          moment, il voit Caliste pâmée, et la croit morte ses regrets avec les plaies le font
+          tomber en faiblesse. Caliste revient de pâmoison, et s’entraidant l’un à l’autre à
+          marcher, ils gagnent la maison d’un paysan, où elle lui bande ses blessures. Dorise
+          désespérée, et n’osant retourner à la cour, trouve les vrais habits de ces assassins, et
+          s’accommode de celui de Géronte pour le mieux cacher. Pymante, qui allait rechercher les
+          siens, et cependant, afin de mieux passer pour villageois, avait jeté son masque et son
+          épée dans une caverne, la voit en cet état. Après quelque méconte, Dorise se feint être un
+          jeune gentilhomme, contraint pour quelque occasion de se retirer de la Cour, et le prie de
+          le tenir là quelque temps caché. Pymante lui baille quelque échappatoire ; mais s’étant
+          aperçu de ses discours qu’elle avait vu son crime, et d’ailleurs entré en quelque soupçon
+          que ce fût Dorise, il accorde sa demande, et la mène en cette caverne, résolu, si c’était
+          elle, de se servir de l’occasion, sinon d’ôter du monde un témoin de ton forfait, en ce
+          lieu où il était assuré de retrouver son épée. Sur le chemin, au moyen d’un poinçon qui
+          lui était demeuré dans les cheveux, il la reconnaît et se fait connaître à elle : ses
+          offres de service sont aussi mal reçues que par le passé ; elle persiste toujours ne
+          vouloir chérir que Rosidor. Pymante l’assure qu’il l’a tué; elle entre en furie ce qui
+          n’empêche pas ce paysan déguisé de l’enlever dans cette caverne, où, tâchant d’user de
+          force, cette courageuse fille lui crève un oeil de son poinçon et comme la douleur lui
+          fait y porter les deux mains, elle s’échappe de lui, dont l’amour tourné en rage le fait
+          sortir l’épée à la main de cette caverne, à dessein et de venger cette injure par sa mort,
+          et d’étouffer ensemble l’indice de son crime. Rosidor cependant n’avait pu se dérober si
+          secrètement qu’il ne fut suivi de son écuyer Lysarque, à qui par importunité il conte le
+          sujet de sa sortie. Ce généreux serviteur ne pouvant endurer que la partie s’achevât sans
+          lui, le quitte pour aller engager l’écuyer de Clitandre à servir de second à son maître.
+          En cette résolution, il rencontre un gentilhomme, son particulier ami, nommé Cléon, dont
+          il apprend que Clitandre venait de monter à cheval avec le prince pour aller à la chasse.
+          Cette nouvelle le met en inquiétude ; et, ne sachant tous deux que juger de ce méconte,
+          ils vont de compagnie en avertir le roi. Le roi, qui ne voulait pas perdre ces cavaliers,
+          envoie en même temps Cléon rappeler Clitandre de la chasse, et Lysarque avec une troupe
+          d’archers au lieu de l’assignation, afin que si Clitandre s’était échappé d’auprès du
+          prince pour aller joindre ton rival, il fût assez fort pour les séparer. Lysarque ne
+          trouve que les deux corps des gens de Clitandre, qu’il renvoie par la moitié de les
+          archers, cependant qu’avec l’autre il suit une trace de sang qui le mène jusques au lieu
+          où Rosidor et Caliste s’étaient retirés. La vue de ces corps fait soupçonner au roi
+          quelque supercherie de la part de Clitandre, et l’aigrit tellement contre lui, qu’à son
+          retour de la chasse il le fait mettre en prison, sans qu’on lui en dit même le sujet.
+          Cette colère s’augmente par l’arrivée de Rosidor tout blessé, qui, après le récit de les
+          aventures, présente au roi le cartel de Clitandre, signé de sa main (contrefaite
+          toutefois) et rendu par son page, si bien que le roi ne doutant plus de son crime, le fait
+          venir en son conseil, où, quelque protestation que peut faire son innocence, il le
+          condamne à perdre la tête dans le jour même, de peur de le voir comme forcé de le donner
+          aux prières de son fils, s’il attendait son retour de la chasse. Cléon en apprend la
+          nouvelle ; et redoutant que le prince ne se prît à lui de la perte de ce cavalier qu’il
+          affectionnait, il le va chercher encore une fois à la chasse pour l’en avertir. Tandis que
+          tout ceci se passe, une tempête surprend le prince à la chasse, ses gens, effrayés de la
+          violence des foudres et des orages, qui çà qui là cherchent où le cacher si bien que,
+          demeuré seul, un de coup tonnerre lui tue son cheval sous lui. La tempête finie, il voit
+          un jeune gentilhomme qu’un paysan poursuivait l’épée à la main (c’était Pymante et
+          Dorise). Il était déjà terrassé, et prêt de recevoir le coup de la mort ; mais le prince
+          ne pouvant souffrir une action si méchante, tâche d’empêcher cet assassinat. Pymante,
+          tenant Dorise d’une main, le combat, de l’autre, ne croyant pas de sûreté pour soi, après
+          avoir été vu en cet équipage, que par la mort. Dorise reconnaît le prince, et s’entrelace
+          tellement dans les jambes de ton ravisseur, qu’elle le fait trébucher. Le prince saute
+          aussitôt sur lui, et le désarme l’ayant désarmé, il crie les gens, et enfin deux veneurs
+          paraissent chargés des vrais habits de Pymante, Dorise, et Lycaste. Ils les lui présentent
+          comme un effet extraordinaire du foudre, qui avait confirmé trois corps, à ce qu’ils
+          s’imaginaient, sans toucher à leurs habits. C’est de là que Dorise prend occasion de se
+          faire connaître au prince, et de lui déclarer tout ce qui s’est passé dans ce bois. Le
+          prince étonné commande à ses veneurs de garrotter Pymante avec les couples de leurs chiens
+          en même temps Cléon arrive, qui fait le récit au prince du péril de Clitandre, et du sujet
+          qui l’avait réduit en l’extrémité où il était. Cela lui fait reconnaître Pymante pour
+          l’auteur de ces perfidies ; et l’ayant baillé à tes veneurs à ramener, il pique à toute
+          bride vers le château, arrache Clitandre aux bourreaux, et le va présenter au roi avec les
+          criminels, Pymante et Dorise, arrivés quelque temps après lui. Le roi venait de conclure
+          avec la reine le mariage de Rosidor et de Caliste, sitôt qu’il serait guéri, dont Caliste
+          était allé porter la nouvelle au blessé et après que le prince lui eut fait connaître
+          l’innocence de Clitandre, il le reçoit à bras ouverts, et lui promet toute forte de
+          faveurs pour récompense du tort qu’il lui avait pensé faire.</p>
+        <p>De là, il envoie Pymante à son conseil pour être puni, voulant voir par là de quelle
+          façon ses sujets vengeraient un attentat fait sur leur prince. Le prince obtient un pardon
+          pour Dorise, qui lui avait assuré la vie et la voulant désormais favoriser, en propose le
+          mariage à Clitandre, qui s’en excuse modestement. Rosidor et Caliste viennent remercier le
+          roi, qui les réconcilie avec Clitandre et Dorise, et invite ces derniers, voire même leur
+          commande de s’entr’aimer, puisque lui et le prince le désirent, leur donnant jusqu’à la
+          guérison de Rosidor pour allumer cette flamme,</p>
         <l>Afin de voir alors cueillir en même jour</l>
         <l>À deux couples d’amants les fruits de leur amour.</l>
       </div>
@@ -91,14 +270,22 @@
           <head>ACTEURS</head>
           <castItem><role xml:id="ALCANDRE" rend="male">ALCANDRE</role>, roi d’Écosse.</castItem>
           <castItem><role xml:id="FLORIDAN" rend="male">FLORIDAN</role>, fils du roi.</castItem>
-          <castItem><role xml:id="ROSIDOR" rend="male">ROSIDOR</role>, favori du roi et amant de Caliste.</castItem>
-          <castItem><role xml:id="CLITANDRE" rend="male">CLITANDRE</role>, favori du prince Floridan et amoureux aussi de Caliste, mais dédaigné.</castItem>
-          <castItem><role xml:id="PYMANTE" rend="male">PYMANTE</role>, amoureux de Dorise, et dédaigné.</castItem>
-          <castItem><role xml:id="CALISTE" rend="female">CALISTE</role>, maîtresse de Rosidor et de Clitandre.</castItem>
-          <castItem><role xml:id="DORISE" rend="female">DORISE</role>, maîtresse de Pymante.</castItem>
-          <castItem><role xml:id="LYSARQUE" rend="male">LYSARQUE</role>, écuyer de Rosidor.</castItem>
-          <castItem><role xml:id="GERONTE" rend="male veteran">GÉRONTE</role>, écuyer de Clitandre.</castItem>
-          <castItem><role xml:id="CLEON" rend="male">CLÉON</role>, gentilhomme suivant la cour.</castItem>
+          <castItem><role xml:id="ROSIDOR" rend="male">ROSIDOR</role>, favori du roi et amant de
+            Caliste.</castItem>
+          <castItem><role xml:id="CLITANDRE" rend="male">CLITANDRE</role>, favori du prince Floridan
+            et amoureux aussi de Caliste, mais dédaigné.</castItem>
+          <castItem><role xml:id="PYMANTE" rend="male">PYMANTE</role>, amoureux de Dorise, et
+            dédaigné.</castItem>
+          <castItem><role xml:id="CALISTE" rend="female">CALISTE</role>, maîtresse de Rosidor et de
+            Clitandre.</castItem>
+          <castItem><role xml:id="DORISE" rend="female">DORISE</role>, maîtresse de
+            Pymante.</castItem>
+          <castItem><role xml:id="LYSARQUE" rend="male">LYSARQUE</role>, écuyer de
+            Rosidor.</castItem>
+          <castItem><role xml:id="GERONTE" rend="male veteran">GÉRONTE</role>, écuyer de
+            Clitandre.</castItem>
+          <castItem><role xml:id="CLEON" rend="male">CLÉON</role>, gentilhomme suivant la
+            cour.</castItem>
           <castItem><role xml:id="LYCASTE" rend="male">LYCASTE</role>, page de Clitandre.</castItem>
           <castItem><role xml:id="GEOLIER" rend="male">LE GEÔLIER</role>.</castItem>
           <castItem><role xml:id="ARCHER1" rend="male">PREMIER ARCHER</role>.</castItem>
@@ -108,7 +295,8 @@
           <castItem><role xml:id="VENEUR2" rend="male">SECOND VENEUR</role>.</castItem>
           <castItem><role xml:id="VENEUR3" rend="male">TROISIÈME VENEUR</role>.</castItem>
         </castList>
-        <set country="Ecosse" link="" location="Ecosse" periode="(inconnue)">La scène est en un château du Roi, proche d’une forêt.</set>
+        <set country="Ecosse" link="" location="Ecosse" periode="(inconnue)">La scène est en un
+          château du Roi, proche d’une forêt.</set>
       </div>
     </front>
     <body>
@@ -116,7 +304,7 @@
         <head>ACTE I</head>
         <div2 n="1" type="scene" xml:id="I01">
           <head>SCÈNE PREMIERE.<listPerson type="configuration" xml:id="conf1">
-            <person corresp="#CALISTE"/>
+              <person corresp="#CALISTE"/>
             </listPerson></head>
           <sp who="CALISTE" xml:id="I01-1">
             <speaker>CALISTE, seul.</speaker>
@@ -170,8 +358,8 @@
         </div2>
         <div2 n="2" type="scene" xml:id="I02">
           <head>SCÈNE II. Rosidor, Lysarque.<listPerson type="configuration" xml:id="conf2">
-            <person corresp="#ROSIDOR"/>
-            <person corresp="#LYSARQUE"/>
+              <person corresp="#ROSIDOR"/>
+              <person corresp="#LYSARQUE"/>
             </listPerson></head>
           <sp who="ROSIDOR" xml:id="I02-1">
             <speaker>ROSIDOR.</speaker>
@@ -188,7 +376,8 @@
             <l n="57" xml:id="l57">M’instruise des moyens de plaire à cette belle,</l>
             <l n="58" xml:id="l58">Allume dans mon coeur de nouveaux feux pour elle :</l>
             <l n="59" xml:id="l59">Enfin, sans persister dans l’obstination,</l>
-            <note type="L">Inclination : Se dit aussi de l’amour, du penchant, de l’attachement qu’on a pour quelqu’un. [F]</note>
+            <note type="L">Inclination : Se dit aussi de l’amour, du penchant, de l’attachement
+              qu’on a pour quelqu’un. [F]</note>
             <l n="60" xml:id="l60">Laisse-moi suivre ici mon inclination.</l>
           </sp>
           <sp who="LYSARQUE" xml:id="I02-2">
@@ -265,7 +454,7 @@
         </div2>
         <div2 n="3" type="scene" xml:id="I03">
           <head>SCÈNE III.<listPerson type="configuration" xml:id="conf3">
-            <person corresp="#CALISTE"/>
+              <person corresp="#CALISTE"/>
             </listPerson></head>
           <sp who="CALISTE" xml:id="I03-1">
             <speaker>CALISTE, seul.</speaker>
@@ -281,8 +470,8 @@
         </div2>
         <div2 n="4" type="scene" xml:id="I04">
           <head>SCÈNE IV. Caliste, Dorise.<listPerson type="configuration" xml:id="conf4">
-            <person corresp="#CALISTE"/>
-            <person corresp="#DORISE"/>
+              <person corresp="#CALISTE"/>
+              <person corresp="#DORISE"/>
             </listPerson></head>
           <sp who="CALISTE" xml:id="I04-1">
             <speaker>CALISTE.</speaker>
@@ -332,9 +521,10 @@
           </sp>
         </div2>
         <div2 n="5" type="scene" xml:id="I05">
-          <head>SCÈNE V. Pymante, Géronte, sortants d’une grotte, déguisés en paysans.<listPerson type="configuration" xml:id="conf5">
-            <person corresp="#GERONTE"/>
-            <person corresp="#PYMANTE"/>
+          <head>SCÈNE V. Pymante, Géronte, sortants d’une grotte, déguisés en paysans.<listPerson
+              type="configuration" xml:id="conf5">
+              <person corresp="#GERONTE"/>
+              <person corresp="#PYMANTE"/>
             </listPerson></head>
           <sp who="GERONTE" xml:id="I05-1">
             <speaker>GÉRONTE.</speaker>
@@ -387,10 +577,11 @@
           </sp>
         </div2>
         <div2 n="6" type="scene" xml:id="I06">
-          <head>SCÈNE VI. Pymante, Géronte, Lycaste, aussi déguisé en paysan.<listPerson type="configuration" xml:id="conf6">
-            <person corresp="#PYMANTE"/>
-            <person corresp="#LYCASTE"/>
-            <person corresp="#GERONTE"/>
+          <head>SCÈNE VI. Pymante, Géronte, Lycaste, aussi déguisé en paysan.<listPerson
+              type="configuration" xml:id="conf6">
+              <person corresp="#PYMANTE"/>
+              <person corresp="#LYCASTE"/>
+              <person corresp="#GERONTE"/>
             </listPerson></head>
           <sp who="PYMANTE" xml:id="I06-1">
             <speaker>PYMANTE.</speaker>
@@ -413,7 +604,8 @@
             <l n="170" xml:id="l170">Mais pourquoi ces habits ? Qui te les fait reprendre ?</l>
           </sp>
           <sp who="LYCASTE" xml:id="I06-4">
-            <speaker>LYCASTE, leur présente à chacun un masque et une épée et porte leurs habits.</speaker>
+            <speaker>LYCASTE, leur présente à chacun un masque et une épée et porte leurs
+              habits.</speaker>
             <l n="171" xml:id="l171">Pour notre sûreté, portons-les avec nous,</l>
             <l n="172" xml:id="l172">De peur que, cependant que nous serons aux coups,</l>
             <l n="173" xml:id="l173">Quelque maraud, conduit par sa bonne aventure,</l>
@@ -437,8 +629,8 @@
         </div2>
         <div2 n="7" type="scene" xml:id="I07">
           <head>SCENE VII. Cléon, Lysarque.<listPerson type="configuration" xml:id="conf7">
-            <person corresp="#CLEON"/>
-            <person corresp="#LYSARQUE"/>
+              <person corresp="#CLEON"/>
+              <person corresp="#LYSARQUE"/>
             </listPerson></head>
           <sp who="CLEON" xml:id="I07-1">
             <speaker>CLÉON.</speaker>
@@ -478,8 +670,8 @@
         </div2>
         <div2 n="8" type="scene" xml:id="I08">
           <head>SCÈNE VIII. Caliste, Dorise.<listPerson type="configuration" xml:id="conf8">
-            <person corresp="#CALISTE"/>
-            <person corresp="#DORISE"/>
+              <person corresp="#CALISTE"/>
+              <person corresp="#DORISE"/>
             </listPerson></head>
           <stage>Casliste cependant que Dorise s’arrête à chercher derrière un buisson.</stage>
           <sp who="CALISTE" xml:id="I08-1">
@@ -489,7 +681,8 @@
             <l n="199" xml:id="l199">Je ne vois point mon traître, Hippolyte non plus.</l>
           </sp>
           <sp who="DORISE" xml:id="I08-2">
-            <speaker>DORISE tirant une épée de derrière ce buisson et saisissant Caliste par le bras.</speaker>
+            <speaker>DORISE tirant une épée de derrière ce buisson et saisissant Caliste par le
+              bras.</speaker>
             <l n="200" xml:id="l200">Voici qui va trancher tes soucis superflus ;</l>
             <l n="201" xml:id="l201">Voici dont je vais rendre, aux dépens de ta vie,</l>
             <l n="202" xml:id="l202">Et ma flamme vengée, et ma haine assouvie.</l>
@@ -535,15 +728,22 @@
           </sp>
         </div2>
         <div2 n="9" type="scene" xml:id="I09">
-          <head>SCÈNE IX. Rosidor, Pymante, Géronte, Lycaste, Caliste, Dorise.<listPerson type="configuration" xml:id="conf9">
-            <person corresp="#ROSIDOR"/>
-            <person corresp="#DORISE"/>
-            <person corresp="#CALISTE"/>
-            <person corresp="#PYMANTE"/>
-            <person corresp="#GERONTE"/>
-            <person corresp="#LYCASTE"/>
+          <head>SCÈNE IX. Rosidor, Pymante, Géronte, Lycaste, Caliste, Dorise.<listPerson
+              type="configuration" xml:id="conf9">
+              <person corresp="#ROSIDOR"/>
+              <person corresp="#DORISE"/>
+              <person corresp="#CALISTE"/>
+              <person corresp="#PYMANTE"/>
+              <person corresp="#GERONTE"/>
+              <person corresp="#LYCASTE"/>
             </listPerson></head>
-          <stage>Comme Dorise est prête de tuer Caliste, un bruit entendu lui fait relever son épée, et Rosidor paraît tout en sang poursuivi par ses trois assassins masqués. En entrant, il tue Lycaste, et retirant son épée elle se rompt contre la branche d’un arbre. En cette extrémité il voit celle que tient Dorise, et sans la reconnaître il s’en saisit, et passe tout d’un temps le tronçon qui lui restait de la sienne en la main gauche, et se défend ainsi contre Pymante et Géronte, dont il tue le dernier et met l’autre en fuite.</stage>
+          <stage>Comme Dorise est prête de tuer Caliste, un bruit entendu lui fait relever son épée,
+            et Rosidor paraît tout en sang poursuivi par ses trois assassins masqués. En entrant, il
+            tue Lycaste, et retirant son épée elle se rompt contre la branche d’un arbre. En cette
+            extrémité il voit celle que tient Dorise, et sans la reconnaître il s’en saisit, et
+            passe tout d’un temps le tronçon qui lui restait de la sienne en la main gauche, et se
+            défend ainsi contre Pymante et Géronte, dont il tue le dernier et met l’autre en
+            fuite.</stage>
           <sp who="ROSIDOR" xml:id="I09-1">
             <speaker>ROSIDOR.</speaker>
             <l n="218" xml:id="l218">Meurs, brigand. Ah ! Malheur ! Cette branche fatale</l>
@@ -698,7 +898,7 @@
         <head>ACTE II</head>
         <div2 n="1" type="scene" xml:id="II01">
           <head>SCÈNE PREMIÈRE.<listPerson type="configuration" xml:id="conf11">
-            <person corresp="#PYMANTE"/>
+              <person corresp="#PYMANTE"/>
             </listPerson></head>
           <sp who="PYMANTE" xml:id="II01-1">
             <speaker>PYMANTE, masqué.</speaker>
@@ -777,9 +977,10 @@
           </sp>
         </div2>
         <div2 n="2" type="scene" xml:id="II02">
-          <head>SCÈNE II. Lysarque, Pymante, Archers.<listPerson type="configuration" xml:id="conf12">
-            <person corresp="#LYSARQUE"/>
-            <person corresp="#PYMANTE"/>
+          <head>SCÈNE II. Lysarque, Pymante, Archers.<listPerson type="configuration"
+              xml:id="conf12">
+              <person corresp="#LYSARQUE"/>
+              <person corresp="#PYMANTE"/>
             </listPerson></head>
           <sp who="LYSARQUE" xml:id="II02-1">
             <speaker>LYSARQUE.</speaker>
@@ -861,9 +1062,9 @@
         </div2>
         <div2 n="3" type="scene" xml:id="II03">
           <head>SCÈNE III. Lysarque, Archers.<listPerson type="configuration" xml:id="conf13">
-            <person corresp="#LYSARQUE"/>
-            <person corresp="#ARCHER1"/>
-            <person corresp="#ARCHER2"/>
+              <person corresp="#LYSARQUE"/>
+              <person corresp="#ARCHER1"/>
+              <person corresp="#ARCHER2"/>
             </listPerson></head>
           <sp who="LYSARQUE" xml:id="II03-1">
             <speaker>LYSARQUE, regarde le corps de Géronte et de Lycaste.</speaker>
@@ -907,7 +1108,8 @@
             <l n="448" xml:id="l448">De qui le seul aspect rend le crime éclairci.</l>
           </sp>
           <sp who="ARCHER2" xml:id="II03-8">
-            <speaker>SECOND ARCHER, lui présentant les deux pièces rompues de l’épée de Rosidor.</speaker>
+            <speaker>SECOND ARCHER, lui présentant les deux pièces rompues de l’épée de
+              Rosidor.</speaker>
             <l n="449" xml:id="l449">Monsieur, connaissez-vous ce fer et cette garde ?</l>
           </sp>
           <sp who="LYSARQUE" xml:id="II03-9">
@@ -926,12 +1128,13 @@
             <l n="455" xml:id="l455">Suivons-les au hasard. Vous autres, enlevez</l>
             <l n="456" xml:id="l456">Promptement ces deux corps que nous avons trouvés.</l>
           </sp>
-          <stage>Lysarque et cet archer rentrent dans le bois, et le reste des archers reportent à la cour les corps de Géronte et Lycaste.</stage>
+          <stage>Lysarque et cet archer rentrent dans le bois, et le reste des archers reportent à
+            la cour les corps de Géronte et Lycaste.</stage>
         </div2>
         <div2 n="4" type="scene" xml:id="II04">
           <head>SCÈNE IV. Floridan, Clitandre, Page.<listPerson type="configuration" xml:id="conf14">
-            <person corresp="#FLORIDAN"/>
-            <person corresp="#CLITANDRE"/>
+              <person corresp="#FLORIDAN"/>
+              <person corresp="#CLITANDRE"/>
             </listPerson></head>
           <sp who="FLORIDAN" xml:id="II04-1">
             <speaker>FLORIDAN, parlant à son page.</speaker>
@@ -1022,9 +1225,9 @@
         </div2>
         <div2 n="5" type="scene" xml:id="II05">
           <head>SCÈNE V. Floridan, Clitandre, Cléon.<listPerson type="configuration" xml:id="conf15">
-            <person corresp="#CLEON"/>
-            <person corresp="#FLORIDAN"/>
-            <person corresp="#CLITANDRE"/>
+              <person corresp="#CLEON"/>
+              <person corresp="#FLORIDAN"/>
+              <person corresp="#CLITANDRE"/>
             </listPerson></head>
           <sp who="CLEON" xml:id="II05-1">
             <speaker>CLÉON.</speaker>
@@ -1073,9 +1276,10 @@
           </sp>
         </div2>
         <div2 n="6" type="scene" xml:id="II06">
-          <head>SCÈNE VI. Dorise, achevant de vêtir l’habit de Géronte, qu’elle avait trouvé dans le bois.<listPerson type="configuration" xml:id="conf16">
-            <person corresp="#DORISE"/>
-            <person corresp="#GERONTE"/>
+          <head>SCÈNE VI. Dorise, achevant de vêtir l’habit de Géronte, qu’elle avait trouvé dans le
+              bois.<listPerson type="configuration" xml:id="conf16">
+              <person corresp="#DORISE"/>
+              <person corresp="#GERONTE"/>
             </listPerson></head>
           <sp who="DORISE" xml:id="II06-1">
             <speaker>DORISE.</speaker>
@@ -1139,8 +1343,8 @@
         </div2>
         <div2 n="7" type="scene" xml:id="II07">
           <head>SCÈNE VII. Pymante, Dorise.<listPerson type="configuration" xml:id="conf17">
-            <person corresp="#PYMANTE"/>
-            <person corresp="#DORISE"/>
+              <person corresp="#PYMANTE"/>
+              <person corresp="#DORISE"/>
             </listPerson></head>
           <sp who="PYMANTE" xml:id="II07-1">
             <speaker>PYMANTE, la prenant pour Géronte et l’embrassant.</speaker>
@@ -1148,7 +1352,8 @@
             <l n="584" xml:id="l584">Malheureux compagnon de mon funeste sort…</l>
           </sp>
           <sp who="DORISE" xml:id="II07-2">
-            <speaker>DORISE croyant qu’il la prend pour Rosidor, et qu’en l’embrassant il la poignarde.</speaker>
+            <speaker>DORISE croyant qu’il la prend pour Rosidor, et qu’en l’embrassant il la
+              poignarde.</speaker>
             <l n="585" xml:id="l585">Ton oeil t’abuse. Hélas ! Misérable, regarde</l>
             <l n="586" xml:id="l586">Qu’au lieu de Rosidor ton erreur me poignarde.</l>
           </sp>
@@ -1221,7 +1426,7 @@
         </div2>
         <div2 n="8" type="scene" xml:id="II08">
           <head>SCÈNE VIII.<listPerson type="configuration" xml:id="conf18">
-            <person corresp="#PYMANTE"/>
+              <person corresp="#PYMANTE"/>
             </listPerson></head>
           <sp who="PYMANTE" xml:id="II08-1">
             <speaker>PYLANTE, seule.</speaker>
@@ -1275,10 +1480,11 @@
       <div1 n="3" type="act" xml:id="III">
         <head>ACTE III</head>
         <div2 n="1" type="scene" xml:id="III01">
-          <head>SCÈNE PREMIÈRE. Alcandre, Rosidor, Caliste, un Prévôt.<listPerson type="configuration" xml:id="conf20">
-            <person corresp="#ALCANDRE"/>
-            <person corresp="#ROSIDOR"/>
-            <person corresp="#CALISTE"/>
+          <head>SCÈNE PREMIÈRE. Alcandre, Rosidor, Caliste, un Prévôt.<listPerson
+              type="configuration" xml:id="conf20">
+              <person corresp="#ALCANDRE"/>
+              <person corresp="#ROSIDOR"/>
+              <person corresp="#CALISTE"/>
             </listPerson></head>
           <sp who="ALCANDRE" xml:id="III01-1">
             <speaker>ALCANDRE.</speaker>
@@ -1386,7 +1592,8 @@
             <l n="746" xml:id="l746">Envoyé de sa part, et rendu par son page ?</l>
             <l n="747" xml:id="l747">Peut-il désavouer que ses gens déguisés</l>
             <l n="748" xml:id="l748">De son commandement ne soient autorisés ?</l>
-            <l n="749" xml:id="l749">Les deux, tous morts qu’ils sont, qu’on les traîne à la boue,</l>
+            <l n="749" xml:id="l749">Les deux, tous morts qu’ils sont, qu’on les traîne à la
+              boue,</l>
             <l n="750" xml:id="l750">L’autre, aussitôt que pris, se verra sur la roue ;</l>
             <l n="751" xml:id="l751">Et pour le scélérat que je tiens prisonnier,</l>
             <l n="752" xml:id="l752">Ce jour que nous voyons lui sera le dernier.</l>
@@ -1416,8 +1623,8 @@
         </div2>
         <div2 n="2" type="scene" xml:id="III02">
           <head>SCÈNE II. Rosidor, Caliste.<listPerson type="configuration" xml:id="conf21">
-            <person corresp="#ROSIDOR"/>
-            <person corresp="#CALISTE"/>
+              <person corresp="#ROSIDOR"/>
+              <person corresp="#CALISTE"/>
             </listPerson></head>
           <sp who="ROSIDOR" xml:id="III02-1">
             <speaker>ROSIDOR.</speaker>
@@ -1469,7 +1676,7 @@
         </div2>
         <div2 n="3" type="scene" xml:id="III03">
           <head>SCÈNE III.<listPerson type="configuration" xml:id="conf22">
-            <person corresp="#CLITANDRE"/>
+              <person corresp="#CLITANDRE"/>
             </listPerson></head>
           <sp who="CLITANDRE" xml:id="III03-1">
             <speaker>CLITANDRE, en prison.</speaker>
@@ -1521,8 +1728,8 @@
         </div2>
         <div2 n="4" type="scene" xml:id="III04">
           <head>SCÈNE IV. Clitandre, le Geôlier.<listPerson type="configuration" xml:id="conf23">
-            <person corresp="#GEOLIER"/>
-            <person corresp="#CLITANDRE"/>
+              <person corresp="#GEOLIER"/>
+              <person corresp="#CLITANDRE"/>
             </listPerson></head>
           <sp who="GEOLIER" xml:id="III04-1">
             <speaker>LE GEÔLIER.</speaker>
@@ -1557,11 +1764,12 @@
         </div2>
         <div2 n="5" type="scene" xml:id="III05">
           <head>SCÈNE V. Pymante, Dorise.<listPerson type="configuration" xml:id="conf24">
-            <person corresp="#PYMANTE"/>
-            <person corresp="#DORISE"/>
+              <person corresp="#PYMANTE"/>
+              <person corresp="#DORISE"/>
             </listPerson></head>
           <sp who="PYMANTE" xml:id="III05-1">
-            <speaker>PYMANTE, regardant une aiguille qu’elle avait laissée par mégarde dans ses cheveux en se déguisant.</speaker>
+            <speaker>PYMANTE, regardant une aiguille qu’elle avait laissée par mégarde dans ses
+              cheveux en se déguisant.</speaker>
             <l n="849" xml:id="l849">En vain pour m’éblouir vous usez de la ruse,</l>
             <l n="850" xml:id="l850">Mon esprit, quoique lourd, aisément ne s’abuse ;</l>
             <l n="851" xml:id="l851">Ce que vous me cachez, je le lis dans vos yeux :</l>
@@ -1777,8 +1985,8 @@
         <head>ACTE IV</head>
         <div2 n="1" type="scene" xml:id="IV01">
           <head>SCÈNE PREMIÈRE. Pymante, Dorise.<listPerson type="configuration" xml:id="conf26">
-            <person corresp="#DORISE"/>
-            <person corresp="#PYMANTE"/>
+              <person corresp="#DORISE"/>
+              <person corresp="#PYMANTE"/>
             </listPerson></head>
           <sp who="DORISE" xml:id="IV01-1">
             <speaker>DORISE.</speaker>
@@ -1878,7 +2086,8 @@
             <l n="1030" xml:id="l1030">De punir l’attentat d’un infâme corsaire.</l>
           </sp>
           <sp who="PYMANTE" xml:id="IV01-16">
-            <speaker>PYMANTE, prenant son épée dans la caverne où il l’avait jetée au 2ème acte.</speaker>
+            <speaker>PYMANTE, prenant son épée dans la caverne où il l’avait jetée au 2ème
+              acte.</speaker>
             <l n="1031" xml:id="l1031">Ton sang m’en répondra ; tu m’auras beau prier,</l>
             <l n="1032" part="I" xml:id="l1032">Tu mourras.</l>
           </sp>
@@ -1889,7 +2098,7 @@
         </div2>
         <div2 n="2" type="scene" xml:id="IV02">
           <head>SCÈNE II.<listPerson type="configuration" xml:id="conf27">
-            <person corresp="#PYMANTE"/>
+              <person corresp="#PYMANTE"/>
             </listPerson></head>
           <sp who="PYMANTE" xml:id="IV02-1">
             <speaker>PYMANTE, seul.</speaker>
@@ -1968,7 +2177,7 @@
         </div2>
         <div2 n="3" type="scene" xml:id="IV03">
           <head>SCÈNE III.<listPerson type="configuration" xml:id="conf28">
-            <person corresp="#FLORIDAN"/>
+              <person corresp="#FLORIDAN"/>
             </listPerson></head>
           <sp who="FLORIDAN" xml:id="IV03-1">
             <speaker>FLORIDAN, seul.</speaker>
@@ -2004,9 +2213,9 @@
         </div2>
         <div2 n="4" type="scene" xml:id="IV04">
           <head>SCÈNE IV. Floridan, Pymante, Dorise.<listPerson type="configuration" xml:id="conf29">
-            <person corresp="#PYMANTE"/>
-            <person corresp="#DORISE"/>
-            <person corresp="#FLORIDAN"/>
+              <person corresp="#PYMANTE"/>
+              <person corresp="#DORISE"/>
+              <person corresp="#FLORIDAN"/>
             </listPerson></head>
           <sp who="PYMANTE" xml:id="IV04-1">
             <speaker>PYMANTE saisit Dorise qui le fuyait.</speaker>
@@ -2080,13 +2289,14 @@
           </sp>
         </div2>
         <div2 n="5" type="scene" xml:id="IV05">
-          <head>SCÈNE V. Floridan, Pymante, Dorise, trois veneurs, portant en leurs mains les vrais habits de Pymante, Lycaste et Dorise.<listPerson type="configuration" xml:id="conf30">
-            <person corresp="#VENEUR1"/>
-            <person corresp="#FLORIDAN"/>
-            <person corresp="#PYMANTE"/>
-            <person corresp="#VENEUR2"/>
-            <person corresp="#DORISE"/>
-            <person corresp="#LYCASTE"/>
+          <head>SCÈNE V. Floridan, Pymante, Dorise, trois veneurs, portant en leurs mains les vrais
+            habits de Pymante, Lycaste et Dorise.<listPerson type="configuration" xml:id="conf30">
+              <person corresp="#VENEUR1"/>
+              <person corresp="#FLORIDAN"/>
+              <person corresp="#PYMANTE"/>
+              <person corresp="#VENEUR2"/>
+              <person corresp="#DORISE"/>
+              <person corresp="#LYCASTE"/>
             </listPerson></head>
           <sp who="VENEUR1" xml:id="IV05-1">
             <speaker>PREMIER VENEUR.</speaker>
@@ -2109,7 +2319,8 @@
           </sp>
           <sp who="FLORIDAN" xml:id="IV05-5">
             <speaker>FLORIDAN.</speaker>
-            <note type="L">Maraud : Terme injurieux qui se dit des gueux, des coquins qui n’ont ni bien ni honneur, qui sont capables de faire toutes sortes de lâchetés. [F]</note>
+            <note type="L">Maraud : Terme injurieux qui se dit des gueux, des coquins qui n’ont ni
+              bien ni honneur, qui sont capables de faire toutes sortes de lâchetés. [F]</note>
             <l n="1155" xml:id="l1155">Garrottez ce maraud ; les couples de vos chiens</l>
             <l n="1156" xml:id="l1156">Vous y pourront servir, faute d’autres liens.</l>
             <l n="1157" xml:id="l1157">Je veux qu’à mon retour une prompte justice</l>
@@ -2163,12 +2374,13 @@
             <l n="1187" xml:id="l1187">Tu l’y ramèneras. Vous, s’il ne veut marcher,</l>
             <l n="1188" xml:id="l1188">Gardez-le cependant au pied de ce rocher.</l>
           </sp>
-          <stage>Le prince sort, et un des veneurs s’en va avec Dorise et les autres mènent Pymante d’une autre côté.</stage>
+          <stage>Le prince sort, et un des veneurs s’en va avec Dorise et les autres mènent Pymante
+            d’une autre côté.</stage>
         </div2>
         <div2 n="6" type="scene" xml:id="IV06">
           <head>SCÈNE VI. Clitandre, Le Geôlier.<listPerson type="configuration" xml:id="conf31">
-            <person corresp="#CLITANDRE"/>
-            <person corresp="#GEOLIER"/>
+              <person corresp="#CLITANDRE"/>
+              <person corresp="#GEOLIER"/>
             </listPerson></head>
           <sp who="CLITANDRE" xml:id="IV06-1">
             <speaker>CLITANDRE, en prison.</speaker>
@@ -2217,7 +2429,7 @@
         </div2>
         <div2 n="7" type="scene" xml:id="IV07">
           <head>SCÈNE VII.<listPerson type="configuration" xml:id="conf32">
-            <person corresp="#CLITANDRE"/>
+              <person corresp="#CLITANDRE"/>
             </listPerson></head>
           <sp who="CLITANDRE" xml:id="IV07-1">
             <speaker>CLITANDRE, seul.</speaker>
@@ -2272,11 +2484,12 @@
           </sp>
         </div2>
         <div2 n="8" type="scene" xml:id="IV08">
-          <head>SCÈNE VIII, Floridan, Pymante, Cléon, Dorise, en habits de femme ; trois veneurs.<listPerson type="configuration" xml:id="conf33">
-            <person corresp="#FLORIDAN"/>
-            <person corresp="#CLEON"/>
-            <person corresp="#DORISE"/>
-            <person corresp="#PYMANTE"/>
+          <head>SCÈNE VIII, Floridan, Pymante, Cléon, Dorise, en habits de femme ; trois
+              veneurs.<listPerson type="configuration" xml:id="conf33">
+              <person corresp="#FLORIDAN"/>
+              <person corresp="#CLEON"/>
+              <person corresp="#DORISE"/>
+              <person corresp="#PYMANTE"/>
             </listPerson></head>
           <sp who="FLORIDAN" xml:id="IV08-1">
             <speaker>FLORIDAN, à Dorise et Cléon.</speaker>
@@ -2322,10 +2535,11 @@
       <div1 n="5" type="act" xml:id="V">
         <head>ACTE V</head>
         <div2 n="1" type="scene" xml:id="V01">
-          <head>SCÈNE PREMIÈRE. Floridan, Clitandre, un Prévôt, Cléon.<listPerson type="configuration" xml:id="conf35">
-            <person corresp="#FLORIDAN"/>
-            <person corresp="#CLITANDRE"/>
-            <person corresp="#CLEON"/>
+          <head>SCÈNE PREMIÈRE. Floridan, Clitandre, un Prévôt, Cléon.<listPerson
+              type="configuration" xml:id="conf35">
+              <person corresp="#FLORIDAN"/>
+              <person corresp="#CLITANDRE"/>
+              <person corresp="#CLEON"/>
             </listPerson></head>
           <sp who="FLORIDAN" xml:id="V01-1">
             <speaker>FLORIDAN, parlant au prévôt.</speaker>
@@ -2412,7 +2626,7 @@
         </div2>
         <div2 n="2" type="scene" xml:id="V02">
           <head>SCÈNE II.<listPerson type="configuration" xml:id="conf36">
-            <person corresp="#ROSIDOR"/>
+              <person corresp="#ROSIDOR"/>
             </listPerson></head>
           <sp who="ROSIDOR" xml:id="V02-1">
             <speaker>ROSIDOR, sur son lit.</speaker>
@@ -2466,8 +2680,8 @@
         </div2>
         <div2 n="3" type="scene" xml:id="V03">
           <head>SCÈNE III. Rosidor, Caliste.<listPerson type="configuration" xml:id="conf37">
-            <person corresp="#CALISTE"/>
-            <person corresp="#ROSIDOR"/>
+              <person corresp="#CALISTE"/>
+              <person corresp="#ROSIDOR"/>
             </listPerson></head>
           <sp who="CALISTE" xml:id="V03-1">
             <speaker>CALISTE.</speaker>
@@ -2613,13 +2827,14 @@
           </sp>
         </div2>
         <div2 n="4" type="scene" xml:id="V04">
-          <head>SCÈNE IV. Alcandre, Floridan, Clitandre, Pymante, Dorise, Cléon, Prévôt, trois veneurs.<listPerson type="configuration" xml:id="conf38">
-            <person corresp="#ALCANDRE"/>
-            <person corresp="#CLITANDRE"/>
-            <person corresp="#FLORIDAN"/>
-            <person corresp="#PYMANTE"/>
-            <person corresp="#DORISE"/>
-            <person corresp="#CLEON"/>
+          <head>SCÈNE IV. Alcandre, Floridan, Clitandre, Pymante, Dorise, Cléon, Prévôt, trois
+              veneurs.<listPerson type="configuration" xml:id="conf38">
+              <person corresp="#ALCANDRE"/>
+              <person corresp="#CLITANDRE"/>
+              <person corresp="#FLORIDAN"/>
+              <person corresp="#PYMANTE"/>
+              <person corresp="#DORISE"/>
+              <person corresp="#CLEON"/>
             </listPerson></head>
           <sp who="ALCANDRE" xml:id="V04-1">
             <speaker>ALCANDRE.</speaker>
@@ -2720,7 +2935,9 @@
             <l n="1534" xml:id="l1534">L’amour que vers son prince il aura fait paraître.</l>
             <l n="1535" xml:id="l1535">Viens çà toi maintenant, monstre de cruauté,</l>
             <l n="1536" xml:id="l1536">Qui joins l’assassinat à la déloyauté,</l>
-            <note type="L">Alecton : dit l’Implacable, est une des trois Furies (ou Euménides en grec) qui poursuivaient Oreste, parricide et mari incestueux de sa mère Clytemnestre. Voir la tragédie "Les Euménides" d’Eschyle.</note>
+            <note type="L">Alecton : dit l’Implacable, est une des trois Furies (ou Euménides en
+              grec) qui poursuivaient Oreste, parricide et mari incestueux de sa mère Clytemnestre.
+              Voir la tragédie "Les Euménides" d’Eschyle.</note>
             <l n="1537" xml:id="l1537">Détestable Alecton, que la reine déçue</l>
             <l n="1538" xml:id="l1538">Avait naguère au rang de ses filles reçue !</l>
             <l n="1539" xml:id="l1539">Quel barbare, ou plutôt quelle peste d’enfer</l>
@@ -2773,7 +2990,8 @@
             <l n="1567" xml:id="l1567">Permettez désormais, Sire, que mes desseins</l>
             <l n="1568" xml:id="l1568">Prennent des mouvements plus réglés et plus sains :</l>
             <l n="1569" xml:id="l1569">Souffrez que pour pleurer mes actions brutales,</l>
-            <note type="L">Vestale : Fille vierge chez les Romains, qui était consacrée au service de la déesse Vesta, pour garder le feu sacré de son temple. [F]</note>
+            <note type="L">Vestale : Fille vierge chez les Romains, qui était consacrée au service
+              de la déesse Vesta, pour garder le feu sacré de son temple. [F]</note>
             <l n="1570" xml:id="l1570">Je fasse ma retraite avecque les Vestales,</l>
             <l n="1571" xml:id="l1571">Et qu’une criminelle indigne d’être au jour</l>
             <l n="1572" xml:id="l1572">Se puisse renfermer en leur sacré séjour.</l>
@@ -2819,14 +3037,15 @@
           </sp>
         </div2>
         <div2 n="5" type="scene" xml:id="V05">
-          <head>SCÈNE V. Alcandre, Floridan, Cléon, Clitandre, Rosidor, Caliste, Dorise.<listPerson type="configuration" xml:id="conf39">
-            <person corresp="#ALCANDRE"/>
-            <person corresp="#ROSIDOR"/>
-            <person corresp="#CLITANDRE"/>
-            <person corresp="#DORISE"/>
-            <person corresp="#CALISTE"/>
-            <person corresp="#FLORIDAN"/>
-            <person corresp="#CLEON"/>
+          <head>SCÈNE V. Alcandre, Floridan, Cléon, Clitandre, Rosidor, Caliste, Dorise.<listPerson
+              type="configuration" xml:id="conf39">
+              <person corresp="#ALCANDRE"/>
+              <person corresp="#ROSIDOR"/>
+              <person corresp="#CLITANDRE"/>
+              <person corresp="#DORISE"/>
+              <person corresp="#CALISTE"/>
+              <person corresp="#FLORIDAN"/>
+              <person corresp="#CLEON"/>
             </listPerson></head>
           <sp who="ALCANDRE" xml:id="V05-1">
             <speaker>ALCANDRE.</speaker>
@@ -2877,7 +3096,8 @@
           <sp who="ALCANDRE" xml:id="V05-8">
             <speaker>ALCANDRE.</speaker>
             <l n="1616" xml:id="l1616">Tu ne veux plus songer qu’à ce jour à venir</l>
-            <note type="L">Hyménée : divinité fabuleuse des païens, qu’ils croient présider aux mariage. (...) signifie aussi poétiquement le mariage. [F]</note>
+            <note type="L">Hyménée : divinité fabuleuse des païens, qu’ils croient présider aux
+              mariage. (...) signifie aussi poétiquement le mariage. [F]</note>
             <l n="1617" xml:id="l1617">Où Rosidor guéri termine un hyménée.</l>
             <l n="1618" xml:id="l1618">Clitandre, en attendant cette heureuse journée,</l>
             <l n="1619" xml:id="l1619">Tâchera d’allumer en son âme des feux</l>
