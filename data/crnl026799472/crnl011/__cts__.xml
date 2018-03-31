@@ -14,7 +14,7 @@
       urn="urn:cts:freLit:crnl026799472.crnl023.obvilchartes1-2"
       urn="urn:cts:freLit:crnl026799472.crnl023.obvilchartes1-3"
       >
-        <ti:label xml:lang="mul">La Conquête de la Toison d'or</ti:label>
+        <ti:label xml:lang="fr">La Conquête de la Toison d'or</ti:label>
 
         <ti:description xml:lang="fr">
             Tragédie
@@ -36,7 +36,7 @@
           Label represents the title of the edition.
           Label node needs xml:lang declaration, it reflects the language of the title.
         -->
-    <ti:label xml:lang="mul">Martial's Epigrammata</ti:label>
+    <ti:label xml:lang="fr">Martial's Epigrammata</ti:label>
     <!--
           Edition, Translation, and Commentary must have at least one description node.
           Description node needs xml:lang declaration, it reflects the language of the description.

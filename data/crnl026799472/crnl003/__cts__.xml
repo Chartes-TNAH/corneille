@@ -14,7 +14,7 @@
       urn="urn:cts:latinLit:freLit:crnl026799472.crnl003.obvilchartes3-1"
       >
       <!-- ajout identifiant après "crnl003.(n° identifiant) -->  
-        <ti:label xml:lang="mul">La Veuve ou le traître trahi</ti:label>
+        <ti:label xml:lang="fr">La Veuve ou le traître trahi</ti:label>
 
         <ti:description xml:lang="fr">
             Comédie
@@ -30,7 +30,7 @@
       urn="urn:cts:latinLit:freLit:crnl026799472.crnl003.obvilchartes3-2"
       >
       <!-- ajout identifiant après "crnl003.(n° identifiant) -->  
-        <ti:label xml:lang="mul">La Veuve ou le traître trahi</ti:label>
+        <ti:label xml:lang="fr">La Veuve ou le traître trahi</ti:label>
 
         <ti:description xml:lang="fr">
             Comédie
@@ -58,6 +58,6 @@ ajout urn avec @xml:base dans xml
 
 Dans refDecl => matchPattern => 1 seule expression régulière vu qu'on ne cherche à récupérer que les vers
 
-Changer "epidoc" dans .travis.yml
+Changer "tei" dans .travis.yml
 -->
 
