@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://oeuvres.github.io/Teinte/teinte.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://oeuvres.github.io/Teinte/teinte.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="fr">
+<?xml-model href="http://oeuvres.github.io/Teinte/teinte.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://oeuvres.github.io/Teinte/teinte.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
         <title>Rodogune</title>
         <title type="sub">, tragédie</title>
-        <author academie="1647" born="1606" born_location="Rouen" death="1684" death_location="Paris" key="Corneille, Pierre (1606-1684)">
+        <author academie="1647" born="1606" born_location="Rouen" death="1684"
+          death_location="Paris" key="Corneille, Pierre (1606-1684)">
           <surname>Corneille, Pierre</surname>
           <forename> Pierre</forename>
         </author>
@@ -32,8 +34,8 @@
     </fileDesc>
     <profileDesc>
       <creation>
-        <date type="created" when="1644"/>
-        <date type="issued" when="1647"/>
+        <date type="created" when="1650-01-13"/>
+        <date type="issued" when="1651"/>
       </creation>
       <langUsage>
         <language ident="fr"/>
@@ -47,16 +49,14 @@
     <encodingDesc>
       <refsDecl n="CTS">
         <!-- Nos textes ne se composent que d'un seul niveau, c'est pourquoi nous avons créé deux <cRefPattern> qui récupèrent les vers et les didascalies-->
-        <cRefPattern 
-          n="level1"
-          matchPattern="(\w+)"
+        <cRefPattern n="level1" matchPattern="(\w+)"
           replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div//tei:l[@n='$1'])">
           <p>level1 récupère les vers</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="crnl026799472.crnl015.obvilchartes1-1">
+  <text xml:base="urn:cts:freLit:crnl026799472.crnl015.obvilchartes15-1">
     <front>
       <titlePage>
         <docTitle>
@@ -66,19 +66,84 @@
         <docDate value="1647">M. DC. XLVII. AVEC PRIVILÈGE DU ROI.</docDate>
         <docAuthor bio="corneillep" id="CORNEILLE, Pierre"/>
         <docImprint>
-          <privilege id="1646-04-17"> <head>Extrait du privilège du Roi</head> <p>Par grâce et privilège du Roi, donné à Paris le 17ème jour d’avril 1646 signé par le Roi en son conseil, DENIS : Il est permis à Toussaint Quinet, Marchand libraire à Paris, d’imprimer ou faire imprimer, vendre et distribuer une pièce de théâtre intitulée Rodogune, Tragédie, de Monsieur Corneille, et ce durant la temps et l’espace de cinq ans, à compter du jour qu’elle sera achevée d’imprimer : et défenses sont faites à tous imprimeurs, et autres, de contrefaire la dite pièce, ni même en vendre ou exposer en vente, sas le consentement du dit Quinet, ou de ceux qui auront droit de lui, à peine de trois mille livres d’amende, et de tous dépens, dommages et intérêts, ainsi qu’il est plus amplement porté par lesdites lettres, qui sont en vertu du présent extrait tenues pour bien et dûment signifiées, à ce qu’aucun ne peut n’en prétende cause d’ignorance. </p> <p>Et le dit Quinet a associé avec lui Antoine de Sommaville et Augustin Courbé aussi marchands libraires à Paris, pour jouir avec eux du dit privilège, suivant l’accord fait entre-eux.</p> <p>Les exemplaires ont été fournis.</p> </privilege>
-          <acheveImprime id="1647-01-31">Achevé d’imprimer pour la première fois, le dernier jour de janvier 1647.</acheveImprime>
-          <printer id="COURBE">Imprimé à Rouen, et se vend à Paris, Chez AUGUSTIN COURBÉ, au Palais, en la Galerie des Merciers, à la Palme.</printer>
+          <privilege id="1646-04-17">
+            <head>Extrait du privilège du Roi</head>
+            <p>Par grâce et privilège du Roi, donné à Paris le 17ème jour d’avril 1646 signé par le
+              Roi en son conseil, DENIS : Il est permis à Toussaint Quinet, Marchand libraire à
+              Paris, d’imprimer ou faire imprimer, vendre et distribuer une pièce de théâtre
+              intitulée Rodogune, Tragédie, de Monsieur Corneille, et ce durant la temps et l’espace
+              de cinq ans, à compter du jour qu’elle sera achevée d’imprimer : et défenses sont
+              faites à tous imprimeurs, et autres, de contrefaire la dite pièce, ni même en vendre
+              ou exposer en vente, sas le consentement du dit Quinet, ou de ceux qui auront droit de
+              lui, à peine de trois mille livres d’amende, et de tous dépens, dommages et intérêts,
+              ainsi qu’il est plus amplement porté par lesdites lettres, qui sont en vertu du
+              présent extrait tenues pour bien et dûment signifiées, à ce qu’aucun ne peut n’en
+              prétende cause d’ignorance. </p>
+            <p>Et le dit Quinet a associé avec lui Antoine de Sommaville et Augustin Courbé aussi
+              marchands libraires à Paris, pour jouir avec eux du dit privilège, suivant l’accord
+              fait entre-eux.</p>
+            <p>Les exemplaires ont été fournis.</p>
+          </privilege>
+          <acheveImprime id="1647-01-31">Achevé d’imprimer pour la première fois, le dernier jour de
+            janvier 1647.</acheveImprime>
+          <printer id="COURBE">Imprimé à Rouen, et se vend à Paris, Chez AUGUSTIN COURBÉ, au Palais,
+            en la Galerie des Merciers, à la Palme.</printer>
         </docImprint>
         <performance>
-        <premiere date="1644" location="Théâtre du Marais">Représenté pour la première fois en 1644 au Théâtre du Marais.</premiere>
-      </performance>
+          <premiere date="1644" location="Théâtre du Marais">Représenté pour la première fois en
+            1644 au Théâtre du Marais.</premiere>
+        </performance>
       </titlePage>
       <div type="dedication">
         <salute>À MONSIEUR LE PRINCE DE CONDÉ.</salute>
         <head>Monseigneur,</head>
-        <p>Rodogune se présente à Votre Altesse avec quelque sorte de confiance, et ne peut croire qu’après avoir fait sa bonne fortune, vous dédaigniez de la prendre en votre protection. Elle a trop grande connaissance de votre bonté, pour craindre que vous veuilliez laisser votre ouvrage imparfait, et ui dénier la continuation des grâces dont vous lui avez été si prodigue. C’est à votre Illustre suffrage qu’elle est obligée de tout ce qu’elle a reçu d’applaudissements, et les favorables regards dont il vous plt fortifier le faiblesse de sa naissance, lui donnèrent tant d’éclat et de vigueur, qu’il semblait que vous eussiez pris plaisir à répandre sur elle un rayon de cette gloire qui vous environne, et à lui faire part de cette facilité de vaincre qui vous suit partout. </p>
-        <p>Après cela, MONSEIGNEUR, quels hommages peut-elle rendre à Votre Altesse qui ne soient au dessous de ce qu’il lui doit ? Si elle tâche à lui témoigner quelque reconnaissance par l’admiration de ses vertus, où trouverez-t-elle des éloges dignes de cette main qui fait trembler tous nos ennemis, et dont les coups d’essai furent signalés par la défaites des premiers capitaines de l’Europe ? Votre Altesse sut vaincre avant qu’ils se pussent imaginer qu’elle sut combattre, et ce grand courage qui n’avait encore vu la guerre que dans les livres, effaça tout ce qu’il y avait lu des Alexandres et des Césars, sitôt qu’il parut à la tête d’une armée. La générale consternation où la perte de notre grand Monarque nous avait plongés, enflait l’orgueil de nos adversaires en un tel point, qu’ils osaient se persuader que du siège de Rocroy dépendait la prise de Paris, et l’avidité de leur ambition dévorait déjà le coeur d’un Royaume, dont ils pensaient avoir surpris les frontières. Cependant les premiers miracles de votre valeur renversèrent si pleinement toutes leurs espérances, que ceux-là mêmes qui s’étaient promis tant de conquêtes sur nous, virent terminer la campagne de cette même année par celle que vous fîtes sur eux. Ce fut par là, Monseigneur, que vous commençâtes ces grandes victoires que vous avez toujours si bien choisies, qu’elle ont été honoré deux règnes tout à la fois, comme si c’eût été trop peu pour V.A. d’étendre les bornes de l’État sous celui-ci; si elle n’eût en même temps effacé quelques uns des malheurs qui s’étaient mêlés aux longues prospérités de l’autre. Thionville, Philisbourg et Norlinghen étaient des lieux funestes pour le France ; elle ’en pouvait entendre les noms sans gémir ; elle ne pouvait y porter sa pensée sans soupirer ; et ces mêmes lieux, dont le souvenir lui arrachait des soupirs et des gémissements, sont devenus les éclatantes marques de sa nouvelle félicité, les dignes occasions de ses feux de joie, et les glorieux sujets des actions de grâce qu’elle a rendues au Ciel pour les Triomphes que votre courage invincible en a obtenus. Dispensez-moi, MONSEIGNEUR, de vous parler de Dunkerque : j’épuise toutes les forces de mon imagination, et ne conçois rien qui puisse répondre à la dignité de ce grand ouvrage, qui nous vient d’assurer l’océan par la prise de cette fameuse retraite des Corsaires. Tous nos Havres en étaient comme assiégés, il n’en pouvaient échapper un vaisseau qu’à la merci de leurs brigandages, et nous en avons vu souvent de pillés à la vue des mêmes ports dont ils venaient de faire voile : et maintenant par la conquête d’une seule ville, je vois d’un côté nos mers libres, nos côtes affranchies, notre commerce rétabli, la racine de nos maux publics coupée ; d’autres côté la Flandre ouverte, l’embouchure de ses rivières captives, la porte de son secours fermée, la force de son abondance en notre pouvoir, et ce que je vois n’est rien encore au prix de ce que je prévois, sitôt que Votre Altesse y reportera la terreur se ses armes. Dispensez-moi donc, MONSEIGNEUR, de profaner des effets si merveilleux, et des attentes si hautes, par la bassesse de mes idées, et par l’impuissance de mes expressions, et trouvez bon que demeurant dans un respectueux silence, je n’ajoute rien ici qu’une protestation très inviolable d’être toute ma vie, </p>
+        <p>Rodogune se présente à Votre Altesse avec quelque sorte de confiance, et ne peut croire
+          qu’après avoir fait sa bonne fortune, vous dédaigniez de la prendre en votre protection.
+          Elle a trop grande connaissance de votre bonté, pour craindre que vous veuilliez laisser
+          votre ouvrage imparfait, et ui dénier la continuation des grâces dont vous lui avez été si
+          prodigue. C’est à votre Illustre suffrage qu’elle est obligée de tout ce qu’elle a reçu
+          d’applaudissements, et les favorables regards dont il vous plt fortifier le faiblesse de
+          sa naissance, lui donnèrent tant d’éclat et de vigueur, qu’il semblait que vous eussiez
+          pris plaisir à répandre sur elle un rayon de cette gloire qui vous environne, et à lui
+          faire part de cette facilité de vaincre qui vous suit partout. </p>
+        <p>Après cela, MONSEIGNEUR, quels hommages peut-elle rendre à Votre Altesse qui ne soient au
+          dessous de ce qu’il lui doit ? Si elle tâche à lui témoigner quelque reconnaissance par
+          l’admiration de ses vertus, où trouverez-t-elle des éloges dignes de cette main qui fait
+          trembler tous nos ennemis, et dont les coups d’essai furent signalés par la défaites des
+          premiers capitaines de l’Europe ? Votre Altesse sut vaincre avant qu’ils se pussent
+          imaginer qu’elle sut combattre, et ce grand courage qui n’avait encore vu la guerre que
+          dans les livres, effaça tout ce qu’il y avait lu des Alexandres et des Césars, sitôt qu’il
+          parut à la tête d’une armée. La générale consternation où la perte de notre grand Monarque
+          nous avait plongés, enflait l’orgueil de nos adversaires en un tel point, qu’ils osaient
+          se persuader que du siège de Rocroy dépendait la prise de Paris, et l’avidité de leur
+          ambition dévorait déjà le coeur d’un Royaume, dont ils pensaient avoir surpris les
+          frontières. Cependant les premiers miracles de votre valeur renversèrent si pleinement
+          toutes leurs espérances, que ceux-là mêmes qui s’étaient promis tant de conquêtes sur
+          nous, virent terminer la campagne de cette même année par celle que vous fîtes sur eux. Ce
+          fut par là, Monseigneur, que vous commençâtes ces grandes victoires que vous avez toujours
+          si bien choisies, qu’elle ont été honoré deux règnes tout à la fois, comme si c’eût été
+          trop peu pour V.A. d’étendre les bornes de l’État sous celui-ci; si elle n’eût en même
+          temps effacé quelques uns des malheurs qui s’étaient mêlés aux longues prospérités de
+          l’autre. Thionville, Philisbourg et Norlinghen étaient des lieux funestes pour le France ;
+          elle ’en pouvait entendre les noms sans gémir ; elle ne pouvait y porter sa pensée sans
+          soupirer ; et ces mêmes lieux, dont le souvenir lui arrachait des soupirs et des
+          gémissements, sont devenus les éclatantes marques de sa nouvelle félicité, les dignes
+          occasions de ses feux de joie, et les glorieux sujets des actions de grâce qu’elle a
+          rendues au Ciel pour les Triomphes que votre courage invincible en a obtenus.
+          Dispensez-moi, MONSEIGNEUR, de vous parler de Dunkerque : j’épuise toutes les forces de
+          mon imagination, et ne conçois rien qui puisse répondre à la dignité de ce grand ouvrage,
+          qui nous vient d’assurer l’océan par la prise de cette fameuse retraite des Corsaires.
+          Tous nos Havres en étaient comme assiégés, il n’en pouvaient échapper un vaisseau qu’à la
+          merci de leurs brigandages, et nous en avons vu souvent de pillés à la vue des mêmes ports
+          dont ils venaient de faire voile : et maintenant par la conquête d’une seule ville, je
+          vois d’un côté nos mers libres, nos côtes affranchies, notre commerce rétabli, la racine
+          de nos maux publics coupée ; d’autres côté la Flandre ouverte, l’embouchure de ses
+          rivières captives, la porte de son secours fermée, la force de son abondance en notre
+          pouvoir, et ce que je vois n’est rien encore au prix de ce que je prévois, sitôt que Votre
+          Altesse y reportera la terreur se ses armes. Dispensez-moi donc, MONSEIGNEUR, de profaner
+          des effets si merveilleux, et des attentes si hautes, par la bassesse de mes idées, et par
+          l’impuissance de mes expressions, et trouvez bon que demeurant dans un respectueux
+          silence, je n’ajoute rien ici qu’une protestation très inviolable d’être toute ma vie, </p>
         <p>MONSEIGNIEUR, </p>
         <p>DE VOTRE ALTESSE,</p>
         <p>Le très humble et très obéissant, et très passionné serviteur,</p>
@@ -87,27 +152,110 @@
       <div type="preface">
         <head>APPIAN ALEXANDRIN</head>
         <p>Au livre des guerres de Syrie, sur la fin. </p>
-        <p>Démetrius surnommé Nicanor, roi de Syrie, entreprit le guerre contre les Parthes, et étant devenu leur prisonnier vécut dans le Cour de leur Roi Phraates, dont il épousa la soeur nommé Rodogune. Cependant Diodotus, domestique des rois précédents, s’empara du trône de Syrie, et y fit asseoir un Alexandre encore enfant, fils d’Alexandre le bâtard, et d’une fille de Ptolémée. Ayant gouverné quelques temps comme sont tuteur, il se défit de ce malheureux pupille, et eut l’insolence de prendre lui-même la couronne, sous un nouveau nom de Tryphon qu’il se donna. Mais Antiochus frère du roi prisonnier, ayant apprit à Rhodes sa captivité et les troubles qui l’avaient suivi, revint dans ce pays, où ayant défait Tryphon avec beaucoup de peine, il le fit mourir : de là il porta les armes contre Phraates, lui redemandant son frère, et vaincu dans un une bataille il se tua lui-même. Demétrius retourné en son royaume fut tué par sa femme Cléopâtre, qui lui dressa des embûches en haine de cette seconde femme Rodogune qu’il avait épousée, dont elle avait conçu une telle indignation, que pour s’en venger elle avait épousé ce même Antiochus frère de son mari. Elle avait deux fils de Démétrius, l’un nommé Seleucus et l’autre Antiochus, dont elle tua le premier d’un coup de flèche sitôt qu’il eut prit le diadème après la mort de son père, soit qu’elle craignit qu’il ne la voulut venger, soit que l’impétuosité de la même fureur la portât à ce nouveau parricide. Antiochus lui succéda, qui contraignit cette mauvaise mère de boire la poisons qu’elle lui avait préparé. C’est ainsi qu’elle en fut enfin puni.</p>
-        <p>Voilà ce que m’a prêté l’Histoire, où j’ai changé les circonstances de quelques incidents, pour leur donner plus de bienséance. Je me suis servi du nom de Nicanor plutôt que celui de Demetrius, à cause que le vers souffrait plus aisément l’un que l’autre. J’ai supposé qu’il n’avait pas encore épousé Rodogune, afin que ses deux fils pussent avoir de l’amour pour elle, sans choquer le spectateurs, qui eussent trouvé étrange cette passion pour le veuve de leur père, si j’eusse suivi l’Histoire. L’ordre de leur naissance est incertain, Rodogune prisonnière quoiqu’elle ne vint jamais en Syrie, la haine de Cléopâtre pour elle, la proposition sanglante qu’elle fait à ses fils, celle que cette Princesse est obligée de leur faire pour sa garantir, l’inclinaison qu’elle a pour Antiochus, et la jalouse fureur de cette mère qui se résout plutôt à perdre ses fils qu’à se voir sujette de sa rivale , ne sont que les embellissements de l’invention, et des acheminements vraisemblables à l’effet dénaturé que me présentait l’Histoire, et que les lois du poème ne me permettaient pas de changer. Je l’ai même adouci tant que j’ai pu en Antiochus que j’avais fait trop honnête homme dans le reste de l’ouvrage, pour forcer à la fin sa mère à s’empoisonner soi-même.</p>
-        <p>On s’étonnera peut-être de ce que j’ai donné à cette tragédie le nom de Rodogune ; plutôt que celui de Cléopâtre sur qui tombe toute l’action tragique ; et même on pourra douter si la liberté de la poésie peut s’étendre jusqu’à feindre un sujet entier sous des nom véritables, comme j’ai fait ici, où depuis la narration du premier acte qui sert de fondement au reste, jusques aux effets qui paraissent dans le cinquième, il n’y a rien que l’Histoire avoue.</p>
-        <p>Pour le premier, je confesse ingénument que ce poème devait plutôt porter le nom de Cléopâtre, que de Rodogune mais ce qui m’a fait user ainsi, a été la peur que ’ai eue qu’à ce nom le peuple ne se laissât préoccuper des idées et cette fameuse et dernière reine d’Égypte, et ne confondit cette reine de Syrie avec elle, s’il l’entendait prononcer. C’est pour cette même raison que j’ai ensuite évité de le mêler dans mes vers, n’ayant jamais fit parler de cette seconde Médée que sous celui de la Reine ; et je me suis enhardi à cette licence d’autant plus librement que j’ai remarqué que nos anciens maîtres, qu’ils se sont peu mis en peine de donner leurs poèmes le nom des héros qu’ils y faisaient paraître, et leur ont souvent fait porter celui des choeurs, qui ont encore bien moins de pat dans l’action que les personnages épisodiques comme Rodogune, témoin les Trachiniennes de Sophocle, que nous n’aurions jamais voulu nommer autrement que la Mort d’Hercule.</p>
-        <p>Pour le second point je le tiens un pue plus à résoudre, et n’en voudrais pas donner mon opinion pour bonne, j’ai cru que pourvu que nous conservassions les effets de l’Histoire, toutes les circonstances, ou comme je viens de le nommer, les acheminements, étaient en notre pouvoir, au moins je ne pense pas avoir vu de règle qui restreigne cette liberté que j’ai prise. je m’en suis assez bien trouvé en cette tragédie, mais comme je l’ai poussée encore plus loin dans Héraclius qu je viens de mettre sur le théâtre, ce sera en le donnant au public que j tâcherai de la justifier si je vois que les savants s’en offensent, ou que le peuple en murmure. Cependant ceux qui en auront quelque scrupule m’obligeront de considérer les deux Electres de Sophocle et d’Euripide, qui conservant le même effet, y parviennent par des voies si différentes, qu’il faut nécessairement conclure que l’une des deux est tout à fait de l’invention de son auteur. Ils pourront encore jeter l’oeil sur l’Iphigénie in Tauris, vu qu’elle n’est fondée que sur cette feinte que Diane enleva Iphigénie du sacrifice dans une nuée, et supposa un biche en sa place. Enfin, ils pourront garde à l’Hélène d’Euripide, ou la principale action et les épisodes, le noeud et le dénouement sont entièrement inventés sous des noms véritables.</p>
-        <p>Au reste, si quelqu’un a la curiosité de voir cette Histoire plus au long, qu’il prenne la peine de lire Justin qui la commence au trente-sixième livre, et l’ayant quitté la reprend sur le fin du trente-huitième, et l’achève au trente-neuvième, il la rapporte un peu autrement, et ne dit pas que Cléopâtre tua son mari, mais qu’elle l’abandonna, et qu’il fut tué par le commandement d’un des capitaines d’un Alexandre qu’il lui oppose. Il varie aussi beaucoup sur ce qui regarde Triphon et on pupille, qu’il nomme Antiochus, et ne s’accorde avec Appian que sur ce qui se passa entre la mère et les deux fils.</p>
-        <p>Le premier livre de Machabées, au chapitres 11, 13, 14 et 15 parle de ces guerres de Tryphon et de la prison de Demetrius chez les Parthes, mais il nomme ce pupille Antiochus ainsi que Justin, et attribue la défaite de Tryphon à Antiochus fils de Demetrius, et non pas à son frère comme fait Appian que j’ai suivi, et ne dit rien du reste.</p>
-        <p>Josephe au 13ème livre des antiquités judaïques, nomme encore ce pupille de Tryphon Antiochus, fait marier Cléopâtre à Antiochus frère de Demetrius durant la captivité de ce premier mari chez les Parthes, luis attribue la défaite et la mort de Tryphon, s’accorde avec Justin touchant la mort de Demetrius abandonné et non pas tué par sa femme, et ne parle point de ce qu’Appian et lui rapporte d’elle et de ses deux fils, dont j’ai fait cette tragédie.</p>
+        <p>Démetrius surnommé Nicanor, roi de Syrie, entreprit le guerre contre les Parthes, et
+          étant devenu leur prisonnier vécut dans le Cour de leur Roi Phraates, dont il épousa la
+          soeur nommé Rodogune. Cependant Diodotus, domestique des rois précédents, s’empara du
+          trône de Syrie, et y fit asseoir un Alexandre encore enfant, fils d’Alexandre le bâtard,
+          et d’une fille de Ptolémée. Ayant gouverné quelques temps comme sont tuteur, il se défit
+          de ce malheureux pupille, et eut l’insolence de prendre lui-même la couronne, sous un
+          nouveau nom de Tryphon qu’il se donna. Mais Antiochus frère du roi prisonnier, ayant
+          apprit à Rhodes sa captivité et les troubles qui l’avaient suivi, revint dans ce pays, où
+          ayant défait Tryphon avec beaucoup de peine, il le fit mourir : de là il porta les armes
+          contre Phraates, lui redemandant son frère, et vaincu dans un une bataille il se tua
+          lui-même. Demétrius retourné en son royaume fut tué par sa femme Cléopâtre, qui lui dressa
+          des embûches en haine de cette seconde femme Rodogune qu’il avait épousée, dont elle avait
+          conçu une telle indignation, que pour s’en venger elle avait épousé ce même Antiochus
+          frère de son mari. Elle avait deux fils de Démétrius, l’un nommé Seleucus et l’autre
+          Antiochus, dont elle tua le premier d’un coup de flèche sitôt qu’il eut prit le diadème
+          après la mort de son père, soit qu’elle craignit qu’il ne la voulut venger, soit que
+          l’impétuosité de la même fureur la portât à ce nouveau parricide. Antiochus lui succéda,
+          qui contraignit cette mauvaise mère de boire la poisons qu’elle lui avait préparé. C’est
+          ainsi qu’elle en fut enfin puni.</p>
+        <p>Voilà ce que m’a prêté l’Histoire, où j’ai changé les circonstances de quelques
+          incidents, pour leur donner plus de bienséance. Je me suis servi du nom de Nicanor plutôt
+          que celui de Demetrius, à cause que le vers souffrait plus aisément l’un que l’autre. J’ai
+          supposé qu’il n’avait pas encore épousé Rodogune, afin que ses deux fils pussent avoir de
+          l’amour pour elle, sans choquer le spectateurs, qui eussent trouvé étrange cette passion
+          pour le veuve de leur père, si j’eusse suivi l’Histoire. L’ordre de leur naissance est
+          incertain, Rodogune prisonnière quoiqu’elle ne vint jamais en Syrie, la haine de Cléopâtre
+          pour elle, la proposition sanglante qu’elle fait à ses fils, celle que cette Princesse est
+          obligée de leur faire pour sa garantir, l’inclinaison qu’elle a pour Antiochus, et la
+          jalouse fureur de cette mère qui se résout plutôt à perdre ses fils qu’à se voir sujette
+          de sa rivale , ne sont que les embellissements de l’invention, et des acheminements
+          vraisemblables à l’effet dénaturé que me présentait l’Histoire, et que les lois du poème
+          ne me permettaient pas de changer. Je l’ai même adouci tant que j’ai pu en Antiochus que
+          j’avais fait trop honnête homme dans le reste de l’ouvrage, pour forcer à la fin sa mère à
+          s’empoisonner soi-même.</p>
+        <p>On s’étonnera peut-être de ce que j’ai donné à cette tragédie le nom de Rodogune ; plutôt
+          que celui de Cléopâtre sur qui tombe toute l’action tragique ; et même on pourra douter si
+          la liberté de la poésie peut s’étendre jusqu’à feindre un sujet entier sous des nom
+          véritables, comme j’ai fait ici, où depuis la narration du premier acte qui sert de
+          fondement au reste, jusques aux effets qui paraissent dans le cinquième, il n’y a rien que
+          l’Histoire avoue.</p>
+        <p>Pour le premier, je confesse ingénument que ce poème devait plutôt porter le nom de
+          Cléopâtre, que de Rodogune mais ce qui m’a fait user ainsi, a été la peur que ’ai eue qu’à
+          ce nom le peuple ne se laissât préoccuper des idées et cette fameuse et dernière reine
+          d’Égypte, et ne confondit cette reine de Syrie avec elle, s’il l’entendait prononcer.
+          C’est pour cette même raison que j’ai ensuite évité de le mêler dans mes vers, n’ayant
+          jamais fit parler de cette seconde Médée que sous celui de la Reine ; et je me suis
+          enhardi à cette licence d’autant plus librement que j’ai remarqué que nos anciens maîtres,
+          qu’ils se sont peu mis en peine de donner leurs poèmes le nom des héros qu’ils y faisaient
+          paraître, et leur ont souvent fait porter celui des choeurs, qui ont encore bien moins de
+          pat dans l’action que les personnages épisodiques comme Rodogune, témoin les Trachiniennes
+          de Sophocle, que nous n’aurions jamais voulu nommer autrement que la Mort d’Hercule.</p>
+        <p>Pour le second point je le tiens un pue plus à résoudre, et n’en voudrais pas donner mon
+          opinion pour bonne, j’ai cru que pourvu que nous conservassions les effets de l’Histoire,
+          toutes les circonstances, ou comme je viens de le nommer, les acheminements, étaient en
+          notre pouvoir, au moins je ne pense pas avoir vu de règle qui restreigne cette liberté que
+          j’ai prise. je m’en suis assez bien trouvé en cette tragédie, mais comme je l’ai poussée
+          encore plus loin dans Héraclius qu je viens de mettre sur le théâtre, ce sera en le
+          donnant au public que j tâcherai de la justifier si je vois que les savants s’en
+          offensent, ou que le peuple en murmure. Cependant ceux qui en auront quelque scrupule
+          m’obligeront de considérer les deux Electres de Sophocle et d’Euripide, qui conservant le
+          même effet, y parviennent par des voies si différentes, qu’il faut nécessairement conclure
+          que l’une des deux est tout à fait de l’invention de son auteur. Ils pourront encore jeter
+          l’oeil sur l’Iphigénie in Tauris, vu qu’elle n’est fondée que sur cette feinte que Diane
+          enleva Iphigénie du sacrifice dans une nuée, et supposa un biche en sa place. Enfin, ils
+          pourront garde à l’Hélène d’Euripide, ou la principale action et les épisodes, le noeud et
+          le dénouement sont entièrement inventés sous des noms véritables.</p>
+        <p>Au reste, si quelqu’un a la curiosité de voir cette Histoire plus au long, qu’il prenne
+          la peine de lire Justin qui la commence au trente-sixième livre, et l’ayant quitté la
+          reprend sur le fin du trente-huitième, et l’achève au trente-neuvième, il la rapporte un
+          peu autrement, et ne dit pas que Cléopâtre tua son mari, mais qu’elle l’abandonna, et
+          qu’il fut tué par le commandement d’un des capitaines d’un Alexandre qu’il lui oppose. Il
+          varie aussi beaucoup sur ce qui regarde Triphon et on pupille, qu’il nomme Antiochus, et
+          ne s’accorde avec Appian que sur ce qui se passa entre la mère et les deux fils.</p>
+        <p>Le premier livre de Machabées, au chapitres 11, 13, 14 et 15 parle de ces guerres de
+          Tryphon et de la prison de Demetrius chez les Parthes, mais il nomme ce pupille Antiochus
+          ainsi que Justin, et attribue la défaite de Tryphon à Antiochus fils de Demetrius, et non
+          pas à son frère comme fait Appian que j’ai suivi, et ne dit rien du reste.</p>
+        <p>Josephe au 13ème livre des antiquités judaïques, nomme encore ce pupille de Tryphon
+          Antiochus, fait marier Cléopâtre à Antiochus frère de Demetrius durant la captivité de ce
+          premier mari chez les Parthes, luis attribue la défaite et la mort de Tryphon, s’accorde
+          avec Justin touchant la mort de Demetrius abandonné et non pas tué par sa femme, et ne
+          parle point de ce qu’Appian et lui rapporte d’elle et de ses deux fils, dont j’ai fait
+          cette tragédie.</p>
       </div>
       <div xml:id="castList">
         <castList>
           <head>ACTEURS</head>
-          <castItem><role xml:id="CLEOPATRE" rend="female">CLÉOPÂTRE</role>, reine de Syrie, veuve de Démétrius Nicanor.</castItem>
-          <castItem><role xml:id="SELEUCUS" rend="male">SÉLEUCUS</role>, fils de Démétrius et de Cléopâtre.</castItem>
-          <castItem><role xml:id="ANTIOCHUS" rend="male">ANTIOCHUS</role>, fils de Démétrius et de Cléopâtre.</castItem>
-          <castItem><role xml:id="RODOGUNE" rend="female">RODOGUNE</role>, soeur de Phaartes, roi des Parthes.</castItem>
-          <castItem><role xml:id="TIMAGENE" rend="male">TIMAGÈNE</role>, gouverneur des deux princes.</castItem>
-          <castItem><role xml:id="ORONTE" rend="male">ORONTE</role>, ambassadeur de Phaartes.</castItem>
-          <castItem><role xml:id="LAONICE" rend="female">LAONICE</role>, soeur de Timagène, confidente de Cléopâtre.</castItem>
+          <castItem><role xml:id="CLEOPATRE" rend="female">CLÉOPÂTRE</role>, reine de Syrie, veuve
+            de Démétrius Nicanor.</castItem>
+          <castItem><role xml:id="SELEUCUS" rend="male">SÉLEUCUS</role>, fils de Démétrius et de
+            Cléopâtre.</castItem>
+          <castItem><role xml:id="ANTIOCHUS" rend="male">ANTIOCHUS</role>, fils de Démétrius et de
+            Cléopâtre.</castItem>
+          <castItem><role xml:id="RODOGUNE" rend="female">RODOGUNE</role>, soeur de Phaartes, roi
+            des Parthes.</castItem>
+          <castItem><role xml:id="TIMAGENE" rend="male">TIMAGÈNE</role>, gouverneur des deux
+            princes.</castItem>
+          <castItem><role xml:id="ORONTE" rend="male">ORONTE</role>, ambassadeur de
+            Phaartes.</castItem>
+          <castItem><role xml:id="LAONICE" rend="female">LAONICE</role>, soeur de Timagène,
+            confidente de Cléopâtre.</castItem>
         </castList>
-        <set country="Syrie" location="Séleucie de Piérie" periode="IIème avant JC">La scène est à Séleucie, dans le Palais-Royal.</set>
+        <set country="Syrie" location="Séleucie de Piérie" periode="IIème avant JC">La scène est à
+          Séleucie, dans le Palais-Royal.</set>
       </div>
     </front>
     <body>
@@ -115,8 +263,8 @@
         <head>ACTE I</head>
         <div2 n="1" type="scene" xml:id="I01">
           <head>SCÈNE PREMIÈRE. Léonice, Timagène.<listPerson type="configuration" xml:id="conf1">
-            <person corresp="#LAONICE"/>
-            <person corresp="#TIMAGENE"/>
+              <person corresp="#LAONICE"/>
+              <person corresp="#TIMAGENE"/>
             </listPerson></head>
           <sp who="LAONICE" xml:id="I01-1">
             <speaker>LAONICE.</speaker>
@@ -201,10 +349,11 @@
           </sp>
         </div2>
         <div2 n="2" type="scene" xml:id="I02">
-          <head>SCÈNE II. Antiochus, Timagène, Laonice.<listPerson type="configuration" xml:id="conf2">
-            <person corresp="#ANTIOCHUS"/>
-            <person corresp="#TIMAGENE"/>
-            <person corresp="#LAONICE"/>
+          <head>SCÈNE II. Antiochus, Timagène, Laonice.<listPerson type="configuration"
+              xml:id="conf2">
+              <person corresp="#ANTIOCHUS"/>
+              <person corresp="#TIMAGENE"/>
+              <person corresp="#LAONICE"/>
             </listPerson></head>
           <sp who="ANTIOCHUS" xml:id="I02-1">
             <speaker>ANTIOCHUS.</speaker>
@@ -254,11 +403,12 @@
           </sp>
         </div2>
         <div2 n="3" type="scene" xml:id="I03">
-          <head>SCÈNE III. Séleucus, Antiochus, Timagène, Laonice.<listPerson type="configuration" xml:id="conf3">
-            <person corresp="#SELEUCUS"/>
-            <person corresp="#ANTIOCHUS"/>
-            <person corresp="#TIMAGENE"/>
-            <person corresp="#LAONICE"/>
+          <head>SCÈNE III. Séleucus, Antiochus, Timagène, Laonice.<listPerson type="configuration"
+              xml:id="conf3">
+              <person corresp="#SELEUCUS"/>
+              <person corresp="#ANTIOCHUS"/>
+              <person corresp="#TIMAGENE"/>
+              <person corresp="#LAONICE"/>
             </listPerson></head>
           <sp who="SELEUCUS" xml:id="I03-1">
             <speaker>SÉLEUCUS.</speaker>
@@ -454,8 +604,8 @@
         </div2>
         <div2 n="4" type="scene" xml:id="I04">
           <head>SCÈNE IV. Laonice, Timagène.<listPerson type="configuration" xml:id="conf4">
-            <person corresp="#LAONICE"/>
-            <person corresp="#TIMAGENE"/>
+              <person corresp="#LAONICE"/>
+              <person corresp="#TIMAGENE"/>
             </listPerson></head>
           <sp who="LAONICE" xml:id="I04-1">
             <speaker>LAONICE.</speaker>
@@ -566,8 +716,8 @@
         </div2>
         <div2 n="5" type="scene" xml:id="I05">
           <head>SCÈNE V. Rodogune, Laonice.<listPerson type="configuration" xml:id="conf5">
-            <person corresp="#RODOGUNE"/>
-            <person corresp="#LAONICE"/>
+              <person corresp="#RODOGUNE"/>
+              <person corresp="#LAONICE"/>
             </listPerson></head>
           <sp who="RODOGUNE" xml:id="I05-1">
             <speaker>RODOGUNE.</speaker>
@@ -727,7 +877,7 @@
         <head>ACTE II</head>
         <div2 n="1" type="scene" xml:id="II01">
           <head>SCÈNE PREMIÈRE.<listPerson type="configuration" xml:id="conf7">
-            <person corresp="#CLEOPATRE"/>
+              <person corresp="#CLEOPATRE"/>
             </listPerson></head>
           <sp who="CLEOPATRE" xml:id="II01-1">
             <speaker>CLÉOPÂTRE.</speaker>
@@ -767,8 +917,8 @@
         </div2>
         <div2 n="2" type="scene" xml:id="II02">
           <head>SCÈNE II. Cléopâtre, Laonice.<listPerson type="configuration" xml:id="conf8">
-            <person corresp="#CLEOPATRE"/>
-            <person corresp="#LAONICE"/>
+              <person corresp="#CLEOPATRE"/>
+              <person corresp="#LAONICE"/>
             </listPerson></head>
           <sp who="CLEOPATRE" xml:id="II02-1">
             <speaker>CLÉOPÂTRE.</speaker>
@@ -900,11 +1050,12 @@
           </sp>
         </div2>
         <div2 n="3" type="scene" xml:id="II03">
-          <head>SCÈNE III. Cléopâtre, Antiochus, Séleucus, Laonice.<listPerson type="configuration" xml:id="conf9">
-            <person corresp="#CLEOPATRE"/>
-            <person corresp="#ANTIOCHUS"/>
-            <person corresp="#SELEUCUS"/>
-            <person corresp="#LAONICE"/>
+          <head>SCÈNE III. Cléopâtre, Antiochus, Séleucus, Laonice.<listPerson type="configuration"
+              xml:id="conf9">
+              <person corresp="#CLEOPATRE"/>
+              <person corresp="#ANTIOCHUS"/>
+              <person corresp="#SELEUCUS"/>
+              <person corresp="#LAONICE"/>
             </listPerson></head>
           <sp who="CLEOPATRE" xml:id="II03-1">
             <speaker>CLÉOPÂTRE.</speaker>
@@ -1081,8 +1232,8 @@
         </div2>
         <div2 n="4" type="scene" xml:id="II04">
           <head>SCÈNE IV. Séleucus, Antiochus.<listPerson type="configuration" xml:id="conf10">
-            <person corresp="#SELEUCUS"/>
-            <person corresp="#ANTIOCHUS"/>
+              <person corresp="#SELEUCUS"/>
+              <person corresp="#ANTIOCHUS"/>
             </listPerson></head>
           <sp who="SELEUCUS" xml:id="II04-1">
             <speaker>SÉLEUCUS.</speaker>
@@ -1197,10 +1348,11 @@
       <div1 n="3" type="act" xml:id="III">
         <head>ACTE III</head>
         <div2 n="1" type="scene" xml:id="III01">
-          <head>SCÈNE PREMIÈRE. Rodogune, Oronte, Laonice.<listPerson type="configuration" xml:id="conf12">
-            <person corresp="#RODOGUNE"/>
-            <person corresp="#LAONICE"/>
-            <person corresp="#ORONTE"/>
+          <head>SCÈNE PREMIÈRE. Rodogune, Oronte, Laonice.<listPerson type="configuration"
+              xml:id="conf12">
+              <person corresp="#RODOGUNE"/>
+              <person corresp="#LAONICE"/>
+              <person corresp="#ORONTE"/>
             </listPerson></head>
           <sp who="RODOGUNE" xml:id="III01-1">
             <speaker>RODOGUNE.</speaker>
@@ -1257,8 +1409,8 @@
         </div2>
         <div2 n="2" type="scene" xml:id="III02">
           <head>SCÈNE II. Rodogune, Oronte.<listPerson type="configuration" xml:id="conf13">
-            <person corresp="#RODOGUNE"/>
-            <person corresp="#ORONTE"/>
+              <person corresp="#RODOGUNE"/>
+              <person corresp="#ORONTE"/>
             </listPerson></head>
           <sp who="RODOGUNE" xml:id="III02-1">
             <speaker>RODOGUNE.</speaker>
@@ -1323,8 +1475,8 @@
         </div2>
         <div2 n="3" type="scene" xml:id="III03">
           <head>SCÈNE III. blabla<listPerson type="configuration" xml:id="conf14">
-            <person corresp="#RODOGUNE"/>
-          </listPerson></head>
+              <person corresp="#RODOGUNE"/>
+            </listPerson></head>
           <sp who="RODOGUNE" xml:id="III03-1">
             <speaker>RODOGUNE.</speaker>
             <l n="843" xml:id="l843">Quoi ? Je pourrais descendre à ce lâche artifice</l>
@@ -1384,10 +1536,11 @@
           </sp>
         </div2>
         <div2 n="4" type="scene" xml:id="III04">
-          <head>SCÈNE IV. Antiochus, Séleucus, Rodogune.<listPerson type="configuration" xml:id="conf15">
-            <person corresp="#ANTIOCHUS"/>
-            <person corresp="#RODOGUNE"/>
-            <person corresp="#SELEUCUS"/>
+          <head>SCÈNE IV. Antiochus, Séleucus, Rodogune.<listPerson type="configuration"
+              xml:id="conf15">
+              <person corresp="#ANTIOCHUS"/>
+              <person corresp="#RODOGUNE"/>
+              <person corresp="#SELEUCUS"/>
             </listPerson></head>
           <sp who="ANTIOCHUS" xml:id="III04-1">
             <speaker>ANTIOCHUS.</speaker>
@@ -1591,8 +1744,8 @@
         </div2>
         <div2 n="5" type="scene" xml:id="III05">
           <head>SCÈNE V. Antiochus, Séleucus.<listPerson type="configuration" xml:id="conf16">
-            <person corresp="#ANTIOCHUS"/>
-            <person corresp="#SELEUCUS"/>
+              <person corresp="#ANTIOCHUS"/>
+              <person corresp="#SELEUCUS"/>
             </listPerson></head>
           <sp who="ANTIOCHUS" xml:id="III05-1">
             <speaker>ANTIOCHUS.</speaker>
@@ -1708,7 +1861,7 @@
         </div2>
         <div2 n="6" type="scene" xml:id="III06">
           <head>SCÈNE VI.<listPerson type="configuration" xml:id="conf17">
-            <person corresp="#ANTIOCHUS"/>
+              <person corresp="#ANTIOCHUS"/>
             </listPerson></head>
           <sp who="ANTIOCHUS" xml:id="III06-1">
             <speaker>ANTIOCHUS.</speaker>
@@ -1735,8 +1888,8 @@
         <head>ACTE IV</head>
         <div2 n="1" type="scene" xml:id="IV01">
           <head>SCÈNE PREMIÈRE. Antiochus, Rodogune.<listPerson type="configuration" xml:id="conf19">
-            <person corresp="#RODOGUNE"/>
-            <person corresp="#ANTIOCHUS"/>
+              <person corresp="#RODOGUNE"/>
+              <person corresp="#ANTIOCHUS"/>
             </listPerson></head>
           <sp who="RODOGUNE" xml:id="IV01-1">
             <speaker>RODOGUNE.</speaker>
@@ -1767,7 +1920,8 @@
             <l n="1148" xml:id="l1148">Un mot ne fait pas voir jusques au fond d’une âme ;</l>
             <l n="1149" xml:id="l1149">Et votre espoir trop prompt prend trop de vanité</l>
             <l n="1150" xml:id="l1150">Des termes obligeants de ma civilité.</l>
-            <l n="1151" xml:id="l1151">Je l’ai dit, il est vrai ; mais quoi qu’il en puisse être,</l>
+            <l n="1151" xml:id="l1151">Je l’ai dit, il est vrai ; mais quoi qu’il en puisse
+              être,</l>
             <l n="1152" xml:id="l1152">Méritez cet amour que vous voulez connaître.</l>
             <l n="1153" xml:id="l1153">Lorsque j’ai soupiré, ce n’était pas pour vous ;</l>
             <l n="1154" xml:id="l1154">J’ai donné ces soupirs aux mânes d’un époux ;</l>
@@ -1909,7 +2063,7 @@
         </div2>
         <div2 n="2" type="scene" xml:id="IV02">
           <head>SCÈNE II.<listPerson type="configuration" xml:id="conf20">
-            <person corresp="#ANTIOCHUS"/>
+              <person corresp="#ANTIOCHUS"/>
             </listPerson></head>
           <sp who="ANTIOCHUS" xml:id="IV02-1">
             <speaker>ANTIOCHUS.</speaker>
@@ -1926,10 +2080,11 @@
           </sp>
         </div2>
         <div2 n="3" type="scene" xml:id="IV03">
-          <head>SCÈNE III. Cléopâtre, Antiochus, Laonice.<listPerson type="configuration" xml:id="conf21">
-            <person corresp="#CLEOPATRE"/>
-            <person corresp="#ANTIOCHUS"/>
-            <person corresp="#LAONICE"/>
+          <head>SCÈNE III. Cléopâtre, Antiochus, Laonice.<listPerson type="configuration"
+              xml:id="conf21">
+              <person corresp="#CLEOPATRE"/>
+              <person corresp="#ANTIOCHUS"/>
+              <person corresp="#LAONICE"/>
             </listPerson></head>
           <sp who="CLEOPATRE" xml:id="IV03-1">
             <speaker>CLÉOPÂTRE.</speaker>
@@ -2135,8 +2290,8 @@
         </div2>
         <div2 n="4" type="scene" xml:id="IV04">
           <head>SCÈNE IV. Cléopâtre, Laonice.<listPerson type="configuration" xml:id="conf22">
-            <person corresp="#LAONICE"/>
-            <person corresp="#CLEOPATRE"/>
+              <person corresp="#LAONICE"/>
+              <person corresp="#CLEOPATRE"/>
             </listPerson></head>
           <sp who="LAONICE" xml:id="IV04-1">
             <speaker>LAONICE.</speaker>
@@ -2161,7 +2316,7 @@
         </div2>
         <div2 n="5" type="scene" xml:id="IV05">
           <head>SCÈNE V.<listPerson type="configuration" xml:id="conf23">
-            <person corresp="#CLEOPATRE"/>
+              <person corresp="#CLEOPATRE"/>
             </listPerson></head>
           <sp who="CLEOPATRE" xml:id="IV05-1">
             <speaker>CLÉOPÂTRE.</speaker>
@@ -2186,8 +2341,8 @@
         </div2>
         <div2 n="6" type="scene" xml:id="IV06">
           <head>SCÈNE VI. Cléopâtre, Séleucus.<listPerson type="configuration" xml:id="conf24">
-            <person corresp="#CLEOPATRE"/>
-            <person corresp="#SELEUCUS"/>
+              <person corresp="#CLEOPATRE"/>
+              <person corresp="#SELEUCUS"/>
             </listPerson></head>
           <sp who="CLEOPATRE" xml:id="IV06-1">
             <speaker>CLÉOPÂTRE.</speaker>
@@ -2335,7 +2490,7 @@
         </div2>
         <div2 n="7" type="scene" xml:id="IV07">
           <head>SCÈNE VII.<listPerson type="configuration" xml:id="conf25">
-            <person corresp="#CLEOPATRE"/>
+              <person corresp="#CLEOPATRE"/>
             </listPerson></head>
           <sp who="CLEOPATRE" xml:id="IV07-1">
             <speaker>CLÉOPÂTRE.</speaker>
@@ -2368,7 +2523,7 @@
         <head>ACTE V</head>
         <div2 n="1" type="scene" xml:id="V01">
           <head>SCÈNE PREMIÈRE.<listPerson type="configuration" xml:id="conf27">
-            <person corresp="#CLEOPATRE"/>
+              <person corresp="#CLEOPATRE"/>
             </listPerson></head>
           <sp who="CLEOPATRE" xml:id="V01-1">
             <speaker>CLÉOPÂTRE.</speaker>
@@ -2418,8 +2573,8 @@
         </div2>
         <div2 n="2" type="scene" xml:id="V02">
           <head>SCÈNE II. Cléopâtre, Laonice.<listPerson type="configuration" xml:id="conf28">
-            <person corresp="#CLEOPATRE"/>
-            <person corresp="#LAONICE"/>
+              <person corresp="#CLEOPATRE"/>
+              <person corresp="#LAONICE"/>
             </listPerson></head>
           <sp who="CLEOPATRE" xml:id="V02-1">
             <speaker>CLÉOPÂTRE.</speaker>
@@ -2450,12 +2605,13 @@
           </sp>
         </div2>
         <div2 n="3" type="scene" xml:id="V03">
-          <head>SCÈNE III. Cléopâtre, Antiochus, Rodogune, Oronte, Laonice, troupe de Parthes et de Syriens.<listPerson type="configuration" xml:id="conf29">
-            <person corresp="#CLEOPATRE"/>
-            <person corresp="#RODOGUNE"/>
-            <person corresp="#ANTIOCHUS"/>
-            <person corresp="#ORONTE"/>
-            <person corresp="#LAONICE"/>
+          <head>SCÈNE III. Cléopâtre, Antiochus, Rodogune, Oronte, Laonice, troupe de Parthes et de
+              Syriens.<listPerson type="configuration" xml:id="conf29">
+              <person corresp="#CLEOPATRE"/>
+              <person corresp="#RODOGUNE"/>
+              <person corresp="#ANTIOCHUS"/>
+              <person corresp="#ORONTE"/>
+              <person corresp="#LAONICE"/>
             </listPerson></head>
           <sp who="CLEOPATRE" xml:id="V03-1">
             <speaker>CLÉOPÂTRE.</speaker>
@@ -2485,7 +2641,12 @@
             <speaker>CLÉOPÂTRE.</speaker>
             <l n="1571" xml:id="l1571">J’ose le croire ainsi ; mais prenez votre place :</l>
             <l n="1572" xml:id="l1572">Il est temps d’avancer ce qu’il faut que je fasse.</l>
-            <stage>ici Antiochus s’assied dans un fauteuil, Rodogune à sa gauche, en même rang, et Cléopâtre à sa droite, mais en rang inférieur, et qui marque quelque inégalité. Oronte s’assied aussi à la gauche de Rodogune, avec la même différence ; et Cléopâtre, cependant qu’ils prennent leurs prennent, parle à l’oreille de Léonice, qui s’en va quérir une coupe pleine de vin empoisonné. Après qu’elle est partie, Cléopâtre continue.</stage>
+            <stage>ici Antiochus s’assied dans un fauteuil, Rodogune à sa gauche, en même rang, et
+              Cléopâtre à sa droite, mais en rang inférieur, et qui marque quelque inégalité. Oronte
+              s’assied aussi à la gauche de Rodogune, avec la même différence ; et Cléopâtre,
+              cependant qu’ils prennent leurs prennent, parle à l’oreille de Léonice, qui s’en va
+              quérir une coupe pleine de vin empoisonné. Après qu’elle est partie, Cléopâtre
+              continue.</stage>
             <l n="1573" xml:id="l1573">Peuple qui m’écoutez, Parthes et Syriens,</l>
             <l n="1574" xml:id="l1574">Sujets du roi son frère, ou qui fûtes les miens,</l>
             <l n="1575" xml:id="l1575">Voici de mes deux fils celui qu’un droit d’aînesse</l>
@@ -2543,12 +2704,13 @@
           </sp>
         </div2>
         <div2 n="4" type="scene" xml:id="V04">
-          <head>SCÈNE IV. Cléopâtre, Antiochus, Rodogune, Oronte, Timagène, Léonice, troupe.<listPerson type="configuration" xml:id="conf30">
-            <person corresp="#TIMAGENE"/>
-            <person corresp="#CLEOPATRE"/>
-            <person corresp="#ANTIOCHUS"/>
-            <person corresp="#RODOGUNE"/>
-            <person corresp="#ORONTE"/>
+          <head>SCÈNE IV. Cléopâtre, Antiochus, Rodogune, Oronte, Timagène, Léonice,
+              troupe.<listPerson type="configuration" xml:id="conf30">
+              <person corresp="#TIMAGENE"/>
+              <person corresp="#CLEOPATRE"/>
+              <person corresp="#ANTIOCHUS"/>
+              <person corresp="#RODOGUNE"/>
+              <person corresp="#ORONTE"/>
             </listPerson></head>
           <sp who="TIMAGENE" xml:id="V04-1">
             <speaker>TIMAGÈNE.</speaker>
@@ -2877,7 +3039,8 @@
             <l n="1795" xml:id="l1795">J’ai souffert cet outrage avecque patience.</l>
           </sp>
           <sp who="ANTIOCHUS" xml:id="V04-39">
-            <speaker>ANTIOCHUS, prenant le coupe des mains de Cléopâtre, après qu’elle a bu..</speaker>
+            <speaker>ANTIOCHUS, prenant le coupe des mains de Cléopâtre, après qu’elle a
+              bu..</speaker>
             <l n="1796" xml:id="l1796">Pardonnez-lui, madame, un peu de défiance :</l>
             <l n="1797" xml:id="l1797">Comme vous l’accusez, elle fait son effort</l>
             <l n="1798" xml:id="l1798">À rejeter sur vous l’horreur de cette mort ;</l>
