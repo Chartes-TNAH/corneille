@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://oeuvres.github.io/Teinte/teinte.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://oeuvres.github.io/Teinte/teinte.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="fr">
+<?xml-model href="http://oeuvres.github.io/Teinte/teinte.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://oeuvres.github.io/Teinte/teinte.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
         <title>Don Sanche d’Aragon</title>
         <title type="sub">, comédie héroïque</title>
-        <author academie="1647" born="1606" born_location="Rouen" death="1684" death_location="Paris" key="Corneille, Pierre (1606-1684)">
+        <author academie="1647" born="1606" born_location="Rouen" death="1684"
+          death_location="Paris" key="Corneille, Pierre (1606-1684)">
           <surname>Corneille, Pierre</surname>
           <forename> Pierre</forename>
         </author>
@@ -48,16 +50,14 @@
     <encodingDesc>
       <refsDecl n="CTS">
         <!-- Nos textes ne se composent que d'un seul niveau, c'est pourquoi nous avons créé deux <cRefPattern> qui récupèrent les vers et les didascalies-->
-        <cRefPattern 
-          n="level1"
-          matchPattern="(\w+)"
+        <cRefPattern n="level1" matchPattern="(\w+)"
           replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div//tei:l[@n='$1'])">
           <p> level1 récupère les vers</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base ="urn:cts:freLit:crnl026799472.crnl018.obvilchartes18-1">
+  <text xml:base="urn:cts:freLit:crnl026799472.crnl018.obvilchartes18-1">
     <front>
       <titlePage>
         <docTitle>
@@ -71,34 +71,46 @@
           <acheveImprime id="**/**/16**"/>
         </docImprint>
         <performance>
-        <premiere date="1649" location="Hôtel de Bourgogne">Représenté pour la première fois en 1649 au Théâtre de l’Hôtel de Bourgogne.</premiere>
-      </performance>
+          <premiere date="1649" location="Hôtel de Bourgogne">Représenté pour la première fois en
+            1649 au Théâtre de l’Hôtel de Bourgogne.</premiere>
+        </performance>
       </titlePage>
       <div xml:id="castList">
         <castList>
           <head>ACTEURS</head>
           <head>ACTEURS</head>
-          <castItem><role xml:id="ISABELLE" rend="female">DONA ISABELLE</role>, reine de Castille.</castItem>
-          <castItem><role xml:id="LEONOR" rend="female">DONA LÉONOR</role>, reine d’Aragon.</castItem>
-          <castItem><role xml:id="ELVIRE" rend="female">DONA ELVIRE</role>, princesse d’Aragon.</castItem>
-          <castItem><role xml:id="BLANCHE" rend="female">BLANCHE</role>, dame d’honneur de la reine de Castille.</castItem>
-          <castItem><role xml:id="CARLOS" rend="male">CARLOS</role>, cavalier inconnu qui se trouve être Don Sanche, roi d’Aragon.</castItem>
-          <castItem><role xml:id="RAYMOND" rend="male">DON RAYMOND DE MONCADE</role>, favori du défunt roi d’Aragon.</castItem>
-          <castItem><role xml:id="LOPE" rend="male">DON LOPE DE GUSMAN</role>, grand de Castille.</castItem>
-          <castItem><role xml:id="MANRIQUE" rend="male">DON MANRIQUE DE LARE</role>, grand de Castille.</castItem>
-          <castItem><role xml:id="ALVAR" rend="male">DON ALVAR DE LUNE</role>, grand de Castille.</castItem>
+          <castItem><role xml:id="ISABELLE" rend="female">DONA ISABELLE</role>, reine de
+            Castille.</castItem>
+          <castItem><role xml:id="LEONOR" rend="female">DONA LÉONOR</role>, reine
+            d’Aragon.</castItem>
+          <castItem><role xml:id="ELVIRE" rend="female">DONA ELVIRE</role>, princesse
+            d’Aragon.</castItem>
+          <castItem><role xml:id="BLANCHE" rend="female">BLANCHE</role>, dame d’honneur de la reine
+            de Castille.</castItem>
+          <castItem><role xml:id="CARLOS" rend="male">CARLOS</role>, cavalier inconnu qui se trouve
+            être Don Sanche, roi d’Aragon.</castItem>
+          <castItem><role xml:id="RAYMOND" rend="male">DON RAYMOND DE MONCADE</role>, favori du
+            défunt roi d’Aragon.</castItem>
+          <castItem><role xml:id="LOPE" rend="male">DON LOPE DE GUSMAN</role>, grand de
+            Castille.</castItem>
+          <castItem><role xml:id="MANRIQUE" rend="male">DON MANRIQUE DE LARE</role>, grand de
+            Castille.</castItem>
+          <castItem><role xml:id="ALVAR" rend="male">DON ALVAR DE LUNE</role>, grand de
+            Castille.</castItem>
           <castItem><role xml:id="GARDE" rend="male">Un garde</role>.</castItem>
         </castList>
-        <set country="Espagne" link="" location="Valladolid" periode="XVème">La scène est à Valladolid.</set>
+        <set country="Espagne" link="" location="Valladolid" periode="XVème">La scène est à
+          Valladolid.</set>
       </div>
     </front>
     <body>
       <div1 n="1" type="act" xml:id="I">
         <head>ACTE I</head>
         <div2 n="1" type="scene" xml:id="I01">
-          <head>SCÈNE PREMIÈRE. Dona Léonor, Dona Elvire.<listPerson type="configuration" xml:id="conf1">
-            <person corresp="#LEONOR"/>
-            <person corresp="#ELVIRE"/>
+          <head>SCÈNE PREMIÈRE. Dona Léonor, Dona Elvire.<listPerson type="configuration"
+              xml:id="conf1">
+              <person corresp="#LEONOR"/>
+              <person corresp="#ELVIRE"/>
             </listPerson></head>
           <sp who="LEONOR" xml:id="I01-1">
             <speaker>DONA LÉONOR.</speaker>
@@ -227,11 +239,12 @@
           </sp>
         </div2>
         <div2 n="2" type="scene" xml:id="I02">
-          <head>SCÈNE II. Dona Isabelle, Dona Léonor, Dona Elvire, Blanche.<listPerson type="configuration" xml:id="conf2">
-            <person corresp="#LEONOR"/>
-            <person corresp="#ISABELLE"/>
-            <person corresp="#ELVIRE"/>
-            <person corresp="#BLANCHE"/>
+          <head>SCÈNE II. Dona Isabelle, Dona Léonor, Dona Elvire, Blanche.<listPerson
+              type="configuration" xml:id="conf2">
+              <person corresp="#LEONOR"/>
+              <person corresp="#ISABELLE"/>
+              <person corresp="#ELVIRE"/>
+              <person corresp="#BLANCHE"/>
             </listPerson></head>
           <sp who="LEONOR" xml:id="I02-1">
             <speaker>DONA LÉONOR.</speaker>
@@ -285,15 +298,16 @@
           </sp>
         </div2>
         <div2 n="3" type="scene" xml:id="I03">
-          <head>SCÈNE III. Dona Isabelle, Dona Léonor, Dona Elvire, Blanche, Don Lope, Don Manrique, Don Alvar, Carlos.<listPerson type="configuration" xml:id="conf3">
-            <person corresp="#ISABELLE"/>
-            <person corresp="#LOPE"/>
-            <person corresp="#MANRIQUE"/>
-            <person corresp="#ALVAR"/>
-            <person corresp="#CARLOS"/>
-            <person corresp="#LEONOR"/>
-            <person corresp="#ELVIRE"/>
-            <person corresp="#BLANCHE"/>
+          <head>SCÈNE III. Dona Isabelle, Dona Léonor, Dona Elvire, Blanche, Don Lope, Don Manrique,
+            Don Alvar, Carlos.<listPerson type="configuration" xml:id="conf3">
+              <person corresp="#ISABELLE"/>
+              <person corresp="#LOPE"/>
+              <person corresp="#MANRIQUE"/>
+              <person corresp="#ALVAR"/>
+              <person corresp="#CARLOS"/>
+              <person corresp="#LEONOR"/>
+              <person corresp="#ELVIRE"/>
+              <person corresp="#BLANCHE"/>
             </listPerson></head>
           <sp who="ISABELLE" xml:id="I03-1">
             <speaker>DONA ISABELLE.</speaker>
@@ -386,11 +400,14 @@
           <sp who="ISABELLE" xml:id="I03-9">
             <speaker>DONA ISABELLE.</speaker>
             <l part="F">C’est assez ; que chacun prenne place.</l>
-            <stage>Ici les trois reines prennent chacune un fauteuil, et après que les trois comtes et le reste des grands qui sont présents se sont assis sur des bancs préparés exprès, Carlos, y voyant une place vide, s’y veut seoir, et Don Manrique l’en empêche.</stage>
+            <stage>Ici les trois reines prennent chacune un fauteuil, et après que les trois comtes
+              et le reste des grands qui sont présents se sont assis sur des bancs préparés exprès,
+              Carlos, y voyant une place vide, s’y veut seoir, et Don Manrique l’en empêche.</stage>
           </sp>
           <sp who="MANRIQUE" xml:id="I03-10">
             <speaker>DON MANRIQUE.</speaker>
-            <l n="190" xml:id="l190">Tout beau, tout beau, Carlos ! D’où vous vient cette audace ?</l>
+            <l n="190" xml:id="l190">Tout beau, tout beau, Carlos ! D’où vous vient cette audace
+              ?</l>
             <l n="191" xml:id="l191">Et quel titre en ce rang a pu vous établir ?</l>
           </sp>
           <sp who="CARLOS" xml:id="I03-11">
@@ -585,10 +602,11 @@
           </sp>
         </div2>
         <div2 n="4" type="scene" xml:id="I04">
-          <head>SCÈNE IV. Manrique, Don Lope, Don Alvar, Carlos.<listPerson type="configuration" xml:id="conf4">
-            <person corresp="#LOPE"/>
-            <person corresp="#CARLOS"/>
-            <person corresp="#MANRIQUE"/>
+          <head>SCÈNE IV. Manrique, Don Lope, Don Alvar, Carlos.<listPerson type="configuration"
+              xml:id="conf4">
+              <person corresp="#LOPE"/>
+              <person corresp="#CARLOS"/>
+              <person corresp="#MANRIQUE"/>
             </listPerson></head>
           <sp who="LOPE" xml:id="I04-1">
             <speaker>DON LOPE.</speaker>
@@ -636,10 +654,11 @@
           </sp>
         </div2>
         <div2 n="5" type="scene" xml:id="I05">
-          <head>SCÈNE V. Don Manrique, Don Lope, Alvar.<listPerson type="configuration" xml:id="conf5">
-            <person corresp="#LOPE"/>
-            <person corresp="#ALVAR"/>
-            <person corresp="#MANRIQUE"/>
+          <head>SCÈNE V. Don Manrique, Don Lope, Alvar.<listPerson type="configuration"
+              xml:id="conf5">
+              <person corresp="#LOPE"/>
+              <person corresp="#ALVAR"/>
+              <person corresp="#MANRIQUE"/>
             </listPerson></head>
           <sp who="LOPE" xml:id="I05-1">
             <speaker>DON LOPE.</speaker>
@@ -724,9 +743,10 @@
       <div1 n="2" type="act" xml:id="II">
         <head>ACTE II</head>
         <div2 n="1" type="scene" xml:id="II01">
-          <head>SCÈNE PREMIÈRE. Dona Isabelle, Blanche.<listPerson type="configuration" xml:id="conf7">
-            <person corresp="#ISABELLE"/>
-            <person corresp="#BLANCHE"/>
+          <head>SCÈNE PREMIÈRE. Dona Isabelle, Blanche.<listPerson type="configuration"
+              xml:id="conf7">
+              <person corresp="#ISABELLE"/>
+              <person corresp="#BLANCHE"/>
             </listPerson></head>
           <sp who="ISABELLE" xml:id="II01-1">
             <speaker>DONA ISABELLE.</speaker>
@@ -840,10 +860,11 @@
           </sp>
         </div2>
         <div2 n="2" type="scene" xml:id="II02">
-          <head>SCÈNE II. Dona Isabelle, Carlos, Blanche.<listPerson type="configuration" xml:id="conf8">
-            <person corresp="#ISABELLE"/>
-            <person corresp="#CARLOS"/>
-            <person corresp="#BLANCHE"/>
+          <head>SCÈNE II. Dona Isabelle, Carlos, Blanche.<listPerson type="configuration"
+              xml:id="conf8">
+              <person corresp="#ISABELLE"/>
+              <person corresp="#CARLOS"/>
+              <person corresp="#BLANCHE"/>
             </listPerson></head>
           <sp who="ISABELLE" xml:id="II02-1">
             <speaker>DONA ISABELLE.</speaker>
@@ -1049,7 +1070,7 @@
         </div2>
         <div2 n="3" type="scene" xml:id="II03">
           <head>SCÈNE III.<listPerson type="configuration" xml:id="conf9">
-            <person corresp="#CARLOS"/>
+              <person corresp="#CARLOS"/>
             </listPerson></head>
           <sp who="CARLOS" xml:id="II03-1">
             <speaker>CARLOS.</speaker>
@@ -1081,8 +1102,8 @@
         </div2>
         <div2 n="4" type="scene" xml:id="II04">
           <head>SCÈNE IV. Dona Elvire, Carlos.<listPerson type="configuration" xml:id="conf10">
-            <person corresp="#ELVIRE"/>
-            <person corresp="#CARLOS"/>
+              <person corresp="#ELVIRE"/>
+              <person corresp="#CARLOS"/>
             </listPerson></head>
           <sp who="ELVIRE" xml:id="II04-1">
             <speaker>DONA ELVIRE.</speaker>
@@ -1235,9 +1256,10 @@
       <div1 n="3" type="act" xml:id="III">
         <head>ACTE III</head>
         <div2 n="1" type="scene" xml:id="III01">
-          <head>SCÈNE PREMIÈRE. Dona Elvire, Don Alvar.<listPerson type="configuration" xml:id="conf12">
-            <person corresp="#ELVIRE"/>
-            <person corresp="#ALVAR"/>
+          <head>SCÈNE PREMIÈRE. Dona Elvire, Don Alvar.<listPerson type="configuration"
+              xml:id="conf12">
+              <person corresp="#ELVIRE"/>
+              <person corresp="#ALVAR"/>
             </listPerson></head>
           <sp who="ELVIRE" xml:id="III01-1">
             <speaker>DONA ELVIRE.</speaker>
@@ -1381,10 +1403,11 @@
           </sp>
         </div2>
         <div2 n="2" type="scene" xml:id="III02">
-          <head>SCÈNE II. Don Manrique, Don Lope, Don Alvar.<listPerson type="configuration" xml:id="conf13">
-            <person corresp="#MANRIQUE"/>
-            <person corresp="#ALVAR"/>
-            <person corresp="#LOPE"/>
+          <head>SCÈNE II. Don Manrique, Don Lope, Don Alvar.<listPerson type="configuration"
+              xml:id="conf13">
+              <person corresp="#MANRIQUE"/>
+              <person corresp="#ALVAR"/>
+              <person corresp="#LOPE"/>
             </listPerson></head>
           <sp who="MANRIQUE" xml:id="III02-1">
             <speaker>DON MANRIQUE.</speaker>
@@ -1449,9 +1472,10 @@
           </sp>
         </div2>
         <div2 n="3" type="scene" xml:id="III03">
-          <head>SCÈNE III. Dona Isabelle, Don Manrique, Don Lope, Don Alvar.<listPerson type="configuration" xml:id="conf14">
-            <person corresp="#ISABELLE"/>
-            <person corresp="#ALVAR"/>
+          <head>SCÈNE III. Dona Isabelle, Don Manrique, Don Lope, Don Alvar.<listPerson
+              type="configuration" xml:id="conf14">
+              <person corresp="#ISABELLE"/>
+              <person corresp="#ALVAR"/>
             </listPerson></head>
           <sp who="ISABELLE" xml:id="III03-1">
             <speaker>DONA ISABELLE.</speaker>
@@ -1466,10 +1490,11 @@
           </sp>
         </div2>
         <div2 n="4" type="scene" xml:id="III04">
-          <head>SCÈNE IV. Dona Isabelle, Don Manrique, Don Lope.<listPerson type="configuration" xml:id="conf15">
-            <person corresp="#ISABELLE"/>
-            <person corresp="#MANRIQUE"/>
-            <person corresp="#LOPE"/>
+          <head>SCÈNE IV. Dona Isabelle, Don Manrique, Don Lope.<listPerson type="configuration"
+              xml:id="conf15">
+              <person corresp="#ISABELLE"/>
+              <person corresp="#MANRIQUE"/>
+              <person corresp="#LOPE"/>
             </listPerson></head>
           <sp who="ISABELLE" xml:id="III04-1">
             <speaker>DONA ISABELLE.</speaker>
@@ -1684,7 +1709,7 @@
         </div2>
         <div2 n="5" type="scene" xml:id="III05">
           <head>SCÈNE V.<listPerson type="configuration" xml:id="conf16">
-            <person corresp="#ISABELLE"/>
+              <person corresp="#ISABELLE"/>
             </listPerson></head>
           <sp who="ISABELLE" xml:id="III05-1">
             <speaker>DONA ISABELLE.</speaker>
@@ -1708,8 +1733,8 @@
         </div2>
         <div2 n="6" type="scene" xml:id="III06">
           <head>SCÈNE VI. Dona Isabelle, Blanche.<listPerson type="configuration" xml:id="conf17">
-            <person corresp="#ISABELLE"/>
-            <person corresp="#BLANCHE"/>
+              <person corresp="#ISABELLE"/>
+              <person corresp="#BLANCHE"/>
             </listPerson></head>
           <sp who="ISABELLE" xml:id="III06-1">
             <speaker>DONA ISABELLE.</speaker>
@@ -1855,10 +1880,11 @@
       <div1 n="4" type="act" xml:id="IV">
         <head>ACTE IV</head>
         <div2 n="1" type="scene" xml:id="IV01">
-          <head>SCÈNE PREMIÈRE. Dona Léonor, Don Manrique, Don Lope.<listPerson type="configuration" xml:id="conf19">
-            <person corresp="#MANRIQUE"/>
-            <person corresp="#LEONOR"/>
-            <person corresp="#LOPE"/>
+          <head>SCÈNE PREMIÈRE. Dona Léonor, Don Manrique, Don Lope.<listPerson type="configuration"
+              xml:id="conf19">
+              <person corresp="#MANRIQUE"/>
+              <person corresp="#LEONOR"/>
+              <person corresp="#LOPE"/>
             </listPerson></head>
           <sp who="MANRIQUE" xml:id="IV01-1">
             <speaker>DON MANRIQUE.</speaker>
@@ -1973,11 +1999,12 @@
           </sp>
         </div2>
         <div2 n="2" type="scene" xml:id="IV02">
-          <head>SCÈNE II. Dona Léonor, Carlos, Don Manrique, Don Lope.<listPerson type="configuration" xml:id="conf20">
-            <person corresp="#CARLOS"/>
-            <person corresp="#LEONOR"/>
-            <person corresp="#LOPE"/>
-            <person corresp="#MANRIQUE"/>
+          <head>SCÈNE II. Dona Léonor, Carlos, Don Manrique, Don Lope.<listPerson
+              type="configuration" xml:id="conf20">
+              <person corresp="#CARLOS"/>
+              <person corresp="#LEONOR"/>
+              <person corresp="#LOPE"/>
+              <person corresp="#MANRIQUE"/>
             </listPerson></head>
           <sp who="CARLOS" xml:id="IV02-1">
             <speaker>CARLOS.</speaker>
@@ -2006,7 +2033,8 @@
             <l n="1210" xml:id="l1210">Pour n’être pas forcés à commettre une faute ;</l>
             <l n="1211" xml:id="l1211">Et notre honneur, au vôtre en aveugle opposé,</l>
             <l n="1212" xml:id="l1212">Méritait par pitié d’être désabusé.</l>
-            <l n="1213" xml:id="l1213">Notre orgueil n’est pas tel qu’il s’attache aux personnes,</l>
+            <l n="1213" xml:id="l1213">Notre orgueil n’est pas tel qu’il s’attache aux
+              personnes,</l>
             <l n="1214" xml:id="l1214">Ou qu’il ose oublier ce qu’il doit aux couronnes ;</l>
             <l n="1215" xml:id="l1215">Et s’il n’a pas eu d’yeux pour un roi déguisé,</l>
             <l n="1216" xml:id="l1216">Si l’inconnu Carlos s’en est vu méprisé,</l>
@@ -2072,8 +2100,8 @@
         </div2>
         <div2 n="3" type="scene" xml:id="IV03">
           <head>SCÈNE III. Dona Léonor, Carlos.<listPerson type="configuration" xml:id="conf21">
-            <person corresp="#CARLOS"/>
-            <person corresp="#LEONOR"/>
+              <person corresp="#CARLOS"/>
+              <person corresp="#LEONOR"/>
             </listPerson></head>
           <sp who="CARLOS" xml:id="IV03-1">
             <speaker>CARLOS.</speaker>
@@ -2152,7 +2180,8 @@
             <l n="1332" xml:id="l1332">Nous n’avons plus besoin de secours pour régner.</l>
             <l n="1333" xml:id="l1333">La mort de Don Garcie a puni tous ses crimes,</l>
             <l n="1334" xml:id="l1334">Et rendu l’Aragon à ses rois légitimes ;</l>
-            <l n="1335" xml:id="l1335">N’en cherchez plus la gloire, et quels que soient vos voeux,</l>
+            <l n="1335" xml:id="l1335">N’en cherchez plus la gloire, et quels que soient vos
+              voeux,</l>
             <l n="1336" xml:id="l1336">Ne me contraignez point à plus que je ne veux.</l>
             <l n="1337" xml:id="l1337">Le prix de la valeur doit avoir ses limites ;</l>
             <l n="1338" xml:id="l1338">Et je vous crains enfin avec tant de mérites.</l>
@@ -2162,12 +2191,13 @@
         </div2>
         <div2 n="4" type="scene" xml:id="IV04">
           <head>SCÈNE IV. Carlos, Blanche.<listPerson type="configuration" xml:id="conf22">
-            <person corresp="#BLANCHE"/>
-            <person corresp="#CARLOS"/>
+              <person corresp="#BLANCHE"/>
+              <person corresp="#CARLOS"/>
             </listPerson></head>
           <sp who="BLANCHE" xml:id="IV04-1">
             <speaker>BLANCHE.</speaker>
-            <l n="1341" xml:id="l1341">Qui ne vous craindra point, si les reines vous craignent ?</l>
+            <l n="1341" xml:id="l1341">Qui ne vous craindra point, si les reines vous craignent
+              ?</l>
           </sp>
           <sp who="CARLOS" xml:id="IV04-2">
             <speaker>CARLOS.</speaker>
@@ -2199,10 +2229,11 @@
           </sp>
         </div2>
         <div2 n="5" type="scene" xml:id="IV05">
-          <head>SCÈNE V. Donna Isabelle, Carlos, Blanche.<listPerson type="configuration" xml:id="conf23">
-            <person corresp="#CARLOS"/>
-            <person corresp="#ISABELLE"/>
-            <person corresp="#BLANCHE"/>
+          <head>SCÈNE V. Donna Isabelle, Carlos, Blanche.<listPerson type="configuration"
+              xml:id="conf23">
+              <person corresp="#CARLOS"/>
+              <person corresp="#ISABELLE"/>
+              <person corresp="#BLANCHE"/>
             </listPerson></head>
           <sp who="CARLOS" xml:id="IV05-1">
             <speaker>CARLOS.</speaker>
@@ -2343,9 +2374,10 @@
       <div1 n="5" type="act" xml:id="V">
         <head>ACTE V</head>
         <div2 n="1" type="scene" xml:id="V01">
-          <head>SCÈNE PREMIÈRE. Don Alvar, Dona Elvire.<listPerson type="configuration" xml:id="conf25">
-            <person corresp="#ALVAR"/>
-            <person corresp="#ELVIRE"/>
+          <head>SCÈNE PREMIÈRE. Don Alvar, Dona Elvire.<listPerson type="configuration"
+              xml:id="conf25">
+              <person corresp="#ALVAR"/>
+              <person corresp="#ELVIRE"/>
             </listPerson></head>
           <sp who="ALVAR" xml:id="V01-1">
             <speaker>DON ALVAR.</speaker>
@@ -2432,8 +2464,8 @@
         </div2>
         <div2 n="2" type="scene" xml:id="V02">
           <head>SCÈNE II. Dona Léonor, Dona Elvire.<listPerson type="configuration" xml:id="conf26">
-            <person corresp="#LEONOR"/>
-            <person corresp="#ELVIRE"/>
+              <person corresp="#LEONOR"/>
+              <person corresp="#ELVIRE"/>
             </listPerson></head>
           <sp who="LEONOR" xml:id="V02-1">
             <speaker>DONA LÉONOR.</speaker>
@@ -2481,10 +2513,11 @@
           </sp>
         </div2>
         <div2 n="3" type="scene" xml:id="V03">
-          <head>SCÈNE III. Dona Isabelle, Dona Léonor, Dona Elvire.<listPerson type="configuration" xml:id="conf27">
-            <person corresp="#ISABELLE"/>
-            <person corresp="#LEONOR"/>
-            <person corresp="#ELVIRE"/>
+          <head>SCÈNE III. Dona Isabelle, Dona Léonor, Dona Elvire.<listPerson type="configuration"
+              xml:id="conf27">
+              <person corresp="#ISABELLE"/>
+              <person corresp="#LEONOR"/>
+              <person corresp="#ELVIRE"/>
             </listPerson></head>
           <sp who="ISABELLE" xml:id="V03-1">
             <speaker>DONA ISABELLE.</speaker>
@@ -2524,11 +2557,12 @@
           </sp>
         </div2>
         <div2 n="4" type="scene" xml:id="V04">
-          <head>SCÈNE IV. Dona Isabelle, Dona Léonor, Dona Elvire, Blanche.<listPerson type="configuration" xml:id="conf28">
-            <person corresp="#BLANCHE"/>
-            <person corresp="#ISABELLE"/>
-            <person corresp="#LEONOR"/>
-            <person corresp="#ELVIRE"/>
+          <head>SCÈNE IV. Dona Isabelle, Dona Léonor, Dona Elvire, Blanche.<listPerson
+              type="configuration" xml:id="conf28">
+              <person corresp="#BLANCHE"/>
+              <person corresp="#ISABELLE"/>
+              <person corresp="#LEONOR"/>
+              <person corresp="#ELVIRE"/>
             </listPerson></head>
           <sp who="BLANCHE" xml:id="V04-1">
             <speaker>BLANCHE.</speaker>
@@ -2608,7 +2642,8 @@
             <l n="1575" xml:id="l1575">Puis laissant la nature à ses pleins mouvements,</l>
             <l n="1576" xml:id="l1576">Répond avec tendresse à ses embrassements.</l>
             <l n="1577" xml:id="l1577">Ses pleurs mêlent aux siens une fierté sincère ;</l>
-            <l n="1578" xml:id="l1578">On n’entend que soupirs : « Ah ! Mon fils ! - Ah ! Mon père !</l>
+            <l n="1578" xml:id="l1578">On n’entend que soupirs : « Ah ! Mon fils ! - Ah ! Mon père
+              !</l>
             <l n="1579" xml:id="l1579">- Oh ! Jour trois fois heureux ! Moment trop attendu !</l>
             <l n="1580" xml:id="l1580">Tu m’as rendu la vie ! » et : « Vous m’avez perdu ! »</l>
             <l n="1581" xml:id="l1581">Chose étrange ! À ces cris de douleur et de joie,</l>
@@ -2638,14 +2673,15 @@
           </sp>
         </div2>
         <div2 n="5" type="scene" xml:id="V05">
-          <head>SCÈNE V. Dona Isabelle, Dona Léonor, Dona Elvire, Blanche, Carlos, Don Manrique, Don Lope.<listPerson type="configuration" xml:id="conf29">
-            <person corresp="#CARLOS"/>
-            <person corresp="#MANRIQUE"/>
-            <person corresp="#LOPE"/>
-            <person corresp="#ISABELLE"/>
-            <person corresp="#LEONOR"/>
-            <person corresp="#ELVIRE"/>
-            <person corresp="#BLANCHE"/>
+          <head>SCÈNE V. Dona Isabelle, Dona Léonor, Dona Elvire, Blanche, Carlos, Don Manrique, Don
+              Lope.<listPerson type="configuration" xml:id="conf29">
+              <person corresp="#CARLOS"/>
+              <person corresp="#MANRIQUE"/>
+              <person corresp="#LOPE"/>
+              <person corresp="#ISABELLE"/>
+              <person corresp="#LEONOR"/>
+              <person corresp="#ELVIRE"/>
+              <person corresp="#BLANCHE"/>
             </listPerson></head>
           <sp who="CARLOS" xml:id="V05-1">
             <speaker>CARLOS.</speaker>
@@ -2754,14 +2790,15 @@
           </sp>
         </div2>
         <div2 n="6" type="scene" xml:id="V06">
-          <head>SCÈNE VI. Dona Isabelle, Dona Léonor, Dona Elvire, Carlos, Don Manrique, Don Lope, Don Alvar, Blanche.<listPerson type="configuration" xml:id="conf30">
-            <person corresp="#ALVAR"/>
-            <person corresp="#ISABELLE"/>
-            <person corresp="#LEONOR"/>
-            <person corresp="#GARDE"/>
-            <person corresp="#ELVIRE"/>
-            <person corresp="#BLANCHE"/>
-            <person corresp="#CARLOS"/>
+          <head>SCÈNE VI. Dona Isabelle, Dona Léonor, Dona Elvire, Carlos, Don Manrique, Don Lope,
+            Don Alvar, Blanche.<listPerson type="configuration" xml:id="conf30">
+              <person corresp="#ALVAR"/>
+              <person corresp="#ISABELLE"/>
+              <person corresp="#LEONOR"/>
+              <person corresp="#GARDE"/>
+              <person corresp="#ELVIRE"/>
+              <person corresp="#BLANCHE"/>
+              <person corresp="#CARLOS"/>
             </listPerson></head>
           <sp who="ALVAR" xml:id="V06-1">
             <speaker>DON ALVAR.</speaker>
@@ -2789,7 +2826,8 @@
             <l n="1715" xml:id="l1715">Vous donnerez sans doute à cet illustre fils</l>
             <l n="1716" xml:id="l1716">Un rang encor plus haut que celui de marquis.</l>
             <l n="1717" xml:id="l1717">Ce bonhomme en paraît l’âme toute comblée.</l>
-            <stage>Don Alvar présente à Dona Léonor un petit écrin qui s’ouvre sans clef, au moyen d’un ressort secret.</stage>
+            <stage>Don Alvar présente à Dona Léonor un petit écrin qui s’ouvre sans clef, au moyen
+              d’un ressort secret.</stage>
           </sp>
           <sp who="ISABELLE" xml:id="V06-2">
             <speaker>DONA ISABELLE.</speaker>
@@ -2833,14 +2871,15 @@
           </sp>
         </div2>
         <div2 n="7" type="scene" xml:id="V07">
-          <head>SCÈNE VII. Dona Isabelle, Dona Léonor, Dona Elvire, Carlos, Don Manrique, Don Lope, Don Alvar, Blanche, Don Raymond.<listPerson type="configuration" xml:id="conf31">
-            <person corresp="#LEONOR"/>
-            <person corresp="#RAYMOND"/>
-            <person corresp="#LOPE"/>
-            <person corresp="#CARLOS"/>
-            <person corresp="#ISABELLE"/>
-            <person corresp="#ELVIRE"/>
-            <person corresp="#BLANCHE"/>
+          <head>SCÈNE VII. Dona Isabelle, Dona Léonor, Dona Elvire, Carlos, Don Manrique, Don Lope,
+            Don Alvar, Blanche, Don Raymond.<listPerson type="configuration" xml:id="conf31">
+              <person corresp="#LEONOR"/>
+              <person corresp="#RAYMOND"/>
+              <person corresp="#LOPE"/>
+              <person corresp="#CARLOS"/>
+              <person corresp="#ISABELLE"/>
+              <person corresp="#ELVIRE"/>
+              <person corresp="#BLANCHE"/>
             </listPerson></head>
           <sp who="LEONOR" xml:id="V07-1">
             <speaker>DONA LÉONOR.</speaker>
