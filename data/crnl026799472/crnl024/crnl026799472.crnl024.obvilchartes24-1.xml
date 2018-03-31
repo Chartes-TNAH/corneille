@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://oeuvres.github.io/Teinte/teinte.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://oeuvres.github.io/Teinte/teinte.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="fr">
+<?xml-model href="http://oeuvres.github.io/Teinte/teinte.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://oeuvres.github.io/Teinte/teinte.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
         <title>Sertorius</title>
         <title type="sub">, tragédie</title>
-        <author academie="1647" born="1606" born_location="Rouen" death="1684" death_location="Paris" key="Corneille, Pierre (1606-1684)">
+        <author academie="1647" born="1606" born_location="Rouen" death="1684"
+          death_location="Paris" key="Corneille, Pierre (1606-1684)">
           <surname>Corneille, Pierre</surname>
           <forename> Pierre</forename>
         </author>
@@ -34,8 +36,8 @@
     </fileDesc>
     <profileDesc>
       <creation>
-        <date type="created" when="1662-02-25"/>
-        <date type="issued" when="1662"/>
+        <date type="created" when="1650-01-13"/>
+        <date type="issued" when="1651"/>
       </creation>
       <langUsage>
         <language ident="fr"/>
@@ -49,16 +51,14 @@
     <encodingDesc>
       <refsDecl n="CTS">
         <!-- Nos textes ne se composent que d'un seul niveau, c'est pourquoi nous avons créé deux <cRefPattern> qui récupèrent les vers et les didascalies-->
-        <cRefPattern 
-          n="level1"
-          matchPattern="(\w+)"
+        <cRefPattern n="level1" matchPattern="(\w+)"
           replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div//tei:l[@n='$1'])">
           <p>level1 récupère les vers</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base="crnl026799472.crnl024.obvilchartes1-1">
+  <text xml:base="urn:cts:freLit:crnl026799472.crnl024.obvilchartes24-1">
     <front>
       <titlePage>
         <docTitle>
@@ -68,36 +68,139 @@
         <docDate value="1662">M. DC LXII AVEC PRIVILÈGE DU ROI.</docDate>
         <docAuthor bio="corneillep" id="CORNEILLE, Pierre"/>
         <docImprint>
-          <privilege id="1662-05-16"> <head>Extrait du privilège du Roi.</head> <p>Par grâce et privilège du Roi, donné à Paris le seizième mai 1662, Signé par le roi en son conseil, GUITONNEAU. Il est permis à Guillaume de Luyne, Libraire juré de la Ville de Paris, de faire imprimer deux pièces de théâtre, de la composition des sieurs CORNEILLE, intitulés SERTORIUS et MAXIMIAN, pendant sept années ; et défenses faites à tous autres de les imprimer, vendre et débiter d’autres éditions que celles de l’exposant, à peine de Trois mille livre d’amende, et de tous dépens, dommages et intérêts, comme il est plus amplement porté par les dites Lettres.</p> <p>Les exmplaires ont été fournis.</p> </privilege>
-          <acheveImprime id="1662-07-08">Achevé d’imprimer le huitième juillet 1662. À Rouen par L. MAURRY.</acheveImprime>
-          <printer id="COURBE">Imprimé à Rouen et se vend à Paris, Augustin COURBE, au Palais, en la Galerie des Merciers, à la Palme, Guillaume de LUYNE, Libraire juré, au Palais, en la Galerie des Merciers, à la Justice.</printer>
+          <privilege id="1662-05-16">
+            <head>Extrait du privilège du Roi.</head>
+            <p>Par grâce et privilège du Roi, donné à Paris le seizième mai 1662, Signé par le roi
+              en son conseil, GUITONNEAU. Il est permis à Guillaume de Luyne, Libraire juré de la
+              Ville de Paris, de faire imprimer deux pièces de théâtre, de la composition des sieurs
+              CORNEILLE, intitulés SERTORIUS et MAXIMIAN, pendant sept années ; et défenses faites à
+              tous autres de les imprimer, vendre et débiter d’autres éditions que celles de
+              l’exposant, à peine de Trois mille livre d’amende, et de tous dépens, dommages et
+              intérêts, comme il est plus amplement porté par les dites Lettres.</p>
+            <p>Les exmplaires ont été fournis.</p>
+          </privilege>
+          <acheveImprime id="1662-07-08">Achevé d’imprimer le huitième juillet 1662. À Rouen par L.
+            MAURRY.</acheveImprime>
+          <printer id="COURBE">Imprimé à Rouen et se vend à Paris, Augustin COURBE, au Palais, en la
+            Galerie des Merciers, à la Palme, Guillaume de LUYNE, Libraire juré, au Palais, en la
+            Galerie des Merciers, à la Justice.</printer>
         </docImprint>
         <performance>
-        <premiere date="1662-02-25" location="Théâtre du Marais">Représenté pour la première fois le 25 février 1662 au Théâtre du Marais.</premiere>
-      </performance>
+          <premiere date="1662-02-25" location="Théâtre du Marais">Représenté pour la première fois
+            le 25 février 1662 au Théâtre du Marais.</premiere>
+        </performance>
       </titlePage>
       <div type="preface">
         <head>AU LECTEUR</head>
-        <p>Ne cherchez point dans cette tragédie les agréments qui sont en possession de faire réussir au théâtre les poèmes de cette nature ; nous n’y trouverez, ni tendresses d’amour, ni emportements de passion, ni descriptions pompeuses, ni narrations pathétiques. Je puis dire toutefois qu’elle n’a point déplu, et que la dignité des noms illustres, la grandeur de leurs intérêts et la nouveauté de quelques caractères ont supplée du manque de ces grâces. La sujet est simple, et du nombre de ces événements connus, où il ne nous est pas permis de rien changer qu’autant que la nécessité indispensable de les réduire dans la règle, nous force d’en référer les temps et les lieux. Comme il ne m’a fourni aucune femmes, j’ai été obligé de recourir à l’invention pour en introduire deux, assez compatibles l’une et l’autre avec les vérités historiques à qui je me suis attaché. L’une a vécu de ce temps là. C’est la première femme de Pompée, qu’il répudia pour entrer dans l’alliance de Sylla, par le mariage d’Amélie fille de sa femme. Ce divorce est constant par le rapport de tous ceux qui ont écrit la vie de Pompée, mais aucun d’eux ne nous apprend ce que devint cette malheureuse, qu’ils appellent tous Antistie, à la réserve d’un espagnol Évêque de Gironne, qui lui donne le nom d’Aristie, que j’ai préféré comme plus doux à l’oreille. Leur silence m’ayant laissé liberté entière de lui faire un refuge, j’ai cru ne lui ne pouvoir choisir un avec plus de vraisemblance, que chez es ennemis de ceux qui l’avaient outragée. Cette retraite en a d’autant plus, qu’elle produit un effet évitable, par les Lettres des principaux de Rome que je lui fit porter à Sertorius, et que Perpenna remit entre les mains de Pompée, qui en usa comme je le marque. L’autre femme est une pure idée de mon esprit mais qui ne laisse pas d’avoir aussi quelque fondement dans l’histoire. Elle nous apprend que les Lusitaniens appelèrent Sertorius d’Afrique, pour être leur chef contre le parti de Sylla ; mais elle ne nous dit point s’ils étaient en République, ou sous une monarchie. Il n’ y a donc rien qui répugne à leur donner une reine, et je ne la pouvais faire sortir d’un sang plus considérable, que celui de Viriatus dont je lui fait porter le nom, le plus grand homme qe l’Espagne ait opposé aux Romains, et le dernier qui leur a fait tête dans ces provinces avant Sertorius. Il n’était pas roi en effet, mais il en avait toute l’autorité, et les princes et consuls que Rome envoya pour le combattre, et qu’il défit souvent, l’estimèrent assez pour faire des traités de paix avec lui, comme avec un souverain et juste ennemi. Sa mort arriva soixante et huit ans avant celle que je traite ; de sorte qu’il aurait pu être aïeul ou bisaïeul de cette reine que je fait parler ici.</p>
-        <p>Il fut défait par le consuel Q. Servilius, et non par Brutus, comme je l’ai fait dire à cette princesse, sur la foi de cet évêque espagnol que je viens de citer et qui m’a jeté dans l’erreur après lui. Elle est aisée à corriger par le changement d’une mot dans le vers unique qui en parle, et qu’il faut rétablir ainsi.</p>
+        <p>Ne cherchez point dans cette tragédie les agréments qui sont en possession de faire
+          réussir au théâtre les poèmes de cette nature ; nous n’y trouverez, ni tendresses d’amour,
+          ni emportements de passion, ni descriptions pompeuses, ni narrations pathétiques. Je puis
+          dire toutefois qu’elle n’a point déplu, et que la dignité des noms illustres, la grandeur
+          de leurs intérêts et la nouveauté de quelques caractères ont supplée du manque de ces
+          grâces. La sujet est simple, et du nombre de ces événements connus, où il ne nous est pas
+          permis de rien changer qu’autant que la nécessité indispensable de les réduire dans la
+          règle, nous force d’en référer les temps et les lieux. Comme il ne m’a fourni aucune
+          femmes, j’ai été obligé de recourir à l’invention pour en introduire deux, assez
+          compatibles l’une et l’autre avec les vérités historiques à qui je me suis attaché. L’une
+          a vécu de ce temps là. C’est la première femme de Pompée, qu’il répudia pour entrer dans
+          l’alliance de Sylla, par le mariage d’Amélie fille de sa femme. Ce divorce est constant
+          par le rapport de tous ceux qui ont écrit la vie de Pompée, mais aucun d’eux ne nous
+          apprend ce que devint cette malheureuse, qu’ils appellent tous Antistie, à la réserve d’un
+          espagnol Évêque de Gironne, qui lui donne le nom d’Aristie, que j’ai préféré comme plus
+          doux à l’oreille. Leur silence m’ayant laissé liberté entière de lui faire un refuge, j’ai
+          cru ne lui ne pouvoir choisir un avec plus de vraisemblance, que chez es ennemis de ceux
+          qui l’avaient outragée. Cette retraite en a d’autant plus, qu’elle produit un effet
+          évitable, par les Lettres des principaux de Rome que je lui fit porter à Sertorius, et que
+          Perpenna remit entre les mains de Pompée, qui en usa comme je le marque. L’autre femme est
+          une pure idée de mon esprit mais qui ne laisse pas d’avoir aussi quelque fondement dans
+          l’histoire. Elle nous apprend que les Lusitaniens appelèrent Sertorius d’Afrique, pour
+          être leur chef contre le parti de Sylla ; mais elle ne nous dit point s’ils étaient en
+          République, ou sous une monarchie. Il n’ y a donc rien qui répugne à leur donner une
+          reine, et je ne la pouvais faire sortir d’un sang plus considérable, que celui de Viriatus
+          dont je lui fait porter le nom, le plus grand homme qe l’Espagne ait opposé aux Romains,
+          et le dernier qui leur a fait tête dans ces provinces avant Sertorius. Il n’était pas roi
+          en effet, mais il en avait toute l’autorité, et les princes et consuls que Rome envoya
+          pour le combattre, et qu’il défit souvent, l’estimèrent assez pour faire des traités de
+          paix avec lui, comme avec un souverain et juste ennemi. Sa mort arriva soixante et huit
+          ans avant celle que je traite ; de sorte qu’il aurait pu être aïeul ou bisaïeul de cette
+          reine que je fait parler ici.</p>
+        <p>Il fut défait par le consuel Q. Servilius, et non par Brutus, comme je l’ai fait dire à
+          cette princesse, sur la foi de cet évêque espagnol que je viens de citer et qui m’a jeté
+          dans l’erreur après lui. Elle est aisée à corriger par le changement d’une mot dans le
+          vers unique qui en parle, et qu’il faut rétablir ainsi.</p>
         <l>Et de Servilius l’astre prédominant.</l>
-        <p>Je sais bien que Sylla dont je parle tant dans ce poème, était mort six ans avant Sertorius, mais à le prendre à la rigueur, il est permis de presser les temps pour faire l’unité de jour, et pourvu qu’il n’y ait point d’impossibilité formelle, je puis faire arriver en six jours, voire six heures, ce qui s’est passé en six ans. Cela posé, rien n’empêche que Sylla ne meure avant Sertorius, sans rien détruire de ce que je dis ici, puisqu’il a pu mourir depuis qu’Arcas est parti de Rome pour apporter la nouvelle de la démission de se dictature, ce qu’il fait en même temps que Sertorius est assassiné. Je dis de plus, que bien que nous devions être assez scrupuleux observateurs de l’ordre des temps ; néanmoins pourvu que ceux que nous faisons parler se soient connus, et aient eu ensemble quelques intérêts à démêler, nous ne sommes pas obligés à nous attacher si précisément à la durée de leur vie. Sylla était mort quand Sertorius fut tué, mais il pouvait vivre encore sans miracle, et l’auditeur qui communément n’a qu’une teinture superficielle de l’histoire, s’offense rarement d’une pareille prolongation qui ne sort point de la vraisemblance. Je ne voudrais pas toutefois faire une règle générale de cette licence, sans y mettre quelque distinction. La mort de Sylla n’apporta aucun changement aux affaires de Sertoriusen Espagne , et lui fut de si pue d’importance, qu’il est malaisé en lisant le vie de ce héros chez Plutarque, de remarquer lequel des deux est mort le premier, si l’on n’en est instruit d’ailleurs. Autre chose est de celles qui renversent les États, détruisent les partis, et donnent une autre face aux affaires, comme a été celle de Pompée, qui serait révolter tout l’Auditoire contre un auteur, s’il avait l’impudence de la remettre après celle de César. D’ailleurs, il fallait colorer et excuser en quelque sorte la guerre que Pompée et les autres chefs romains continuaient contre Sertorius ; car il est assez malaisé de comprendre pourquoi l’on s’y obstinait, après que la République semblait être rétablie par la démission volontaire et la mort de son tyran. Sans doute que son esprit de souverain qu’il avait faire revivre dans Rome, n’était pas mort avec lui ; et que Pompée et beaucoup d’autres aspirant dans l’âme à prendre sa place, craignaient que Sertorius ne leur y fut un puissant obstacle, ou par l’amour qu’il avait toujours pour sa patrie, ou pour la grandeur de sa réputation, et le mérite de ses actions qui lui eussent fait donner la préférence, si ce grand ébranlement de la République l’eût mise en état de ne se point passer de maître. Pour ne pas déshonorer Pompée par cette jalousie secrète de son ambition, qui semait dès lors ce qu’on a vu depuis éclater si hautement, et qui peut-être était le véritable motif de cette guerre, je me suis persuadé qu’il était plus à propos de faire vivre Sylla, afin d’en attribuer l’injustice à la violence de sa domination; Cela m’a servi de plus à arrêter l’effet de ce puissant amour que je lui fait conserver pour son Aristie, avec qui il n’eut pu se défendre de renouer, s’il n’eut eu en rien à craindre du côté de Sylla, dont le nom odieux , mais illustre, donne un grand poids ux raisonnements de la Politique, qui fait l’âme de toute cette tragédie.</p>
-        <p>Le même Pompée semble s’écarter un peu de la prudence d’un général d’armée, lorsque sur la foi de Sertorius il vient conférer avec lui dans une ville, dont ce chef de parti contraire est maître absolu ; mais c’est une confiance de généreux à généreux, et de Romain à Romain, qui lui donne quelque droit de ne craindre aucune supercherie de la part d’un si grand homme. Ce n’est pas que je ne veuille bien accorder aux critiques qu’il n’a pas assez pourvu à sa propre sûreté, mais il m’était impossible de garder l’unité de lieu, sans lui faire faire cette échappée, qu’il faut imputer à l’incommodité de la règle, plus qu’à moi qui l’ai bien vue. Si vous ne voulez la pardonner à l’impatience qu’il avait de voir sa femme dont je la fais encore si passionné, et à la peur qu’elle ne prit un autre mari, faute de savoir ses intentions pour elle, vous la pardonnerez au plaisir qu’on a pris à cette conférence, que quelques uns des premiers de la Cour, ont estimé autant qu’une pièce entière. Vous n’en serez pas désavoué par Aristote, qui souffre qui souffre qu’on mette quelquefois des choses sans raison sur le théâtre, quand il y a apparence qu’elles seront bien reçues, et qu’on a lieu d’espérer que les avantages que le poème en tirera pourront mériter cette grâce.</p>
+        <p>Je sais bien que Sylla dont je parle tant dans ce poème, était mort six ans avant
+          Sertorius, mais à le prendre à la rigueur, il est permis de presser les temps pour faire
+          l’unité de jour, et pourvu qu’il n’y ait point d’impossibilité formelle, je puis faire
+          arriver en six jours, voire six heures, ce qui s’est passé en six ans. Cela posé, rien
+          n’empêche que Sylla ne meure avant Sertorius, sans rien détruire de ce que je dis ici,
+          puisqu’il a pu mourir depuis qu’Arcas est parti de Rome pour apporter la nouvelle de la
+          démission de se dictature, ce qu’il fait en même temps que Sertorius est assassiné. Je dis
+          de plus, que bien que nous devions être assez scrupuleux observateurs de l’ordre des temps
+          ; néanmoins pourvu que ceux que nous faisons parler se soient connus, et aient eu ensemble
+          quelques intérêts à démêler, nous ne sommes pas obligés à nous attacher si précisément à
+          la durée de leur vie. Sylla était mort quand Sertorius fut tué, mais il pouvait vivre
+          encore sans miracle, et l’auditeur qui communément n’a qu’une teinture superficielle de
+          l’histoire, s’offense rarement d’une pareille prolongation qui ne sort point de la
+          vraisemblance. Je ne voudrais pas toutefois faire une règle générale de cette licence,
+          sans y mettre quelque distinction. La mort de Sylla n’apporta aucun changement aux
+          affaires de Sertoriusen Espagne , et lui fut de si pue d’importance, qu’il est malaisé en
+          lisant le vie de ce héros chez Plutarque, de remarquer lequel des deux est mort le
+          premier, si l’on n’en est instruit d’ailleurs. Autre chose est de celles qui renversent
+          les États, détruisent les partis, et donnent une autre face aux affaires, comme a été
+          celle de Pompée, qui serait révolter tout l’Auditoire contre un auteur, s’il avait
+          l’impudence de la remettre après celle de César. D’ailleurs, il fallait colorer et excuser
+          en quelque sorte la guerre que Pompée et les autres chefs romains continuaient contre
+          Sertorius ; car il est assez malaisé de comprendre pourquoi l’on s’y obstinait, après que
+          la République semblait être rétablie par la démission volontaire et la mort de son tyran.
+          Sans doute que son esprit de souverain qu’il avait faire revivre dans Rome, n’était pas
+          mort avec lui ; et que Pompée et beaucoup d’autres aspirant dans l’âme à prendre sa place,
+          craignaient que Sertorius ne leur y fut un puissant obstacle, ou par l’amour qu’il avait
+          toujours pour sa patrie, ou pour la grandeur de sa réputation, et le mérite de ses actions
+          qui lui eussent fait donner la préférence, si ce grand ébranlement de la République l’eût
+          mise en état de ne se point passer de maître. Pour ne pas déshonorer Pompée par cette
+          jalousie secrète de son ambition, qui semait dès lors ce qu’on a vu depuis éclater si
+          hautement, et qui peut-être était le véritable motif de cette guerre, je me suis persuadé
+          qu’il était plus à propos de faire vivre Sylla, afin d’en attribuer l’injustice à la
+          violence de sa domination; Cela m’a servi de plus à arrêter l’effet de ce puissant amour
+          que je lui fait conserver pour son Aristie, avec qui il n’eut pu se défendre de renouer,
+          s’il n’eut eu en rien à craindre du côté de Sylla, dont le nom odieux , mais illustre,
+          donne un grand poids ux raisonnements de la Politique, qui fait l’âme de toute cette
+          tragédie.</p>
+        <p>Le même Pompée semble s’écarter un peu de la prudence d’un général d’armée, lorsque sur
+          la foi de Sertorius il vient conférer avec lui dans une ville, dont ce chef de parti
+          contraire est maître absolu ; mais c’est une confiance de généreux à généreux, et de
+          Romain à Romain, qui lui donne quelque droit de ne craindre aucune supercherie de la part
+          d’un si grand homme. Ce n’est pas que je ne veuille bien accorder aux critiques qu’il n’a
+          pas assez pourvu à sa propre sûreté, mais il m’était impossible de garder l’unité de lieu,
+          sans lui faire faire cette échappée, qu’il faut imputer à l’incommodité de la règle, plus
+          qu’à moi qui l’ai bien vue. Si vous ne voulez la pardonner à l’impatience qu’il avait de
+          voir sa femme dont je la fais encore si passionné, et à la peur qu’elle ne prit un autre
+          mari, faute de savoir ses intentions pour elle, vous la pardonnerez au plaisir qu’on a
+          pris à cette conférence, que quelques uns des premiers de la Cour, ont estimé autant
+          qu’une pièce entière. Vous n’en serez pas désavoué par Aristote, qui souffre qui souffre
+          qu’on mette quelquefois des choses sans raison sur le théâtre, quand il y a apparence
+          qu’elles seront bien reçues, et qu’on a lieu d’espérer que les avantages que le poème en
+          tirera pourront mériter cette grâce.</p>
       </div>
       <div xml:id="castList">
         <castList>
           <head>ACTEURS</head>
-          <castItem><role xml:id="SERTORIUS">SERTORIUS</role>, général du parti de Marius en Espagne.</castItem>
+          <castItem><role xml:id="SERTORIUS">SERTORIUS</role>, général du parti de Marius en
+            Espagne.</castItem>
           <castItem><role xml:id="PERPENNA">PERPENNA</role>, lieutenant de Sertorius.</castItem>
           <castItem><role xml:id="AUFIDE">AUFIDE</role>, tribun de l’armée de Sertorius.</castItem>
           <castItem><role xml:id="POMPEE">POMPÉE</role>, général du parti de Sylla.</castItem>
           <castItem><role xml:id="ARISTIE">ARISTIE</role>, femme de Pompée.</castItem>
-          <castItem><role xml:id="VIRIATE">VIRIATE</role>, reine de Lusitanie, à présent Portugal.</castItem>
+          <castItem><role xml:id="VIRIATE">VIRIATE</role>, reine de Lusitanie, à présent
+            Portugal.</castItem>
           <castItem><role xml:id="THAMIRE">THAMIRE</role>, dame d’honneur de Viriate.</castItem>
           <castItem><role xml:id="CELSUS">CELSUS</role>, tribun du parti de Pompée.</castItem>
-          <castItem><role xml:id="ARCAS">ARCAS</role>, affranchi d’Aristius, frère d’Aristie.</castItem>
+          <castItem><role xml:id="ARCAS">ARCAS</role>, affranchi d’Aristius, frère
+            d’Aristie.</castItem>
         </castList>
-        <set country="Espagne" link="" location="Catalayud" periode="Ier avant JC">La scène est à Nertobrige, ville d’Aragon, conquise par Sertorius, à présent Catalayud.</set>
+        <set country="Espagne" link="" location="Catalayud" periode="Ier avant JC">La scène est à
+          Nertobrige, ville d’Aragon, conquise par Sertorius, à présent Catalayud.</set>
       </div>
     </front>
     <body>
@@ -105,8 +208,8 @@
         <head>ACTE I</head>
         <div2 n="1" type="scene" xml:id="I01">
           <head>SCÈNE PREMIÈRE. Perpenne, Aufide.<listPerson type="configuration" xml:id="conf1">
-            <person corresp="#PERPENNA"/>
-            <person corresp="#AUFIDE"/>
+              <person corresp="#PERPENNA"/>
+              <person corresp="#AUFIDE"/>
             </listPerson></head>
           <sp who="PERPENNA" xml:id="I01-1">
             <speaker>PERPENNA.</speaker>
@@ -202,7 +305,11 @@
             <l n="69" xml:id="l69">Je vis par mes soldats mes aigles arrachées</l>
             <l n="70" xml:id="l70">Pour se ranger sous lui voler vers ses tranchées ;</l>
             <l n="71" xml:id="l71">Et pour en colorer l’emportement honteux,</l>
-            <note type="L">Viriathe : Fille du chef lusitanien, avait été successivement, berger, chasseur, chef de brigands. Il mena une révolte contre les Romains de -149 à -141. Il périt égorgé dans sa tente par deux de ses officiers en -141. Viriathe est, après Annibal et Mithridate, le plus redoutable ennemi qu’ait rencontré la République romaine.</note>
+            <note type="L">Viriathe : Fille du chef lusitanien, avait été successivement, berger,
+              chasseur, chef de brigands. Il mena une révolte contre les Romains de -149 à -141. Il
+              périt égorgé dans sa tente par deux de ses officiers en -141. Viriathe est, après
+              Annibal et Mithridate, le plus redoutable ennemi qu’ait rencontré la République
+              romaine.</note>
             <l n="72" xml:id="l72">Je les suivis de rage, et m’y rangeai comme eux.</l>
             <l n="73" xml:id="l73">L’impérieuse aigreur de l’âpre jalousie</l>
             <l n="74" xml:id="l74">Dont en secret dès lors mon âme fut saisie</l>
@@ -265,8 +372,8 @@
         </div2>
         <div2 n="2" type="scene" xml:id="I02">
           <head>SCÈNE II. Sertorius, Perpenna.<listPerson type="configuration" xml:id="conf2">
-            <person corresp="#SERTORIUS"/>
-            <person corresp="#PERPENNA"/>
+              <person corresp="#SERTORIUS"/>
+              <person corresp="#PERPENNA"/>
             </listPerson></head>
           <sp who="SERTORIUS" xml:id="I02-1">
             <speaker>SERTORIUS.</speaker>
@@ -432,8 +539,8 @@
         </div2>
         <div2 n="3" type="scene" xml:id="I03">
           <head>SCÈNE III. Sertorius, Aristie.<listPerson type="configuration" xml:id="conf3">
-            <person corresp="#ARISTIE"/>
-            <person corresp="#SERTORIUS"/>
+              <person corresp="#ARISTIE"/>
+              <person corresp="#SERTORIUS"/>
             </listPerson></head>
           <sp who="ARISTIE" xml:id="I03-1">
             <speaker>ARISTIE.</speaker>
@@ -611,8 +718,8 @@
         <head>ACTE II</head>
         <div2 n="1" type="scene" xml:id="II01">
           <head>SCÈNE PREMIÈRE. Viriate, Thamire.<listPerson type="configuration" xml:id="conf5">
-            <person corresp="#VIRIATE"/>
-            <person corresp="#THAMIRE"/>
+              <person corresp="#VIRIATE"/>
+              <person corresp="#THAMIRE"/>
             </listPerson></head>
           <sp who="VIRIATE" xml:id="II01-1">
             <speaker>VIRIATE.</speaker>
@@ -669,8 +776,12 @@
             <l n="414" xml:id="l414">N’ont-ils tous ni vertu, ni pouvoir, ni mérite ?</l>
             <l n="415" xml:id="l415">Et dans votre parti se peut-il qu’aucun d’eux</l>
             <l n="416" xml:id="l416">N’ait signalé son nom par des exploits fameux ?</l>
-            <note type="L">Celtibères : Peuple de l’Hispanie (Tarraconnaise), à l’Est des Carpetani, à l’Ouest des Edetani, occupait les sources de l’Anas (Guadiana) et du Tage et tous les lieux environnants. [B]</note>
-            <note type="L">Tudetani : Peuple de la Bétique, sur les rives du Bétis, dans la moyenne partie de son cours, à l’Ouest des Batuli, avait pour ville principale Gades. Le Bétis traversait leur pays, qui forme la partie Sud-Ouest de l’Andalousie. [B]</note>
+            <note type="L">Celtibères : Peuple de l’Hispanie (Tarraconnaise), à l’Est des Carpetani,
+              à l’Ouest des Edetani, occupait les sources de l’Anas (Guadiana) et du Tage et tous
+              les lieux environnants. [B]</note>
+            <note type="L">Tudetani : Peuple de la Bétique, sur les rives du Bétis, dans la moyenne
+              partie de son cours, à l’Ouest des Batuli, avait pour ville principale Gades. Le Bétis
+              traversait leur pays, qui forme la partie Sud-Ouest de l’Andalousie. [B]</note>
             <l n="417" xml:id="l417">Celui des Turdétans, celui des Celtibères,</l>
             <l n="418" xml:id="l418">Soutiendraient-ils si mal le sceptre de vos pères ?</l>
           </sp>
@@ -747,10 +858,11 @@
           </sp>
         </div2>
         <div2 n="2" type="scene" xml:id="II02">
-          <head>SCÈNE II. Sertorius, Viriate, Thamire.<listPerson type="configuration" xml:id="conf6">
-            <person corresp="#SERTORIUS"/>
-            <person corresp="#VIRIATE"/>
-            <person corresp="#THAMIRE"/>
+          <head>SCÈNE II. Sertorius, Viriate, Thamire.<listPerson type="configuration"
+              xml:id="conf6">
+              <person corresp="#SERTORIUS"/>
+              <person corresp="#VIRIATE"/>
+              <person corresp="#THAMIRE"/>
             </listPerson></head>
           <sp who="SERTORIUS" xml:id="II02-1">
             <speaker>SERTORIUS.</speaker>
@@ -1039,8 +1151,8 @@
         </div2>
         <div2 n="3" type="scene" xml:id="II03">
           <head>SCÈNE III. Viriate, Thamire.<listPerson type="configuration" xml:id="conf7">
-            <person corresp="#THAMIRE"/>
-            <person corresp="#VIRIATE"/>
+              <person corresp="#THAMIRE"/>
+              <person corresp="#VIRIATE"/>
             </listPerson></head>
           <sp who="THAMIRE" xml:id="II03-1">
             <speaker>THAMIRE.</speaker>
@@ -1068,11 +1180,12 @@
           </sp>
         </div2>
         <div2 n="4" type="scene" xml:id="II04">
-          <head>SCÈNE IV. Viriate, Perpenna, Aufide, Thamire.<listPerson type="configuration" xml:id="conf8">
-            <person corresp="#VIRIATE"/>
-            <person corresp="#PERPENNA"/>
-            <person corresp="#AUFIDE"/>
-            <person corresp="#THAMIRE"/>
+          <head>SCÈNE IV. Viriate, Perpenna, Aufide, Thamire.<listPerson type="configuration"
+              xml:id="conf8">
+              <person corresp="#VIRIATE"/>
+              <person corresp="#PERPENNA"/>
+              <person corresp="#AUFIDE"/>
+              <person corresp="#THAMIRE"/>
             </listPerson></head>
           <sp who="VIRIATE" xml:id="II04-1">
             <speaker>VIRIATE.</speaker>
@@ -1165,8 +1278,8 @@
         </div2>
         <div2 n="5" type="scene" xml:id="II05">
           <head>SCÈNE V. Perpenna, Aufide.<listPerson type="configuration" xml:id="conf9">
-            <person corresp="#AUFIDE"/>
-            <person corresp="#PERPENNA"/>
+              <person corresp="#AUFIDE"/>
+              <person corresp="#PERPENNA"/>
             </listPerson></head>
           <sp who="AUFIDE" xml:id="II05-1">
             <speaker>AUFIDE.</speaker>
@@ -1214,8 +1327,8 @@
         <head>ACTE III</head>
         <div2 n="1" type="scene" xml:id="III01">
           <head>SCÈNE PREMIÈRE. Sertorius, Pompée.<listPerson type="configuration" xml:id="conf11">
-            <person corresp="#SERTORIUS"/>
-            <person corresp="#POMPEE"/>
+              <person corresp="#SERTORIUS"/>
+              <person corresp="#POMPEE"/>
             </listPerson></head>
           <sp who="SERTORIUS" xml:id="III01-1">
             <speaker>SERTORIUS.</speaker>
@@ -1510,7 +1623,8 @@
           </sp>
           <sp who="POMPEE" xml:id="III01-20">
             <speaker>POMPÉE.</speaker>
-            <l n="980" part="I" xml:id="l980">Un époux ! Dieux ! Qu’entends-je ? Et qui, seigneur ?</l>
+            <l n="980" part="I" xml:id="l980">Un époux ! Dieux ! Qu’entends-je ? Et qui, seigneur
+              ?</l>
           </sp>
           <sp who="SERTORIUS" xml:id="III01-21">
             <speaker>SERTORIUS.</speaker>
@@ -1545,8 +1659,8 @@
         </div2>
         <div2 n="2" type="scene" xml:id="III02">
           <head>SCÈNE II. Pompée, Aristie.<listPerson type="configuration" xml:id="conf12">
-            <person corresp="#POMPEE"/>
-            <person corresp="#ARISTIE"/>
+              <person corresp="#POMPEE"/>
+              <person corresp="#ARISTIE"/>
             </listPerson></head>
           <sp who="POMPEE" xml:id="III02-1">
             <speaker>POMPÉE.</speaker>
@@ -1588,7 +1702,8 @@
             <l n="1012" xml:id="l1012">Sortez de mon esprit, ressentiments jaloux</l>
             <l n="1013" xml:id="l1013">Noirs enfants du dépit, ennemis de ma gloire,</l>
             <l n="1014" xml:id="l1014">Tristes ressentiments, je ne veux plus vous croire.</l>
-            <l n="1015" xml:id="l1015">Quoi qu’on m’ait fait d’outrage, il ne m’en souvient plus :</l>
+            <l n="1015" xml:id="l1015">Quoi qu’on m’ait fait d’outrage, il ne m’en souvient plus
+              :</l>
             <l n="1016" xml:id="l1016">Plus de nouvel hymen, plus de Sertorius ;</l>
             <l n="1017" xml:id="l1017">Je suis au grand Pompée ; et puisqu’il m’aime encore,</l>
             <l n="1018" xml:id="l1018">Puisqu’il me rend son coeur, de nouveau je l’adore :</l>
@@ -1632,7 +1747,8 @@
             <l n="1047" xml:id="l1047">Non : puisqu’il vous en faut confier le secret,</l>
             <l n="1048" xml:id="l1048">Émilie à Sylla n’obéit qu’à regret.</l>
             <l n="1049" xml:id="l1049">Des bras d’un autre époux ce tyran qui l’arrache</l>
-            <l n="1050" xml:id="l1050">Ne rompt point dans son coeur le saint noeud qui l’attache :</l>
+            <l n="1050" xml:id="l1050">Ne rompt point dans son coeur le saint noeud qui l’attache
+              :</l>
             <l n="1051" xml:id="l1051">Elle porte en ses flancs un fruit de cet amour,</l>
             <l n="1052" xml:id="l1052">Que bientôt chez moi-même elle va mettre au jour ;</l>
             <l n="1053" xml:id="l1053">Et dans ce triste état, sa main qu’il m’a donnée</l>
@@ -1836,8 +1952,8 @@
         <head>ACTE IV</head>
         <div2 n="1" type="scene" xml:id="IV01">
           <head>SCÈNE PREMIÈRE. Sertorius, Thamire.<listPerson type="configuration" xml:id="conf14">
-            <person corresp="#SERTORIUS"/>
-            <person corresp="#THAMIRE"/>
+              <person corresp="#SERTORIUS"/>
+              <person corresp="#THAMIRE"/>
             </listPerson></head>
           <sp who="SERTORIUS" xml:id="IV01-1">
             <speaker>SERTORIUS.</speaker>
@@ -1913,7 +2029,9 @@
           </sp>
           <sp who="SERTORIUS" xml:id="IV01-13">
             <speaker>SERTORIUS.</speaker>
-            <note type="C">Voir "Ah ! pour être dévot, je n’en suis pas moins homme ;" dans le Tartuffe de Molière, TARTUFFE, Acte III, scène 3, v. 966. et mentionné dans "La Critique du Tartuffe" de Villiers commme un emprunt de Molière.</note>
+            <note type="C">Voir "Ah ! pour être dévot, je n’en suis pas moins homme ;" dans le
+              Tartuffe de Molière, TARTUFFE, Acte III, scène 3, v. 966. et mentionné dans "La
+              Critique du Tartuffe" de Villiers commme un emprunt de Molière.</note>
             <l n="1194" xml:id="l1194">Ah ! Pour être romain, je n’en suis pas moins homme :</l>
             <l n="1195" xml:id="l1195">J’aime, et peut-être plus qu’on n’a jamais aimé ;</l>
             <l n="1196" xml:id="l1196">Malgré mon âge et moi, mon coeur s’est enflammé.</l>
@@ -1938,10 +2056,11 @@
           </sp>
         </div2>
         <div2 n="2" type="scene" xml:id="IV02">
-          <head>SCÈNE II. Sertorius, Viriate, Thamire.<listPerson type="configuration" xml:id="conf15">
-            <person corresp="#VIRIATE"/>
-            <person corresp="#SERTORIUS"/>
-            <person corresp="#THAMIRE"/>
+          <head>SCÈNE II. Sertorius, Viriate, Thamire.<listPerson type="configuration"
+              xml:id="conf15">
+              <person corresp="#VIRIATE"/>
+              <person corresp="#SERTORIUS"/>
+              <person corresp="#THAMIRE"/>
             </listPerson></head>
           <sp who="VIRIATE" xml:id="IV02-1">
             <speaker>VIRIATE.</speaker>
@@ -2232,10 +2351,11 @@
           </sp>
         </div2>
         <div2 n="3" type="scene" xml:id="IV03">
-          <head>SCÈNE III. Sertorius, Perpenna, Aufide.<listPerson type="configuration" xml:id="conf16">
-            <person corresp="#PERPENNA"/>
-            <person corresp="#AUFIDE"/>
-            <person corresp="#SERTORIUS"/>
+          <head>SCÈNE III. Sertorius, Perpenna, Aufide.<listPerson type="configuration"
+              xml:id="conf16">
+              <person corresp="#PERPENNA"/>
+              <person corresp="#AUFIDE"/>
+              <person corresp="#SERTORIUS"/>
             </listPerson></head>
           <sp who="PERPENNA" xml:id="IV03-1">
             <speaker>PERPENNA.</speaker>
@@ -2399,8 +2519,14 @@
             <l n="1482" xml:id="l1482">Que vous dirai-je enfin ? L’Espagne a d’autres reines ;</l>
             <l n="1483" xml:id="l1483">Et vous pourriez vous faire un destin bien plus doux,</l>
             <l n="1484" xml:id="l1484">Si vous faisiez pour moi ce que je fais pour vous.</l>
-            <note type="L">Vécéens : Peuple d’Hispanie, au Sud des Cantabres dont les séparait l’Idubeda, avaient pour villes principales Palentia et Cauca. Ils furent subjugués par Posthumius après 14 ans de guerre . Devenus suspects pendant le guerre des Celtibères, ils furent attaqués de nouveaux par les Romains en 158 et 136, mais ne furent soumis totalement qu’en l’an 100. Leur pays répondait aux provinces modernes de Léon et de Vieille-Castille. [B]</note>
-            <note type="L">Ilergètes : Peuple d’Hispanie, habitait entre l’Ebre et le Sicoris, et avait pour ville principale Ilerda (auj. Lérida). [B]</note>
+            <note type="L">Vécéens : Peuple d’Hispanie, au Sud des Cantabres dont les séparait
+              l’Idubeda, avaient pour villes principales Palentia et Cauca. Ils furent subjugués par
+              Posthumius après 14 ans de guerre . Devenus suspects pendant le guerre des Celtibères,
+              ils furent attaqués de nouveaux par les Romains en 158 et 136, mais ne furent soumis
+              totalement qu’en l’an 100. Leur pays répondait aux provinces modernes de Léon et de
+              Vieille-Castille. [B]</note>
+            <note type="L">Ilergètes : Peuple d’Hispanie, habitait entre l’Ebre et le Sicoris, et
+              avait pour ville principale Ilerda (auj. Lérida). [B]</note>
             <l n="1485" xml:id="l1485">Celle des Vacéens, celle des Ilergètes,</l>
             <l n="1486" xml:id="l1486">Rendraient vos volontés bien plus tôt satisfaites ;</l>
             <l n="1487" xml:id="l1487">La reine avec chaleur saurait vous y servir.</l>
@@ -2494,8 +2620,8 @@
         </div2>
         <div2 n="4" type="scene" xml:id="IV04">
           <head>SCÈNE IV. Perpenna, Aufide.<listPerson type="configuration" xml:id="conf17">
-            <person corresp="#AUFIDE"/>
-            <person corresp="#PERPENNA"/>
+              <person corresp="#AUFIDE"/>
+              <person corresp="#PERPENNA"/>
             </listPerson></head>
           <sp who="AUFIDE" xml:id="IV04-1">
             <speaker>AUFIDE.</speaker>
@@ -2526,8 +2652,8 @@
         <head>ACTE V</head>
         <div2 n="1" type="scene" xml:id="V01">
           <head>SCÈNE PREMIÈRE. Arisite, Viriate.<listPerson type="configuration" xml:id="conf19">
-            <person corresp="#ARISTIE"/>
-            <person corresp="#VIRIATE"/>
+              <person corresp="#ARISTIE"/>
+              <person corresp="#VIRIATE"/>
             </listPerson></head>
           <sp who="ARISTIE" xml:id="V01-1">
             <speaker>ARISTIE.</speaker>
@@ -2625,9 +2751,9 @@
         </div2>
         <div2 n="2" type="scene" xml:id="V02">
           <head>SCÈNE II. Arisite, Viriate, Arcas.<listPerson type="configuration" xml:id="conf20">
-            <person corresp="#ARISTIE"/>
-            <person corresp="#ARCAS"/>
-            <person corresp="#VIRIATE"/>
+              <person corresp="#ARISTIE"/>
+              <person corresp="#ARCAS"/>
+              <person corresp="#VIRIATE"/>
             </listPerson></head>
           <sp who="ARISTIE" xml:id="V02-1">
             <speaker>ARISTIE.</speaker>
@@ -2702,11 +2828,12 @@
           </sp>
         </div2>
         <div2 n="3" type="scene" xml:id="V03">
-          <head>SCÈNE III. Viriate, Aristie, Thamire, Arcas.<listPerson type="configuration" xml:id="conf21">
-            <person corresp="#THAMIRE"/>
-            <person corresp="#VIRIATE"/>
-            <person corresp="#ARISTIE"/>
-            <person corresp="#ARCAS"/>
+          <head>SCÈNE III. Viriate, Aristie, Thamire, Arcas.<listPerson type="configuration"
+              xml:id="conf21">
+              <person corresp="#THAMIRE"/>
+              <person corresp="#VIRIATE"/>
+              <person corresp="#ARISTIE"/>
+              <person corresp="#ARCAS"/>
             </listPerson></head>
           <sp who="THAMIRE" xml:id="V03-1">
             <speaker>THAMIRE.</speaker>
@@ -2788,12 +2915,13 @@
           </sp>
         </div2>
         <div2 n="4" type="scene" xml:id="V04">
-          <head>SCÈNE IV. Perpenna, Aristie, Viriate, Thamire, Arcas.<listPerson type="configuration" xml:id="conf22">
-            <person corresp="#PERPENNA"/>
-            <person corresp="#ARISTIE"/>
-            <person corresp="#VIRIATE"/>
-            <person corresp="#THAMIRE"/>
-            <person corresp="#ARCAS"/>
+          <head>SCÈNE IV. Perpenna, Aristie, Viriate, Thamire, Arcas.<listPerson
+              type="configuration" xml:id="conf22">
+              <person corresp="#PERPENNA"/>
+              <person corresp="#ARISTIE"/>
+              <person corresp="#VIRIATE"/>
+              <person corresp="#THAMIRE"/>
+              <person corresp="#ARCAS"/>
             </listPerson></head>
           <sp who="PERPENNA" xml:id="V04-1">
             <speaker>PERPENNA.</speaker>
@@ -2828,8 +2956,10 @@
             <l n="1722" xml:id="l1722">Vanter insolemment tes détestables flammes,</l>
             <l n="1723" xml:id="l1723">T’emparer d’une reine en son propre palais,</l>
             <l n="1724" xml:id="l1724">Et demander sa main pour prix de tes forfaits !</l>
-            <l n="1725" xml:id="l1725">Crains les dieux, scélérat ; crains les dieux, ou Pompée ;</l>
-            <l n="1726" xml:id="l1726">Crains leur haine, ou son bras, leur foudre, ou son épée ;</l>
+            <l n="1725" xml:id="l1725">Crains les dieux, scélérat ; crains les dieux, ou Pompée
+              ;</l>
+            <l n="1726" xml:id="l1726">Crains leur haine, ou son bras, leur foudre, ou son épée
+              ;</l>
             <l n="1727" xml:id="l1727">Et quelque noir orgueil qui te puisse aveugler,</l>
             <l n="1728" xml:id="l1728">Apprends qu’il m’aime encore, et commence à trembler.</l>
             <l n="1729" xml:id="l1729">Tu le verras, méchant, plus tôt que tu ne penses :</l>
@@ -2926,13 +3056,14 @@
           </sp>
         </div2>
         <div2 n="5" type="scene" xml:id="V05">
-          <head>SCÈNE V. Perpenna, Aristie, Viriate, Aufide, Arcas, Thamire.<listPerson type="configuration" xml:id="conf23">
-            <person corresp="#AUFIDE"/>
-            <person corresp="#ARISTIE"/>
-            <person corresp="#PERPENNA"/>
-            <person corresp="#VIRIATE"/>
-            <person corresp="#THAMIRE"/>
-            <person corresp="#ARCAS"/>
+          <head>SCÈNE V. Perpenna, Aristie, Viriate, Aufide, Arcas, Thamire.<listPerson
+              type="configuration" xml:id="conf23">
+              <person corresp="#AUFIDE"/>
+              <person corresp="#ARISTIE"/>
+              <person corresp="#PERPENNA"/>
+              <person corresp="#VIRIATE"/>
+              <person corresp="#THAMIRE"/>
+              <person corresp="#ARCAS"/>
             </listPerson></head>
           <sp who="AUFIDE" xml:id="V05-1">
             <speaker>AUFIDE.</speaker>
@@ -2963,14 +3094,15 @@
           </sp>
         </div2>
         <div2 n="6" type="scene" xml:id="V06">
-          <head>SCÈNE VI. Pompée, Perpenna, Viriate, Aristie, Celsus, Arcas, Thamire.<listPerson type="configuration" xml:id="conf24">
-            <person corresp="#PERPENNA"/>
-            <person corresp="#ARISTIE"/>
-            <person corresp="#POMPEE"/>
-            <person corresp="#VIRIATE"/>
-            <person corresp="#THAMIRE"/>
-            <person corresp="#CELSUS"/>
-            <person corresp="#ARCAS"/>
+          <head>SCÈNE VI. Pompée, Perpenna, Viriate, Aristie, Celsus, Arcas, Thamire.<listPerson
+              type="configuration" xml:id="conf24">
+              <person corresp="#PERPENNA"/>
+              <person corresp="#ARISTIE"/>
+              <person corresp="#POMPEE"/>
+              <person corresp="#VIRIATE"/>
+              <person corresp="#THAMIRE"/>
+              <person corresp="#CELSUS"/>
+              <person corresp="#ARCAS"/>
             </listPerson></head>
           <sp who="PERPENNA" xml:id="V06-1">
             <speaker>PERPENNA.</speaker>
@@ -3014,7 +3146,8 @@
             <l n="1851" xml:id="l1851">Jusques au dernier point elles m’ont outragé ;</l>
             <l n="1852" xml:id="l1852">Mais puisque je vous vois, je suis assez vengé.</l>
             <l n="1853" xml:id="l1853">Je vous regarde aussi comme un dieu tutélaire ;</l>
-            <l n="1854" xml:id="l1854">Et ne puis… Mais, ô dieux ! Seigneur, qu’allez-vous faire ?</l>
+            <l n="1854" xml:id="l1854">Et ne puis… Mais, ô dieux ! Seigneur, qu’allez-vous faire
+              ?</l>
           </sp>
           <sp who="POMPEE" xml:id="V06-4">
             <speaker>POMPÉE.</speaker>
@@ -3051,12 +3184,13 @@
           </sp>
         </div2>
         <div2 n="7" type="scene" xml:id="V07">
-          <head>SCÈNE VII. Pompée, Viriate, Aristie, Thamire, Arcas.<listPerson type="configuration" xml:id="conf25">
-            <person corresp="#POMPEE"/>
-            <person corresp="#ARISTIE"/>
-            <person corresp="#VIRIATE"/>
-            <person corresp="#THAMIRE"/>
-            <person corresp="#ARCAS"/>
+          <head>SCÈNE VII. Pompée, Viriate, Aristie, Thamire, Arcas.<listPerson type="configuration"
+              xml:id="conf25">
+              <person corresp="#POMPEE"/>
+              <person corresp="#ARISTIE"/>
+              <person corresp="#VIRIATE"/>
+              <person corresp="#THAMIRE"/>
+              <person corresp="#ARCAS"/>
             </listPerson></head>
           <sp who="POMPEE" xml:id="V07-1">
             <speaker>POMPÉE.</speaker>
@@ -3112,13 +3246,14 @@
           </sp>
         </div2>
         <div2 n="8" type="scene" xml:id="V08">
-          <head>SCÈNE VIII. Pompée, Aristie, Viriate, Celsus, Arcas, Thamire.<listPerson type="configuration" xml:id="conf26">
-            <person corresp="#POMPEE"/>
-            <person corresp="#CELSUS"/>
-            <person corresp="#ARISTIE"/>
-            <person corresp="#VIRIATE"/>
-            <person corresp="#THAMIRE"/>
-            <person corresp="#ARCAS"/>
+          <head>SCÈNE VIII. Pompée, Aristie, Viriate, Celsus, Arcas, Thamire.<listPerson
+              type="configuration" xml:id="conf26">
+              <person corresp="#POMPEE"/>
+              <person corresp="#CELSUS"/>
+              <person corresp="#ARISTIE"/>
+              <person corresp="#VIRIATE"/>
+              <person corresp="#THAMIRE"/>
+              <person corresp="#ARCAS"/>
             </listPerson></head>
           <sp who="POMPEE" xml:id="V08-1">
             <speaker>POMPÉE.</speaker>

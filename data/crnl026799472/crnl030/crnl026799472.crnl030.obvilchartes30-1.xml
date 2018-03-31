@@ -50,19 +50,13 @@
         <cRefPattern 
           n="level1"
           matchPattern="(\w+)"
-          replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div//tei:l)">
-          <p>level1 récupère les vers</p>
-        </cRefPattern>
-        <cRefPattern 
-          n="level2"
-          matchPattern="(\w+).(\w+).(\w+)"
           replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div//tei:l[@n='$1'])">
-          <p>level2 récupère les didascalies</p>
+          <p>level1 récupère les vers</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <textxml:base="crnl026799472.crnl030.obvilchartes1-1">
+  <text xml:base="urn:cts:freLit:crnl026799472.crnl030.obvilchartes30-1">
     <front>
       <titlePage>
         <docTitle>
