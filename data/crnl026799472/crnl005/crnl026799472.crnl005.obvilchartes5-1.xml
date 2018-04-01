@@ -48,23 +48,16 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <!-- Nos textes ne se composent que d'un seul niveau, c'est pourquoi nous avons créé deux <cRefPattern> qui récupèrent les vers et les didascalies-->
         <cRefPattern 
           n="level1"
-          matchPattern="(\w+).(\w+).(\w+)"
-          replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div//tei:l)">
+          matchPattern="(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div1/tei:div2//tei:l[@n='$1'])">
           <p>level1 récupère les vers</p>
-        </cRefPattern>
-        <cRefPattern 
-          n="level2"
-          matchPattern="(\w+).(\w+).(\w+)"
-          replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div//tei:stage)">
-          <p>level2 récupère les didascalies</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text>
+  <text xml:base="urn:cts:freLit:crnl026799472.crnl005.obvilchartes5-1" xml:lang="fr">
     <front>
       <titlePage>
         <docTitle>
@@ -78,7 +71,7 @@
           <acheveImprime id="163*-**-**"/>
         </docImprint>
         <performance>
-        <premiere date="1634" location="Hôtel de Bourgogne">Représenté pour la première fois zn 1634 au Théâtre de l’Hôtel de Bourgogne.</premiere>
+        <premiere date="1634" location="Hôtel de Bourgogne">Représenté pour la première fois en 1634 au Théâtre de l’Hôtel de Bourgogne.</premiere>
       </performance>
       </titlePage>
       <div xml:id="castList">
