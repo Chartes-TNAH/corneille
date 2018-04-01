@@ -25,13 +25,12 @@
                 <dc:contributor>Mylène Maignant</dc:contributor>
                 <dc:contributor>Maylis Ribette</dc:contributor>
         </cpt:structured-metadata>
-    
+
       <ti:edition workUrn="urn:cts:freLit:crnl026799472.crnl003" 
          urn="urn:cts:freLit:crnl026799472.crnl003.obvilchartes3-2">
           <ti:label xml:lang="fr">La Veuve ou le traître trahi</ti:label>
           <ti:description xml:lang="fr">Comédie moeurs françaises Cinq actes</ti:description>
           <ti:description xml:lang="fr">Théatre Classique, publié par Paul FIEVRE, Mai 2006, revu Juin 2015 (2e édition de 1682)</ti:description>
       </ti:edition>
-    
 </ti:work>
 

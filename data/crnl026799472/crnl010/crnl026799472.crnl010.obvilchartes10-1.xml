@@ -45,8 +45,18 @@
         </keywords>
       </textClass>
     </profileDesc>
+<encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern 
+          n="level1"
+          matchPattern="(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div1/tei:div2//tei:l[@n='$1'])">
+          <p>level1 récupère les vers</p>
+        </cRefPattern>
+      </refsDecl>
+</encodingDesc>
   </teiHeader>
-  <text>
+  <text xml:base="urn:cts:freLit:crnl026799472.crnl010.obvilchartes10-1" xml:lang="fr">
     <front>
       <titlePage>
         <docTitle>
