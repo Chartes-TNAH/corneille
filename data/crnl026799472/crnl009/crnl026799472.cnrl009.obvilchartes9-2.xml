@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../Teinte/teinte.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="../Teinte/teinte.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="fr">
+<?xml-model href="../Teinte/teinte.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="../Teinte/teinte.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
         <title>Le Cid</title>
         <title type="sub">, tragédie</title>
-        <author academie="1647" born="1606" born_location="Rouen" death="1684" death_location="Paris" key="Corneille, Pierre (1606-1684)">
+        <author academie="1647" born="1606" born_location="Rouen" death="1684"
+          death_location="Paris" key="Corneille, Pierre (1606-1684)">
           <surname>Corneille, Pierre</surname>
           <forename> Pierre</forename>
         </author>
@@ -47,17 +49,14 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <!-- Nos textes ne se composent que d'un seul niveau, c'est pourquoi nous avons créé deux <cRefPattern> qui récupèrent les vers et les didascalies-->
-        <cRefPattern 
-          n="level1"
-          matchPattern="(\w+)"
-          replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div//tei:l[@n='$1'])">
-          <p> level1 récupère les vers</p>
+        <cRefPattern n="level1" matchPattern="(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div1/tei:div2//tei:l[@n='$1'])">
+          <p>level1 récupère les vers</p>
         </cRefPattern>
       </refsDecl>
     </encodingDesc>
   </teiHeader>
-  <text xml:base ="urn:cts:freLit:crnl026799472.crnl009.obvilchartes9-2">
+  <text xml:base="urn:cts:freLit:crnl026799472.crnl009.obvilchartes9-2" xml:lang="fr">
     <front>
       <titlePage>
         <docTitle>
@@ -72,59 +71,246 @@
           <printer id=""/>
         </docImprint>
         <performance>
-        <premiere date="1637-01-04" location="Théâtre du Marais">Représentée pour la première fois le 4 janvier 1637 au Théâtre du Marais.</premiere>
-      </performance>
-        <note>Le texte est conforme à l’édition se situant dans les "Oeuvres complètes de P. Corneille" revue et annotée par J. Taschereau, Paris : P. Jannet, 1857. Tome 2, pp 145-222.</note>
+          <premiere date="1637-01-04" location="Théâtre du Marais">Représentée pour la première fois
+            le 4 janvier 1637 au Théâtre du Marais.</premiere>
+        </performance>
+        <note>Le texte est conforme à l’édition se situant dans les "Oeuvres complètes de P.
+          Corneille" revue et annotée par J. Taschereau, Paris : P. Jannet, 1857. Tome 2, pp
+          145-222.</note>
       </titlePage>
       <div type="preface">
         <head>Examen 1660</head>
-        <p>Ce poème a tant d’avantages du côté du sujet et des pensées brillantes dont il est semé, que la plupart de ses auditeurs n’ont pas voulu voir les défauts de sa conduite, et ont laissé enlever leurs suffrages au plaisir que leur a donné sa représentation. Bien que ce soit celui de tous mes ouvrages réguliers où je me suis permis le plus de licence, il passe encore pour le plus beau auprès de ceux qui ne s’attachent pas à la dernière sévérité des règles, et depuis cinquante ans qu’il tient sa place sur nos théâtres, l’histoire ni l’effort de l’imagination n’y ont rien fait voir qui en ait effacé l’éclat. Aussi a-t-il les deux grandes conditions que demande Aristote aux tragédies parfaites, et dont l’assemblage se rencontre si rarement chez les anciens ni chez les modernes ; il les assemble même plus fortement et plus noblement que les espèces que pose ce philosophe. Une maîtresse que son devoir force à poursuivre la mort de son amant, qu’elle tremble d’obtenir, a les passions plus vives et plus allumées que tout ce qui peut se passer entre un mari et sa femme, une mère et son fils, un frère et sa soeur, et la haute vertu dans un naturel sensible à ses passions, qu’elle dompte sans les affaiblir, et à qui elle laisse toute leur force pour en triompher plus glorieusement, a quelque chose de plus touchant, de plus élevé et de plus aimable que cette médiocre bonté, capable d’une faiblesse et même d’un crime, où nos anciens étaient contraints d’arrêter le caractère le plus parfait des rois et des princes dont ils faisaient leurs héros, afin que ces taches et ces forfaits, défigurant ce qu’ils leur laissaient de vertu, s’accommodassent au goût et aux souhaits de leurs spectateurs, et fortifiassent l’horreur qu’ils avaient conçue de leur domination et de la monarchie. </p>
-        <p>Rodrigue suit ici son devoir sans rien relâcher de sa passion : Chimène fait la même chose à son tour, sans laisser ébranler son dessein par la douleur où elle se voit abîmée par là ; et si la présence de son amant lui fait faire quelque faux pas, c’est une glissade dont elle se relève à l’heure même; et non seulement elle connaît si bien sa faute qu’elle nous en avertit, mais elle fait un prompt désaveu de tout ce qu’une vue si chère lui a pu arracher. Il n’est point besoin qu’on lui reproche qu’il lui est honteux de souffrir l’entretien de son amant après qu’il a tué son père; elle avoue que c’est la seule prise que la médisance aura sur elle. Si elle s’emporte jusqu’à lui dire qu’elle veut bien qu’on sache qu’elle l’adore et le poursuit, ce n’est point une résolution si ferme, qu’elle l’empêche de cacher son amour de tout son possible lorsqu’elle est en la présence du roi. S’il lui échappe de l’encourager au combat contre don Sanche par ces paroles : </p>
+        <p>Ce poème a tant d’avantages du côté du sujet et des pensées brillantes dont il est semé,
+          que la plupart de ses auditeurs n’ont pas voulu voir les défauts de sa conduite, et ont
+          laissé enlever leurs suffrages au plaisir que leur a donné sa représentation. Bien que ce
+          soit celui de tous mes ouvrages réguliers où je me suis permis le plus de licence, il
+          passe encore pour le plus beau auprès de ceux qui ne s’attachent pas à la dernière
+          sévérité des règles, et depuis cinquante ans qu’il tient sa place sur nos théâtres,
+          l’histoire ni l’effort de l’imagination n’y ont rien fait voir qui en ait effacé l’éclat.
+          Aussi a-t-il les deux grandes conditions que demande Aristote aux tragédies parfaites, et
+          dont l’assemblage se rencontre si rarement chez les anciens ni chez les modernes ; il les
+          assemble même plus fortement et plus noblement que les espèces que pose ce philosophe. Une
+          maîtresse que son devoir force à poursuivre la mort de son amant, qu’elle tremble
+          d’obtenir, a les passions plus vives et plus allumées que tout ce qui peut se passer entre
+          un mari et sa femme, une mère et son fils, un frère et sa soeur, et la haute vertu dans un
+          naturel sensible à ses passions, qu’elle dompte sans les affaiblir, et à qui elle laisse
+          toute leur force pour en triompher plus glorieusement, a quelque chose de plus touchant,
+          de plus élevé et de plus aimable que cette médiocre bonté, capable d’une faiblesse et même
+          d’un crime, où nos anciens étaient contraints d’arrêter le caractère le plus parfait des
+          rois et des princes dont ils faisaient leurs héros, afin que ces taches et ces forfaits,
+          défigurant ce qu’ils leur laissaient de vertu, s’accommodassent au goût et aux souhaits de
+          leurs spectateurs, et fortifiassent l’horreur qu’ils avaient conçue de leur domination et
+          de la monarchie. </p>
+        <p>Rodrigue suit ici son devoir sans rien relâcher de sa passion : Chimène fait la même
+          chose à son tour, sans laisser ébranler son dessein par la douleur où elle se voit abîmée
+          par là ; et si la présence de son amant lui fait faire quelque faux pas, c’est une
+          glissade dont elle se relève à l’heure même; et non seulement elle connaît si bien sa
+          faute qu’elle nous en avertit, mais elle fait un prompt désaveu de tout ce qu’une vue si
+          chère lui a pu arracher. Il n’est point besoin qu’on lui reproche qu’il lui est honteux de
+          souffrir l’entretien de son amant après qu’il a tué son père; elle avoue que c’est la
+          seule prise que la médisance aura sur elle. Si elle s’emporte jusqu’à lui dire qu’elle
+          veut bien qu’on sache qu’elle l’adore et le poursuit, ce n’est point une résolution si
+          ferme, qu’elle l’empêche de cacher son amour de tout son possible lorsqu’elle est en la
+          présence du roi. S’il lui échappe de l’encourager au combat contre don Sanche par ces
+          paroles : </p>
         <l>Sors vainqueur d’un combat dont Chimène est le prix. </l>
-        <p>Elle ne se contente pas de s’enfuir de honte au même moment; mais sitôt qu’elle est avec Elvire, à qui elle ne déguise rien de ce qui se passe dans son âme, et que la vue de ce cher objet ne lui fait plus de violence, elle forme un souhait plus raisonnable, qui satisfait sa vertu et son amour tout ensemble, et demande au ciel que le combat se termine: </p>
+        <p>Elle ne se contente pas de s’enfuir de honte au même moment; mais sitôt qu’elle est avec
+          Elvire, à qui elle ne déguise rien de ce qui se passe dans son âme, et que la vue de ce
+          cher objet ne lui fait plus de violence, elle forme un souhait plus raisonnable, qui
+          satisfait sa vertu et son amour tout ensemble, et demande au ciel que le combat se
+          termine: </p>
         <l>Sans faire aucun des deux ni vaincu ni vainqueur. </l>
-        <p>Si elle ne dissimule point qu’elle penche du côté de Rodrigue, de peur d’être à don Sanche, pour qui elle a de l’aversion, cela ne détruit point la protestation qu’elle a faite un peu auparavant que, malgré la loi de ce combat, et les promesses que le roi a faites à Rodrigue, elle lui fera mille autres ennemis, s’il en sort victorieux. Ce grand éclat même qu’elle laisse faire à son amour après qu’elle le croit mort, est suivi d’une opposition vigoureuse à l’exécution de cette loi qui la donne à son amant, et elle ne se tait qu’après que le roi l’a différée, et lui a laissé lieu d’espérer qu’avec le temps il y pourra survenir quelque obstacle. Je sais bien que le silence passe d’ordinaire pour une marque de consentement ; mais quand les rois parlent, c’en est une de contradiction: on ne manque jamais à leur applaudir quand on entre dans leurs sentiments; et le seul moyen de leur contredire avec le respect qui leur est dû, c’est de se taire, quand leurs ordres ne sont pas si pressants qu’on ne puisse remettre à s’excuser de leur obéir lorsque le temps en sera venu, et conserver cependant une espérance légitime d’un empêchement qu’on ne peut encore déterminément prévoir. </p>
-        <p>Il est vrai que, dans ce sujet, il faut se contenter de tirer Rodrigue de péril, sans le pousser jusqu’à son mariage avec Chimène. Il est historique et a plu en son temps ; mais bien sûrement il déplairait au nôtre; et j’ai peine à voir que Chimène y consente chez l’auteur espagnol, bien qu’il donne plus de trois ans de durée à la comédie qu’il en a faite. Pour ne pas contredire l’histoire, j’ai cru ne me pouvoir dispenser d’en jeter quelque idée, mais avec incertitude de l’effet, et ce n’était que par là que je pouvais accorder la bienséance du théâtre avec la vérité de l’événement. </p>
-        <p>Les deux visites que Rodrigue fait à sa maîtresse ont quelque chose qui choque cette bienséance de la part de celle qui les souffre ; la rigueur du devoir voulait qu’elle refusât de lui parler, et s’enfermât dans son cabinet au lieu de l’écouter ; mais permettez-moi de dire avec un des premiers esprits de notre siècle, "que leur conversation est remplie de si beaux sentiments, que plusieurs n’ont pas connu ce défaut, et que ceux qui l’ont connu l’ont toléré". J’irai plus outre, et dirai que tous presque ont souhaité que ces entretiens se fissent ; et j’ai remarqué aux premières représentations qu’alors que ce malheureux amant se présentait devant elle, il s’élevait un certain frémissement dans l’assemblée, qui marquait une curiosité merveilleuse, et un redoublement d’attention pour ce qu’ils avaient à se dire dans un état si pitoyable. Aristote dit "qu’il y a des absurdités qu’il faut laisser dans un poème, quand on peut espérer qu’elles seront bien reçues; et il est du devoir du poète, en ce cas, de les couvrir de tant de brillants, qu’elles puissent éblouir". Je laisse au jugement de mes auditeurs si je me suis assez bien acquitté de ce devoir pour justifier par là ces deux scènes. Les pensées de la première des deux sont quelquefois trop spirituelles pour partir de personnes fort affligées; mais, outre que je n’ai fait que la paraphraser de l’espagnol, si nous ne nous permettions quelque chose de plus ingénieux que le cours ordinaire de la passion, nos poèmes ramperaient souvent, et les grandes douleurs ne mettraient dans la bouche de nos acteurs que des exclamations et des hélas. Pour ne déguiser rien, cette offre que fait Rodrigue de son épée à Chimène, et cette protestation de se laisser tuer par don Sanche, ne me plairaient pas maintenant. Ces beautés étaient de mise en ce temps-là, et ne le seraient plus en celui-ci. La première est dans l’original espagnol, et l’autre est tirée sur ce modèle. Toutes les deux ont fait leur effet en ma faveur; mais je ferais scrupule d’en étaler de pareilles à l’avenir sur notre théâtre. </p>
-        <p>J’ai dit ailleurs ma pensée touchant l’infante et le roi ; il reste néanmoins quelque chose à examiner sur la manière dont ce dernier agit, qui ne paraît pas assez vigoureuse, en ce qu’il ne fait pas arrêter le comte après le soufflet donné, et n’envoie pas des gardes à Don Diègue et à son fils. Sur quoi on peut considérer que don Fernand étant le premier roi de Castille, et ceux qui en avaient été maîtres auparavant lui n’ayant eu titre que de comtes, il n’était peut-être pas assez absolu sur les grands seigneurs de son royaume pour le pouvoir faire. Chez don Guillem de Castro, qui a traité ce sujet avant moi, et qui devait mieux connaître que moi quelle était l’autorité de ce premier monarque de son pays, le soufflet se donne en sa présence et en celle de deux ministres d’État, qui lui conseillent, après que le comte s’est retiré fièrement et avec bravade, et que Don Diègue a fait la même chose en soupirant, de ne le pousser point à bout, parce qu’il a quantité d’amis dans les Asturies, qui se pourraient révolter, et prendre parti avec les Maures dont son État est environné. Ainsi il se résout d’accommoder l’affaire sans bruit, et recommande le secret à ces deux ministres, qui ont été seuls témoins de l’action. C’est sur cet exemple que je me suis cru bien fondé à le faire agir plus mollement qu’on ne ferait en ce temps-ci, où l’autorité royale est plus absolue. Je ne pense pas non plus qu’il fasse une faute bien grande de ne jeter point l’alarme de nuit dans sa ville, sur l’avis incertain qu’il a du dessein des Maures, puisqu’on faisait bonne garde sur les murs et sur le port; mais il est inexcusable de n’y donner aucun ordre après leur arrivée, et de laisser tout faire à Rodrigue. La loi du combat qu’il propose à Chimène avant que de le permettre à don Sanche contre Rodrigue, n’est pas si injuste que quelques-uns ont voulu le dire, parce qu’elle est plutôt une menace pour la faire dédire de la demande de ce combat, qu’un arrêt qu’il lui veuille faire exécuter. Cela paraît en ce qu’après la victoire de Rodrigue il n’en exige pas précisément l’effet de sa parole, et la laisse en état d’espérer que cette condition n’aura point de lieu. </p>
-        <p>Je ne puis dénier que la règle des vingt et quatre heures presse trop les incidents de cette pièce. La mort du comte et l’arrivée des Maures s’y pouvaient entre-suivre d’aussi près qu’elles font, parce que cette arrivée est une surprise qui n’a point de communication, ni de mesures à prendre avec le reste; mais il n’en va pas ainsi du combat de don Sanche, dont le roi était le maître, et pouvait lui choisir un autre temps que deux heures après la fuite des Maures. Leur défaite avait assez fatigué Rodrigue toute la nuit pour mériter deux ou trois jours de repos, et même il y avait quelque apparence qu’il n’en était pas échappé sans blessures, quoique je n’en aie rien dit, parce qu’elles n’auraient fait que nuire à la conclusion de l’action. </p>
-        <p>Cette même règle presse aussi trop Chimène de demander justice au roi la seconde fois. Elle l’avait fait le soir d’auparavant, et n’avait aucun sujet d’y retourner le lendemain matin pour en importuner le roi, dont elle n’avait encore aucun lieu de se plaindre, puisqu’elle ne pouvait encore dire qu’il lui eût manqué de promesse. Le roman lui aurait donné sept ou huit jours de patience avant que de l’en presser de nouveau; mais les vingt et quatre heures ne l’ont pas permis: c’est l’incommodité de la règle. Passons à celle de l’unité de lieu, qui ne m’a pas donné moins de gêne en cette pièce. </p>
-        <p>Je l’ai placé dans Séville, bien que don Fernand n’en ait jamais été le maître, et j’ai été obligé à cette falsification, pour former quelque vraisemblance à la descente des Maures, dont l’armée ne pouvait venir si vite par terre que par eau. Je ne voudrais pas assurer toutefois que le flux de la mer monte effectivement jusque-là ; mais comme dans notre Seine il fait encore plus de chemin qu’il ne lui en faut faire sur le Guadalquivir pour battre les murailles de cette ville, cela peut suffire à fonder quelque probabilité parmi nous, pour ceux qui n’ont point été sur le lieu même. </p>
-        <p>Cette arrivée des Maures ne laisse pas d’avoir ce défaut, que j’ai marqué ailleurs, qu’ils se présentent d’eux-mêmes, sans être appelés dans la pièce directement ni indirectement par aucun acteur du premier acte. Ils ont plus de justesse dans l’irrégularité de l’auteur espagnol. Rodrigue, n’osant plus se montrer à la Cour, les va combattre sur la frontière, et ainsi le premier acteur les va chercher, et leur donne place dans le poème; au contraire de ce qui arrive ici, où ils semblent se venir faire de fête exprès pour en être battus, et lui donner moyen de rendre à son roi un service d’importance qui lui fasse obtenir sa grâce. C’est une seconde incommodité de la règle dans cette tragédie. </p>
-        <p>Tout s’y passe donc dans Séville, et garde ainsi quelque espèce d’unité de lieu en général; mais le lieu particulier change de scène en scène, et tantôt c’est le palais du roi, tantôt l’appartement de l’infante, tantôt la maison de Chimène, et tantôt une rue ou place publique. On le détermine aisément pour les scènes détachées; mais pour celles qui ont leur liaison ensemble, comme les quatre dernières du premier acte, il est malaisé d’en choisir un qui convienne à toutes. Le comte et Don Diègue se querellent au sortir du palais; cela se peut passer dans une rue; mais, après le soufflet reçu, Don Diègue ne peut pas demeurer en cette rue à faire ses plaintes, attendant que son fils survienne, qu’il ne soit tout aussitôt environné de peuple, et ne reçoive l’offre de quelques amis. Ainsi il serait plus à propos qu’il se plaignît dans sa maison, où le met l’Espagnol, pour laisser aller ses sentiments en liberté; mais, en ce cas, il faudrait délier les scènes comme il a fait. En l’état où elles sont ici, on peut dire qu’il faut quelquefois aider au théâtre, et suppléer favorablement ce qui ne s’y peut représenter. Deux personnes s’y arrêtent pour parler, et quelquefois il faut présumer qu’ils marchent, ce qu’on ne peut exposer sensiblement à la vue, parce qu’ils échapperaient aux yeux avant que d’avoir pu dire ce qu’il est nécessaire qu’ils fassent savoir à l’auditeur. Ainsi, par une fiction de théâtre, on peut s’imaginer que Don Diègue et le comte, sortant du palais du roi, avancent toujours en se querellant, et sont arrivés devant la maison de ce premier lorsqu’il reçoit le soufflet qui l’oblige à y entrer pour y chercher du secours. Si cette fiction poétique ne vous satisfait point, laissons-le dans la place publique, et disons que le concours du peuple autour de lui après cette offense, et les offres de service que lui font les premiers amis qui s’y rencontrent, sont des circonstances que le roman ne doit pas oublier; mais que ces menues actions ne servant de rien à la principale, il n’est pas besoin que le poète s’en embarrasse sur la scène. Horace l’en dispense par ces vers:</p>
+        <p>Si elle ne dissimule point qu’elle penche du côté de Rodrigue, de peur d’être à don
+          Sanche, pour qui elle a de l’aversion, cela ne détruit point la protestation qu’elle a
+          faite un peu auparavant que, malgré la loi de ce combat, et les promesses que le roi a
+          faites à Rodrigue, elle lui fera mille autres ennemis, s’il en sort victorieux. Ce grand
+          éclat même qu’elle laisse faire à son amour après qu’elle le croit mort, est suivi d’une
+          opposition vigoureuse à l’exécution de cette loi qui la donne à son amant, et elle ne se
+          tait qu’après que le roi l’a différée, et lui a laissé lieu d’espérer qu’avec le temps il
+          y pourra survenir quelque obstacle. Je sais bien que le silence passe d’ordinaire pour une
+          marque de consentement ; mais quand les rois parlent, c’en est une de contradiction: on ne
+          manque jamais à leur applaudir quand on entre dans leurs sentiments; et le seul moyen de
+          leur contredire avec le respect qui leur est dû, c’est de se taire, quand leurs ordres ne
+          sont pas si pressants qu’on ne puisse remettre à s’excuser de leur obéir lorsque le temps
+          en sera venu, et conserver cependant une espérance légitime d’un empêchement qu’on ne peut
+          encore déterminément prévoir. </p>
+        <p>Il est vrai que, dans ce sujet, il faut se contenter de tirer Rodrigue de péril, sans le
+          pousser jusqu’à son mariage avec Chimène. Il est historique et a plu en son temps ; mais
+          bien sûrement il déplairait au nôtre; et j’ai peine à voir que Chimène y consente chez
+          l’auteur espagnol, bien qu’il donne plus de trois ans de durée à la comédie qu’il en a
+          faite. Pour ne pas contredire l’histoire, j’ai cru ne me pouvoir dispenser d’en jeter
+          quelque idée, mais avec incertitude de l’effet, et ce n’était que par là que je pouvais
+          accorder la bienséance du théâtre avec la vérité de l’événement. </p>
+        <p>Les deux visites que Rodrigue fait à sa maîtresse ont quelque chose qui choque cette
+          bienséance de la part de celle qui les souffre ; la rigueur du devoir voulait qu’elle
+          refusât de lui parler, et s’enfermât dans son cabinet au lieu de l’écouter ; mais
+          permettez-moi de dire avec un des premiers esprits de notre siècle, "que leur conversation
+          est remplie de si beaux sentiments, que plusieurs n’ont pas connu ce défaut, et que ceux
+          qui l’ont connu l’ont toléré". J’irai plus outre, et dirai que tous presque ont souhaité
+          que ces entretiens se fissent ; et j’ai remarqué aux premières représentations qu’alors
+          que ce malheureux amant se présentait devant elle, il s’élevait un certain frémissement
+          dans l’assemblée, qui marquait une curiosité merveilleuse, et un redoublement d’attention
+          pour ce qu’ils avaient à se dire dans un état si pitoyable. Aristote dit "qu’il y a des
+          absurdités qu’il faut laisser dans un poème, quand on peut espérer qu’elles seront bien
+          reçues; et il est du devoir du poète, en ce cas, de les couvrir de tant de brillants,
+          qu’elles puissent éblouir". Je laisse au jugement de mes auditeurs si je me suis assez
+          bien acquitté de ce devoir pour justifier par là ces deux scènes. Les pensées de la
+          première des deux sont quelquefois trop spirituelles pour partir de personnes fort
+          affligées; mais, outre que je n’ai fait que la paraphraser de l’espagnol, si nous ne nous
+          permettions quelque chose de plus ingénieux que le cours ordinaire de la passion, nos
+          poèmes ramperaient souvent, et les grandes douleurs ne mettraient dans la bouche de nos
+          acteurs que des exclamations et des hélas. Pour ne déguiser rien, cette offre que fait
+          Rodrigue de son épée à Chimène, et cette protestation de se laisser tuer par don Sanche,
+          ne me plairaient pas maintenant. Ces beautés étaient de mise en ce temps-là, et ne le
+          seraient plus en celui-ci. La première est dans l’original espagnol, et l’autre est tirée
+          sur ce modèle. Toutes les deux ont fait leur effet en ma faveur; mais je ferais scrupule
+          d’en étaler de pareilles à l’avenir sur notre théâtre. </p>
+        <p>J’ai dit ailleurs ma pensée touchant l’infante et le roi ; il reste néanmoins quelque
+          chose à examiner sur la manière dont ce dernier agit, qui ne paraît pas assez vigoureuse,
+          en ce qu’il ne fait pas arrêter le comte après le soufflet donné, et n’envoie pas des
+          gardes à Don Diègue et à son fils. Sur quoi on peut considérer que don Fernand étant le
+          premier roi de Castille, et ceux qui en avaient été maîtres auparavant lui n’ayant eu
+          titre que de comtes, il n’était peut-être pas assez absolu sur les grands seigneurs de son
+          royaume pour le pouvoir faire. Chez don Guillem de Castro, qui a traité ce sujet avant
+          moi, et qui devait mieux connaître que moi quelle était l’autorité de ce premier monarque
+          de son pays, le soufflet se donne en sa présence et en celle de deux ministres d’État, qui
+          lui conseillent, après que le comte s’est retiré fièrement et avec bravade, et que Don
+          Diègue a fait la même chose en soupirant, de ne le pousser point à bout, parce qu’il a
+          quantité d’amis dans les Asturies, qui se pourraient révolter, et prendre parti avec les
+          Maures dont son État est environné. Ainsi il se résout d’accommoder l’affaire sans bruit,
+          et recommande le secret à ces deux ministres, qui ont été seuls témoins de l’action. C’est
+          sur cet exemple que je me suis cru bien fondé à le faire agir plus mollement qu’on ne
+          ferait en ce temps-ci, où l’autorité royale est plus absolue. Je ne pense pas non plus
+          qu’il fasse une faute bien grande de ne jeter point l’alarme de nuit dans sa ville, sur
+          l’avis incertain qu’il a du dessein des Maures, puisqu’on faisait bonne garde sur les murs
+          et sur le port; mais il est inexcusable de n’y donner aucun ordre après leur arrivée, et
+          de laisser tout faire à Rodrigue. La loi du combat qu’il propose à Chimène avant que de le
+          permettre à don Sanche contre Rodrigue, n’est pas si injuste que quelques-uns ont voulu le
+          dire, parce qu’elle est plutôt une menace pour la faire dédire de la demande de ce combat,
+          qu’un arrêt qu’il lui veuille faire exécuter. Cela paraît en ce qu’après la victoire de
+          Rodrigue il n’en exige pas précisément l’effet de sa parole, et la laisse en état
+          d’espérer que cette condition n’aura point de lieu. </p>
+        <p>Je ne puis dénier que la règle des vingt et quatre heures presse trop les incidents de
+          cette pièce. La mort du comte et l’arrivée des Maures s’y pouvaient entre-suivre d’aussi
+          près qu’elles font, parce que cette arrivée est une surprise qui n’a point de
+          communication, ni de mesures à prendre avec le reste; mais il n’en va pas ainsi du combat
+          de don Sanche, dont le roi était le maître, et pouvait lui choisir un autre temps que deux
+          heures après la fuite des Maures. Leur défaite avait assez fatigué Rodrigue toute la nuit
+          pour mériter deux ou trois jours de repos, et même il y avait quelque apparence qu’il n’en
+          était pas échappé sans blessures, quoique je n’en aie rien dit, parce qu’elles n’auraient
+          fait que nuire à la conclusion de l’action. </p>
+        <p>Cette même règle presse aussi trop Chimène de demander justice au roi la seconde fois.
+          Elle l’avait fait le soir d’auparavant, et n’avait aucun sujet d’y retourner le lendemain
+          matin pour en importuner le roi, dont elle n’avait encore aucun lieu de se plaindre,
+          puisqu’elle ne pouvait encore dire qu’il lui eût manqué de promesse. Le roman lui aurait
+          donné sept ou huit jours de patience avant que de l’en presser de nouveau; mais les vingt
+          et quatre heures ne l’ont pas permis: c’est l’incommodité de la règle. Passons à celle de
+          l’unité de lieu, qui ne m’a pas donné moins de gêne en cette pièce. </p>
+        <p>Je l’ai placé dans Séville, bien que don Fernand n’en ait jamais été le maître, et j’ai
+          été obligé à cette falsification, pour former quelque vraisemblance à la descente des
+          Maures, dont l’armée ne pouvait venir si vite par terre que par eau. Je ne voudrais pas
+          assurer toutefois que le flux de la mer monte effectivement jusque-là ; mais comme dans
+          notre Seine il fait encore plus de chemin qu’il ne lui en faut faire sur le Guadalquivir
+          pour battre les murailles de cette ville, cela peut suffire à fonder quelque probabilité
+          parmi nous, pour ceux qui n’ont point été sur le lieu même. </p>
+        <p>Cette arrivée des Maures ne laisse pas d’avoir ce défaut, que j’ai marqué ailleurs,
+          qu’ils se présentent d’eux-mêmes, sans être appelés dans la pièce directement ni
+          indirectement par aucun acteur du premier acte. Ils ont plus de justesse dans
+          l’irrégularité de l’auteur espagnol. Rodrigue, n’osant plus se montrer à la Cour, les va
+          combattre sur la frontière, et ainsi le premier acteur les va chercher, et leur donne
+          place dans le poème; au contraire de ce qui arrive ici, où ils semblent se venir faire de
+          fête exprès pour en être battus, et lui donner moyen de rendre à son roi un service
+          d’importance qui lui fasse obtenir sa grâce. C’est une seconde incommodité de la règle
+          dans cette tragédie. </p>
+        <p>Tout s’y passe donc dans Séville, et garde ainsi quelque espèce d’unité de lieu en
+          général; mais le lieu particulier change de scène en scène, et tantôt c’est le palais du
+          roi, tantôt l’appartement de l’infante, tantôt la maison de Chimène, et tantôt une rue ou
+          place publique. On le détermine aisément pour les scènes détachées; mais pour celles qui
+          ont leur liaison ensemble, comme les quatre dernières du premier acte, il est malaisé d’en
+          choisir un qui convienne à toutes. Le comte et Don Diègue se querellent au sortir du
+          palais; cela se peut passer dans une rue; mais, après le soufflet reçu, Don Diègue ne peut
+          pas demeurer en cette rue à faire ses plaintes, attendant que son fils survienne, qu’il ne
+          soit tout aussitôt environné de peuple, et ne reçoive l’offre de quelques amis. Ainsi il
+          serait plus à propos qu’il se plaignît dans sa maison, où le met l’Espagnol, pour laisser
+          aller ses sentiments en liberté; mais, en ce cas, il faudrait délier les scènes comme il a
+          fait. En l’état où elles sont ici, on peut dire qu’il faut quelquefois aider au théâtre,
+          et suppléer favorablement ce qui ne s’y peut représenter. Deux personnes s’y arrêtent pour
+          parler, et quelquefois il faut présumer qu’ils marchent, ce qu’on ne peut exposer
+          sensiblement à la vue, parce qu’ils échapperaient aux yeux avant que d’avoir pu dire ce
+          qu’il est nécessaire qu’ils fassent savoir à l’auditeur. Ainsi, par une fiction de
+          théâtre, on peut s’imaginer que Don Diègue et le comte, sortant du palais du roi, avancent
+          toujours en se querellant, et sont arrivés devant la maison de ce premier lorsqu’il reçoit
+          le soufflet qui l’oblige à y entrer pour y chercher du secours. Si cette fiction poétique
+          ne vous satisfait point, laissons-le dans la place publique, et disons que le concours du
+          peuple autour de lui après cette offense, et les offres de service que lui font les
+          premiers amis qui s’y rencontrent, sont des circonstances que le roman ne doit pas
+          oublier; mais que ces menues actions ne servant de rien à la principale, il n’est pas
+          besoin que le poète s’en embarrasse sur la scène. Horace l’en dispense par ces vers:</p>
         <l>Hoc amet, hoc spernat promissi carminis auctor; </l>
         <l>Pleraque negligat. </l>
         <p>Et ailleurs, </p>
         <l>Semper ad eventum festinet. </l>
-        <p>C’est ce qui m’a fait négliger, au troisième acte, de donner à Don Diègue, pour aide à chercher son fils, aucun des cinq cents amis qu’il avait chez lui. Il y a grande apparence que quelques-uns d’eux l’y accompagnaient, et même que quelques autres le cherchaient pour lui d’un autre côté; mais ces accompagnements inutiles de personnes qui n’ont rien à dire, puisque celui qu’ils accompagnent a seul tout l’intérêt à l’action, ces sortes d’accompagnements, dis-je, ont toujours mauvaise grâce au théâtre, et d’autant plus que les comédiens n’emploient à ces personnages muets que leurs moucheurs de chandelles et leurs valets, qui ne savent quelle posture tenir. </p>
-        <p>Les funérailles du Comte étaient encore une chose fort embarrassante, soit qu’elles se soient faites avant la fin de la pièce, soit que le corps ait demeuré en présence dans son hôtel, attendant qu’on y donnât ordre. Le moindre mot que j’en eusse laissé dire, pour en prendre soin, eût rompu toute la chaleur de l’attention, et rempli l’auditeur d’une fâcheuse idée. J’ai cru plus à propos de les dérober à son imagination par mon silence, aussi bien que le lieu précis de ces quatre scènes du premier acte dont je viens de parler; et je m’assure que cet artifice m’a si bien réussi, que peu de personnes ont pris garde à l’un ni à l’autre, et que la plupart des spectateurs, laissant emporter leurs esprits à ce qu’ils ont vu et entendu de pathétique en ce poème, ne se sont point avisés de réfléchir sur ces deux considérations. </p>
-        <p>J’achève par une remarque sur ce que dit Horace, que ce qu’on expose à la vue touche bien plus que ce qu’on n’apprend que par un récit. </p>
-        <p>C’est sur quoi je me suis fondé pour faire voir le soufflet que reçoit Don Diègue, et cacher aux yeux la mort du comte, afin d’acquérir et conserver à mon premier acteur l’amitié des auditeurs, si nécessaire pour réussir au théâtre. L’indignité d’un affront fait à un vieillard, chargé d’années et de victoires, les jette aisément dans le parti de l’offensé; et cette mort, qu’on vient dire au roi tout simplement sans aucune narration touchante, n’excite point en eux la commisération qu’y eût fait naître le spectacle de son sang, et ne leur donne aucune aversion pour ce malheureux amant, qu’ils ont vu forcé par ce qu’il devait à son honneur d’en venir à cette extrémité, malgré l’intérêt et la tendresse de son amour.</p>
+        <p>C’est ce qui m’a fait négliger, au troisième acte, de donner à Don Diègue, pour aide à
+          chercher son fils, aucun des cinq cents amis qu’il avait chez lui. Il y a grande apparence
+          que quelques-uns d’eux l’y accompagnaient, et même que quelques autres le cherchaient pour
+          lui d’un autre côté; mais ces accompagnements inutiles de personnes qui n’ont rien à dire,
+          puisque celui qu’ils accompagnent a seul tout l’intérêt à l’action, ces sortes
+          d’accompagnements, dis-je, ont toujours mauvaise grâce au théâtre, et d’autant plus que
+          les comédiens n’emploient à ces personnages muets que leurs moucheurs de chandelles et
+          leurs valets, qui ne savent quelle posture tenir. </p>
+        <p>Les funérailles du Comte étaient encore une chose fort embarrassante, soit qu’elles se
+          soient faites avant la fin de la pièce, soit que le corps ait demeuré en présence dans son
+          hôtel, attendant qu’on y donnât ordre. Le moindre mot que j’en eusse laissé dire, pour en
+          prendre soin, eût rompu toute la chaleur de l’attention, et rempli l’auditeur d’une
+          fâcheuse idée. J’ai cru plus à propos de les dérober à son imagination par mon silence,
+          aussi bien que le lieu précis de ces quatre scènes du premier acte dont je viens de
+          parler; et je m’assure que cet artifice m’a si bien réussi, que peu de personnes ont pris
+          garde à l’un ni à l’autre, et que la plupart des spectateurs, laissant emporter leurs
+          esprits à ce qu’ils ont vu et entendu de pathétique en ce poème, ne se sont point avisés
+          de réfléchir sur ces deux considérations. </p>
+        <p>J’achève par une remarque sur ce que dit Horace, que ce qu’on expose à la vue touche bien
+          plus que ce qu’on n’apprend que par un récit. </p>
+        <p>C’est sur quoi je me suis fondé pour faire voir le soufflet que reçoit Don Diègue, et
+          cacher aux yeux la mort du comte, afin d’acquérir et conserver à mon premier acteur
+          l’amitié des auditeurs, si nécessaire pour réussir au théâtre. L’indignité d’un affront
+          fait à un vieillard, chargé d’années et de victoires, les jette aisément dans le parti de
+          l’offensé; et cette mort, qu’on vient dire au roi tout simplement sans aucune narration
+          touchante, n’excite point en eux la commisération qu’y eût fait naître le spectacle de son
+          sang, et ne leur donne aucune aversion pour ce malheureux amant, qu’ils ont vu forcé par
+          ce qu’il devait à son honneur d’en venir à cette extrémité, malgré l’intérêt et la
+          tendresse de son amour.</p>
       </div>
       <div xml:id="castList">
         <castList>
           <head>ACTEURS</head>
-          <castItem><role xml:id="FERNAND" rend="male superior">DON FERNAND</role>, premier roi de Castille. </castItem>
-          <castItem><role xml:id="INFANTE" rend="female junior">DONNE URRAQUE </role>, infante de Castille. </castItem>
+          <castItem><role xml:id="FERNAND" rend="male superior">DON FERNAND</role>, premier roi de
+            Castille. </castItem>
+          <castItem><role xml:id="INFANTE" rend="female junior">DONNE URRAQUE </role>, infante de
+            Castille. </castItem>
           <castItem><role xml:id="DIEGUE" rend="male">DON DIÈGUE</role>, père de Don Rodrigue. </castItem>
-          <castItem><role xml:id="COMTE" rend="male">DON GOMES</role>, comte de Gormas, père de Chimène. </castItem>
+          <castItem><role xml:id="COMTE" rend="male">DON GOMES</role>, comte de Gormas, père de
+            Chimène. </castItem>
           <castItem><role xml:id="RODRIGUE" rend="male junior">DON RODRIGUE</role>amant de Chimène. </castItem>
           <castItem><role xml:id="SANCHE" rend="male junior">DON SANCHE</role>, amoureux de Chimène. </castItem>
           <castItem><role xml:id="ARIAS" rend="male">DON ARIAS</role>, gentilhomme castillan. </castItem>
           <castItem><role xml:id="ALONSE" rend="male">DON ALONSE</role>, gentilhomme castillan. </castItem>
           <castItem><role xml:id="CHIMENE" rend="female junior">CHIMÈNE</role>, fille de Don Gomès. </castItem>
-          <castItem><role xml:id="LEONOR" rend="female inferior">LÉONOR</role>, gouvernante de l’Infante. </castItem>
-          <castItem><role xml:id="ELVIRE" rend="female inferior">ELVIRE</role>, gouvernante de Chimène. </castItem>
+          <castItem><role xml:id="LEONOR" rend="female inferior">LÉONOR</role>, gouvernante de
+            l’Infante. </castItem>
+          <castItem><role xml:id="ELVIRE" rend="female inferior">ELVIRE</role>, gouvernante de
+            Chimène. </castItem>
           <castItem><role xml:id="PAGE" rend="male inferior">Un Page</role>de l’Infante.</castItem>
         </castList>
-        <set country="Espagne" link="" location="Séville" periode="XIème">La scène est à Séville.</set>
+        <set country="Espagne" link="" location="Séville" periode="XIème">La scène est à
+          Séville.</set>
       </div>
     </front>
     <body>
       <div1 n="1" type="act" xml:id="I">
         <head>ACTE I</head>
         <div2 n="1" type="scene" xml:id="I01">
-          <head>SCÈNE PREMIÈRE. Chimène, Elvire.<listPerson type="configuration" xml:id="conf1"><person corresp="#CHIMENE"/><person corresp="#ELVIRE"/></listPerson></head>
+          <head>SCÈNE PREMIÈRE. Chimène, Elvire.<listPerson type="configuration" xml:id="conf1"
+                ><person corresp="#CHIMENE"/><person corresp="#ELVIRE"/></listPerson></head>
           <sp who="CHIMENE" xml:id="I01-1">
             <speaker>CHIMÈNE.</speaker>
             <l n="1" xml:id="l1">Elvire, m’as-tu fait un rapport bien sincère ?</l>
@@ -145,7 +331,9 @@
             <l n="10" xml:id="l10">Un si charmant discours ne se peut trop entendre ;</l>
             <l n="11" xml:id="l11">Tu ne peux trop promettre aux feux de notre amour</l>
             <l n="12" xml:id="l12">La douce liberté de se montrer au jour.</l>
-            <note type="L">Brigue : Désir ambitieux pour obtenir quelque charge ou dignité, où l’on tâche de parvenir plus par adresse que par mérite. Se dit aussi de la cabale qui est intéressée à soutenir un parti que l’autre dans une élection. [F]</note>
+            <note type="L">Brigue : Désir ambitieux pour obtenir quelque charge ou dignité, où l’on
+              tâche de parvenir plus par adresse que par mérite. Se dit aussi de la cabale qui est
+              intéressée à soutenir un parti que l’autre dans une élection. [F]</note>
             <l n="13" xml:id="l13">Que t’a-t-il répondu sur la secrète brigue</l>
             <l n="14" xml:id="l14">Que font auprès de toi Don Sanche et Don Rodrigue ?</l>
             <l n="15" xml:id="l15">N’as-tu point trop fait voir quelle inégalité</l>
@@ -171,7 +359,8 @@
             <l n="32" xml:id="l32">Qu’ils y prennent naissance au milieu des lauriers.</l>
             <l n="33" xml:id="l33">La valeur de son père, en son temps sans pareille,</l>
             <l n="34" xml:id="l34">Tant qu’a duré sa force, a passé pour merveille ;</l>
-            <note>Le Vers 35 a été repris par Jean Racine dans sa comédie "Les Plaideurs" de 1669, ce qui offusqua Corneille.</note>
+            <note>Le Vers 35 a été repris par Jean Racine dans sa comédie "Les Plaideurs" de 1669,
+              ce qui offusqua Corneille.</note>
             <l n="35" xml:id="l35">Ses rides sur son front ont gravé ses exploits,</l>
             <l n="36" xml:id="l36">Et nous disent encor ce qu’il fut autrefois.</l>
             <l n="37" xml:id="l37">Je me promets du fils ce que j’ai vu du père ;</l>
@@ -208,7 +397,9 @@
           </sp>
         </div2>
         <div2 n="2" type="scene" xml:id="I02">
-          <head>SCÈNE II. L’Infante, Léonor, Le page.<listPerson type="configuration" xml:id="conf2"><person corresp="#INFANTE"/><person corresp="#LEONOR"/><person corresp="#PAGE"/></listPerson></head>
+          <head>SCÈNE II. L’Infante, Léonor, Le page.<listPerson type="configuration" xml:id="conf2"
+                ><person corresp="#INFANTE"/><person corresp="#LEONOR"/><person corresp="#PAGE"
+              /></listPerson></head>
           <sp who="INFANTE" xml:id="I02-1">
             <speaker>L’INFANTE.</speaker>
             <l n="59" xml:id="l59">Page, allez avertir Chimène de ma part</l>
@@ -351,7 +542,8 @@
           </sp>
         </div2>
         <div2 n="3" type="scene" xml:id="I03">
-          <head>SCÈNE III. Le Comte, Don Diègue.<listPerson type="configuration" xml:id="conf3"><person corresp="#COMTE"/><person corresp="#DIEGUE"/></listPerson></head>
+          <head>SCÈNE III. Le Comte, Don Diègue.<listPerson type="configuration" xml:id="conf3"
+                ><person corresp="#COMTE"/><person corresp="#DIEGUE"/></listPerson></head>
           <sp who="COMTE" xml:id="I03-1">
             <speaker>LE COMTE.</speaker>
             <l n="151" xml:id="l151">Enfin vous l’emportez, et la faveur du roi</l>
@@ -366,7 +558,8 @@
           </sp>
           <sp who="COMTE" xml:id="I03-3">
             <speaker>LE COMTE.</speaker>
-            <l n="157" xml:id="l157">Pour grands que soient les rois, ils sont ce que nous sommes :</l>
+            <l n="157" xml:id="l157">Pour grands que soient les rois, ils sont ce que nous sommes
+              :</l>
             <l n="158" xml:id="l158">Ils peuvent se tromper comme les autres hommes ;</l>
             <l n="159" xml:id="l159">Et ce choix sert de preuve à tous les courtisans</l>
             <l n="160" xml:id="l160">Qu’ils savent mal payer les services présents.</l>
@@ -418,8 +611,12 @@
             <l n="194" xml:id="l194">Que ne puisse égaler une de mes journées ?</l>
             <l n="195" xml:id="l195">Si vous fûtes vaillant, je le suis aujourd’hui,</l>
             <l n="196" xml:id="l196">Et ce bras du royaume est le plus ferme appui.</l>
-            <note type="L">Aragon : grande province d’Espagne, une des douze capitaineries du royaume, est située entre celle de Vieille-Castille et de Navarre à l’Ouest, de Catalogne à l’Est, de Nouvelle-Castille au Sud, et touche à la France par sa frontière septentrionale ; Saragosse en est la capitale. [B]</note>
-            <note type="L">Grenade : ville d’Espagne (...) à 400 km au sud de Madrid, près du confluent de Xénil et du Darro, au milieu d’une vaste et riche plaine. [B]</note>
+            <note type="L">Aragon : grande province d’Espagne, une des douze capitaineries du
+              royaume, est située entre celle de Vieille-Castille et de Navarre à l’Ouest, de
+              Catalogne à l’Est, de Nouvelle-Castille au Sud, et touche à la France par sa frontière
+              septentrionale ; Saragosse en est la capitale. [B]</note>
+            <note type="L">Grenade : ville d’Espagne (...) à 400 km au sud de Madrid, près du
+              confluent de Xénil et du Darro, au milieu d’une vaste et riche plaine. [B]</note>
             <l n="197" xml:id="l197">Grenade et l’Aragon tremblent quand ce fer brille ;</l>
             <l n="198" xml:id="l198">Mon nom sert de rempart à toute la Castille :</l>
             <l n="199" xml:id="l199">Sans moi, vous passeriez bientôt sous d’autres lois,</l>
@@ -520,7 +717,8 @@
           </sp>
         </div2>
         <div2 n="4" type="scene" xml:id="I04">
-          <head>SCÈNE IV.<listPerson type="configuration" xml:id="conf4"><person corresp="#DIEGUE"/></listPerson></head>
+          <head>SCÈNE IV.<listPerson type="configuration" xml:id="conf4"><person corresp="#DIEGUE"
+              /></listPerson></head>
           <sp who="DIEGUE" xml:id="I04-1">
             <speaker>DON DIÈGUE.</speaker>
             <l n="237" xml:id="l237">Ô rage ! Ô désespoir ! Ô vieillesse ennemie !</l>
@@ -550,7 +748,8 @@
           </sp>
         </div2>
         <div2 n="5" type="scene" xml:id="I05">
-          <head>SCÈNE V. Don diègue, Don Rodrigue.<listPerson type="configuration" xml:id="conf5"><person corresp="#DIEGUE"/><person corresp="#RODRIGUE"/></listPerson></head>
+          <head>SCÈNE V. Don diègue, Don Rodrigue.<listPerson type="configuration" xml:id="conf5"
+                ><person corresp="#DIEGUE"/><person corresp="#RODRIGUE"/></listPerson></head>
           <sp who="DIEGUE" xml:id="I05-1">
             <speaker>DON DIÈGUE.</speaker>
             <l n="261" part="I" xml:id="l261">Rodrigue, as-tu du coeur ?</l>
@@ -617,7 +816,8 @@
           </sp>
         </div2>
         <div2 n="6" type="scene" xml:id="I06">
-          <head>SCÈNE VI.<listPerson type="configuration" xml:id="conf6"><person corresp="#RODRIGUE"/></listPerson></head>
+          <head>SCÈNE VI.<listPerson type="configuration" xml:id="conf6"><person corresp="#RODRIGUE"
+              /></listPerson></head>
           <sp who="RODRIGUE" xml:id="I06-1">
             <speaker>DON RODRIGUE.</speaker>
             <lg type="stances">
@@ -701,7 +901,8 @@
       <div1 n="2" type="act" xml:id="II">
         <head>ACTE II</head>
         <div2 n="1" type="scene" xml:id="II01">
-          <head>SCÈNE PREMIÈRE. Don Arias, Le Comte.<listPerson type="configuration" xml:id="conf8"><person corresp="#COMTE"/><person corresp="#ARIAS"/></listPerson></head>
+          <head>SCÈNE PREMIÈRE. Don Arias, Le Comte.<listPerson type="configuration" xml:id="conf8"
+                ><person corresp="#COMTE"/><person corresp="#ARIAS"/></listPerson></head>
           <sp who="COMTE" xml:id="II01-1">
             <speaker>LE COMTE.</speaker>
             <l n="351" xml:id="l351">Je l’avoue entre nous, mon sang un peu trop chaud</l>
@@ -795,9 +996,11 @@
           </sp>
           <sp who="ARIAS" xml:id="II01-18">
             <speaker>DON ARIAS.</speaker>
-            <note type="L">Résoudre : Expliquer une difficulté, décider une question, trouver un problème. Signifie aussi conclure après avoir délibéré. [F]</note>
+            <note type="L">Résoudre : Expliquer une difficulté, décider une question, trouver un
+              problème. Signifie aussi conclure après avoir délibéré. [F]</note>
             <l n="389" xml:id="l389">Adieu donc, puisqu’en vain je tâche à vous résoudre :</l>
-            <note type="L">Foudre : (sens figuré masculin) Se dit de la colère de Dieu ou des rois. [L]</note>
+            <note type="L">Foudre : (sens figuré masculin) Se dit de la colère de Dieu ou des rois.
+              [L]</note>
             <l n="390" xml:id="l390">Avec tous vos lauriers, craignez encor le foudre.</l>
           </sp>
           <sp who="COMTE" xml:id="II01-19">
@@ -818,7 +1021,8 @@
           </sp>
         </div2>
         <div2 n="2" type="scene" xml:id="II02">
-          <head>SCÈNE II. Le Comte, Don Rodrigue.<listPerson type="configuration" xml:id="conf9"><person corresp="#RODRIGUE"/><person corresp="#COMTE"/></listPerson></head>
+          <head>SCÈNE II. Le Comte, Don Rodrigue.<listPerson type="configuration" xml:id="conf9"
+                ><person corresp="#RODRIGUE"/><person corresp="#COMTE"/></listPerson></head>
           <sp who="RODRIGUE" xml:id="II02-1">
             <speaker>DON RODRIGUE.</speaker>
             <l n="397" part="I" xml:id="l397">À moi, Comte, deux mots.</l>
@@ -887,7 +1091,9 @@
             <speaker>DON RODRIGUE.</speaker>
             <l part="F">Oui ; tout autre que moi</l>
             <l n="412" xml:id="l412">Au seul bruit de ton nom pourrait trembler d’effroi.</l>
-            <note type="L">Palme : Se dit figurément en Morale d’une victoire, ou d’un avantage remporté en quelque combat ; à cause que le palme en était autrefois le symbole. [F]</note>
+            <note type="L">Palme : Se dit figurément en Morale d’une victoire, ou d’un avantage
+              remporté en quelque combat ; à cause que le palme en était autrefois le symbole.
+              [F]</note>
             <l n="413" xml:id="l413">Les palmes dont je vois ta tête si couverte</l>
             <l n="414" xml:id="l414">Semblent porter écrit le destin de ma perte.</l>
             <l n="415" xml:id="l415">J’attaque en téméraire un bras toujours vainqueur ;</l>
@@ -903,7 +1109,8 @@
             <l n="422" xml:id="l422">Mon âme avec plaisir te destinait ma fille.</l>
             <l n="423" xml:id="l423">Je sais ta passion, et suis ravi de voir</l>
             <l n="424" xml:id="l424">Que tous ses mouvements cèdent à ton devoir ;</l>
-            <note type="L">Magnanime : Qui a une grandeur d’âme et de courage, qui l’élève au dessus du commun des hommes. Il signifie beaucoup plus que brave et vaillant. [F]</note>
+            <note type="L">Magnanime : Qui a une grandeur d’âme et de courage, qui l’élève au dessus
+              du commun des hommes. Il signifie beaucoup plus que brave et vaillant. [F]</note>
             <l n="425" xml:id="l425">Qu’ils n’ont point affaibli cette ardeur magnanime ;</l>
             <l n="426" xml:id="l426">Que ta haute vertu répond à mon estime ;</l>
             <l n="427" xml:id="l427">Et que voulant pour gendre un cavalier parfait,</l>
@@ -945,7 +1152,9 @@
           </sp>
         </div2>
         <div2 n="3" type="scene" xml:id="II03">
-          <head>SCÈNE III. L’Infante, Chimène, Léonor.<listPerson type="configuration" xml:id="conf10"><person corresp="#INFANTE"/><person corresp="#CHIMENE"/><person corresp="#LEONOR"/></listPerson></head>
+          <head>SCÈNE III. L’Infante, Chimène, Léonor.<listPerson type="configuration"
+              xml:id="conf10"><person corresp="#INFANTE"/><person corresp="#CHIMENE"/><person
+                corresp="#LEONOR"/></listPerson></head>
           <sp who="INFANTE" xml:id="II03-1">
             <speaker>L’INFANTE.</speaker>
             <l n="443" xml:id="l443">Apaise, ma Chimène, apaise ta douleur :</l>
@@ -957,7 +1166,8 @@
           <sp who="CHIMENE" xml:id="II03-2">
             <speaker>CHIMÈNE.</speaker>
             <l n="448" xml:id="l448">Mon coeur outré d’ennuis n’ose rien espérer.</l>
-            <note type="L">Bonace : Calme de la mer, qui se dit quand le vent est abattu, ou a cessé. La bonace trompe souvent le Pilote. [F]</note>
+            <note type="L">Bonace : Calme de la mer, qui se dit quand le vent est abattu, ou a
+              cessé. La bonace trompe souvent le Pilote. [F]</note>
             <l n="449" xml:id="l449">Un orage si prompt qui trouble une bonace</l>
             <l n="450" xml:id="l450">D’un naufrage certain nous porte la menace :</l>
             <l n="451" xml:id="l451">Je n’en saurais douter, je péris dans le port.</l>
@@ -994,7 +1204,8 @@
             <l n="473" xml:id="l473">Le saint noeud qui joindra Don Rodrigue et Chimène</l>
             <l n="474" xml:id="l474">Des pères ennemis dissipera la haine ;</l>
             <l n="475" xml:id="l475">Et nous verrons bientôt votre amour le plus fort</l>
-            <note type="L">Discord : désunion, dispute , querelle. Il est vieux et hors d’usage. [F]</note>
+            <note type="L">Discord : désunion, dispute , querelle. Il est vieux et hors d’usage.
+              [F]</note>
             <l n="476" xml:id="l476">Par un heureux hymen étouffer ce discord.</l>
           </sp>
           <sp who="CHIMENE" xml:id="II03-6">
@@ -1051,7 +1262,9 @@
           </sp>
         </div2>
         <div2 n="4" type="scene" xml:id="II04">
-          <head>SCÈNE IV. L’Infante, Chimène, Léonor, Le page.<listPerson type="configuration" xml:id="conf11"><person corresp="#INFANTE"/><person corresp="#PAGE"/><person corresp="#CHIMENE"/><person corresp="#LEONOR"/></listPerson></head>
+          <head>SCÈNE IV. L’Infante, Chimène, Léonor, Le page.<listPerson type="configuration"
+              xml:id="conf11"><person corresp="#INFANTE"/><person corresp="#PAGE"/><person
+                corresp="#CHIMENE"/><person corresp="#LEONOR"/></listPerson></head>
           <sp who="INFANTE" xml:id="II04-1">
             <speaker>L’INFANTE.</speaker>
             <l n="500" xml:id="l500">Page, cherchez Rodrigue, et l’amenez ici.</l>
@@ -1087,7 +1300,8 @@
           </sp>
         </div2>
         <div2 n="5" type="scene" xml:id="II05">
-          <head>SCÈNE V. L’Infante, Léonor.<listPerson type="configuration" xml:id="conf12"><person corresp="#INFANTE"/><person corresp="#LEONOR"/></listPerson></head>
+          <head>SCÈNE V. L’Infante, Léonor.<listPerson type="configuration" xml:id="conf12"><person
+                corresp="#INFANTE"/><person corresp="#LEONOR"/></listPerson></head>
           <sp who="INFANTE" xml:id="II05-1">
             <speaker>L’INFANTE.</speaker>
             <l n="506" xml:id="l506">Hélas ! Que dans l’esprit je sens d’inquiétude !</l>
@@ -1141,7 +1355,9 @@
             <l n="536" xml:id="l536">Les royaumes entiers tomberont sous ses lois ;</l>
             <l n="537" xml:id="l537">Et mon amour flatteur déjà me persuade</l>
             <l n="538" xml:id="l538">Que je le vois assis au trône de Grenade,</l>
-            <note type="L">Mores (maures) : Homme noir ou femme noire, nés en une région d’Afrique appelée la Mauritanie [F]. Othello, le personnage de la pièce du même nom de Shakespeare est un maure.</note>
+            <note type="L">Mores (maures) : Homme noir ou femme noire, nés en une région d’Afrique
+              appelée la Mauritanie [F]. Othello, le personnage de la pièce du même nom de
+              Shakespeare est un maure.</note>
             <l n="539" xml:id="l539">Les Mores subjugués trembler en l’adorant,</l>
             <l n="540" xml:id="l540">L’Aragon recevoir ce nouveau conquérant,</l>
             <l n="541" xml:id="l541">Le Portugal se rendre, et ses nobles journées</l>
@@ -1175,7 +1391,9 @@
           </sp>
         </div2>
         <div2 n="6" type="scene" xml:id="II06">
-          <head>SCÈNE VI. Don Fernand, Don Arias, Don Sanche.<listPerson type="configuration" xml:id="conf13"><person corresp="#FERNAND"/><person corresp="#ARIAS"/><person corresp="#SANCHE"/></listPerson></head>
+          <head>SCÈNE VI. Don Fernand, Don Arias, Don Sanche.<listPerson type="configuration"
+              xml:id="conf13"><person corresp="#FERNAND"/><person corresp="#ARIAS"/><person
+                corresp="#SANCHE"/></listPerson></head>
           <sp who="FERNAND" xml:id="II06-1">
             <speaker>DON FERNAND.</speaker>
             <l n="557" xml:id="l557">Le Comte est donc si vain et si peu raisonnable !</l>
@@ -1242,7 +1460,8 @@
             <l n="593" xml:id="l593">Vous perdez le respect ; mais je pardonne à l’âge,</l>
             <l n="594" xml:id="l594">Et j’excuse l’ardeur en un jeune courage.</l>
             <l n="595" xml:id="l595">Un roi dont la prudence a de meilleurs objets</l>
-            <note type="L">Ménager : Bon économe de son bien ; qui épargne, qui ne fait point de dépense superflue ; qui fait bien valoir ce qu’on lui donne à manier. [F]</note>
+            <note type="L">Ménager : Bon économe de son bien ; qui épargne, qui ne fait point de
+              dépense superflue ; qui fait bien valoir ce qu’on lui donne à manier. [F]</note>
             <l n="596" xml:id="l596">Est meilleur ménager du sang de ses sujets :</l>
             <l n="597" xml:id="l597">Je veille pour les miens, mes soucis les conservent,</l>
             <l n="598" xml:id="l598">Comme le chef a soin des membres qui le servent.</l>
@@ -1286,7 +1505,8 @@
             <l part="F">Et rien à négliger :</l>
             <l n="624" xml:id="l624">Le trop de confiance attire le danger ;</l>
             <l n="625" xml:id="l625">Et vous n’ignorez pas qu’avec fort peu de peine</l>
-            <note type="C">Un flux de pleine mer ne peut amener les troupes jusqu’à Séville. Voir l’Examen 1660 en tête du texte.</note>
+            <note type="C">Un flux de pleine mer ne peut amener les troupes jusqu’à Séville. Voir
+              l’Examen 1660 en tête du texte.</note>
             <l n="626" xml:id="l626">Un flux de pleine mer jusqu’ici les amène.</l>
             <l n="627" xml:id="l627">Toutefois j’aurais tort de jeter dans les cours,</l>
             <l n="628" xml:id="l628">L’avis étant mal sûr, de paniques terreurs.</l>
@@ -1297,7 +1517,9 @@
           </sp>
         </div2>
         <div2 n="7" type="scene" xml:id="II07">
-          <head>SCÈNE VII. Don Fernand, Don Sanche, Don Alonse.<listPerson type="configuration" xml:id="conf14"><person corresp="#ALONSE"/><person corresp="#FERNAND"/><person corresp="#SANCHE"/></listPerson></head>
+          <head>SCÈNE VII. Don Fernand, Don Sanche, Don Alonse.<listPerson type="configuration"
+              xml:id="conf14"><person corresp="#ALONSE"/><person corresp="#FERNAND"/><person
+                corresp="#SANCHE"/></listPerson></head>
           <sp who="ALONSE" xml:id="II07-1">
             <speaker>DON ALONSE.</speaker>
             <l part="F">Sire, le comte est mort :</l>
@@ -1327,7 +1549,10 @@
           </sp>
         </div2>
         <div2 n="8" type="scene" xml:id="II08">
-          <head>SCÈNE VIII. Don Fernand, Don Diègue, Chimène, Don Sanche, Don Arias, Don Alonse.<listPerson type="configuration" xml:id="conf15"><person corresp="#CHIMENE"/><person corresp="#DIEGUE"/><person corresp="#FERNAND"/><person corresp="#SANCHE"/><person corresp="#ARIAS"/><person corresp="#ALONSE"/></listPerson></head>
+          <head>SCÈNE VIII. Don Fernand, Don Diègue, Chimène, Don Sanche, Don Arias, Don
+              Alonse.<listPerson type="configuration" xml:id="conf15"><person corresp="#CHIMENE"
+                /><person corresp="#DIEGUE"/><person corresp="#FERNAND"/><person corresp="#SANCHE"
+                /><person corresp="#ARIAS"/><person corresp="#ALONSE"/></listPerson></head>
           <sp who="CHIMENE" xml:id="II08-1">
             <speaker>CHIMÈNE.</speaker>
             <l n="647" part="I" xml:id="l647">Sire, sire, justice !</l>
@@ -1444,7 +1669,8 @@
             <l n="708" xml:id="l708">Le Comte en votre Cour l’a fait presque à vos yeux,</l>
             <l n="709" xml:id="l709">Jaloux de votre choix, et fier de l’avantage</l>
             <l n="710" xml:id="l710">Que lui donnait sur moi l’impuissance de l’âge.</l>
-            <note type="L">Harnois : Armure complète, la cuirasse, la casque, et tout l’équipage des armes d’un cavalier pesamment armé. [F]</note>
+            <note type="L">Harnois : Armure complète, la cuirasse, la casque, et tout l’équipage des
+              armes d’un cavalier pesamment armé. [F]</note>
             <l n="711" xml:id="l711">Sire, ainsi ces cheveux blanchis sous le harnois,</l>
             <l n="712" xml:id="l712">Ce sang pour vous servir prodigué tant de fois,</l>
             <l n="713" xml:id="l713">Ce bras, jadis l’effroi d’une armée ennemie,</l>
@@ -1493,7 +1719,8 @@
       <div1 n="3" type="act" xml:id="III">
         <head>ACTE III</head>
         <div2 n="1" type="scene" xml:id="III01">
-          <head>SCÈNE I. Don Rodrigue, Elvire.<listPerson type="configuration" xml:id="conf17"><person corresp="#ELVIRE"/><person corresp="#RODRIGUE"/></listPerson></head>
+          <head>SCÈNE I. Don Rodrigue, Elvire.<listPerson type="configuration" xml:id="conf17"
+                ><person corresp="#ELVIRE"/><person corresp="#RODRIGUE"/></listPerson></head>
           <sp who="ELVIRE" xml:id="III01-1">
             <speaker>ELVIRE.</speaker>
             <l n="741" xml:id="l741">Rodrigue, qu’as-tu fait ? Où viens-tu, misérable ?</l>
@@ -1556,7 +1783,9 @@
           </sp>
         </div2>
         <div2 n="2" type="scene" xml:id="III02">
-          <head>SCÈNE II. Don Sanche, Chimène, Elvire.<listPerson type="configuration" xml:id="conf18"><person corresp="#SANCHE"/><person corresp="#CHIMENE"/><person corresp="#ELVIRE"/></listPerson></head>
+          <head>SCÈNE II. Don Sanche, Chimène, Elvire.<listPerson type="configuration"
+              xml:id="conf18"><person corresp="#SANCHE"/><person corresp="#CHIMENE"/><person
+                corresp="#ELVIRE"/></listPerson></head>
           <sp who="SANCHE" xml:id="III02-1">
             <speaker>DON SANCHE.</speaker>
             <l n="773" xml:id="l773">Oui, Madame, il vous faut de sanglantes victimes :</l>
@@ -1601,7 +1830,8 @@
           </sp>
         </div2>
         <div2 n="3" type="scene" xml:id="III03">
-          <head>SCÈNE III. Chimène, Elvire.<listPerson type="configuration" xml:id="conf19"><person corresp="#CHIMENE"/><person corresp="#ELVIRE"/></listPerson></head>
+          <head>SCÈNE III. Chimène, Elvire.<listPerson type="configuration" xml:id="conf19"><person
+                corresp="#CHIMENE"/><person corresp="#ELVIRE"/></listPerson></head>
           <sp who="CHIMENE" xml:id="III03-1">
             <speaker>CHIMÈNE.</speaker>
             <l n="793" xml:id="l793">Enfin je me vois libre, et je puis sans contrainte</l>
@@ -1669,7 +1899,8 @@
           <sp who="CHIMENE" xml:id="III03-9">
             <speaker>CHIMÈNE.</speaker>
             <l n="831" xml:id="l831">Quoi ! Mon père étant mort, et presque entre mes bras,</l>
-            <note type="C">Orrai : future du verbe ouïr. Le verbe oeïr est maintenant défectif.</note>
+            <note type="C">Orrai : future du verbe ouïr. Le verbe oeïr est maintenant
+              défectif.</note>
             <l n="832" xml:id="l832">Son sang criera vengeance, et je ne l’orrai pas !</l>
             <l n="833" xml:id="l833">Mon coeur, honteusement surpris par d’autres charmes,</l>
             <l n="834" xml:id="l834">Croira ne lui devoir que d’impuissantes larmes !</l>
@@ -1709,7 +1940,9 @@
           </sp>
         </div2>
         <div2 n="4" type="scene" xml:id="III04">
-          <head>SCÈNE IV. Don Rodrigue, Chimène, Elvire.<listPerson type="configuration" xml:id="conf20"><person corresp="#RODRIGUE"/><person corresp="#CHIMENE"/><person corresp="#ELVIRE"/></listPerson></head>
+          <head>SCÈNE IV. Don Rodrigue, Chimène, Elvire.<listPerson type="configuration"
+              xml:id="conf20"><person corresp="#RODRIGUE"/><person corresp="#CHIMENE"/><person
+                corresp="#ELVIRE"/></listPerson></head>
           <sp who="RODRIGUE" xml:id="III04-1">
             <speaker>DON RODRIGUE.</speaker>
             <l n="849" xml:id="l849">Eh bien ! Sans vous donner la peine de poursuivre,</l>
@@ -2016,7 +2249,8 @@
           </sp>
         </div2>
         <div2 n="5" type="scene" xml:id="III05">
-          <head>SCÈNE V.<listPerson type="configuration" xml:id="conf21"><person corresp="#DIEGUE"/></listPerson></head>
+          <head>SCÈNE V.<listPerson type="configuration" xml:id="conf21"><person corresp="#DIEGUE"
+              /></listPerson></head>
           <sp who="DIEGUE" xml:id="III05-1">
             <speaker>DON DIÈGUE.</speaker>
             <l n="1001" xml:id="l1001">Jamais nous ne goûtons de parfaite allégresse :</l>
@@ -2046,7 +2280,8 @@
           </sp>
         </div2>
         <div2 n="6" type="scene" xml:id="III06">
-          <head>SCÈNE VI. Don Diègue, Don Rodrigue.<listPerson type="configuration" xml:id="conf22"><person corresp="#DIEGUE"/><person corresp="#RODRIGUE"/></listPerson></head>
+          <head>SCÈNE VI. Don Diègue, Don Rodrigue.<listPerson type="configuration" xml:id="conf22"
+                ><person corresp="#DIEGUE"/><person corresp="#RODRIGUE"/></listPerson></head>
           <sp who="DIEGUE" xml:id="III06-1">
             <speaker>DON DIÈGUE.</speaker>
             <l n="1025" xml:id="l1025">Rodrigue, enfin le ciel permet que je te voie !</l>
@@ -2157,7 +2392,8 @@
       <div1 n="4" type="act" xml:id="IV">
         <head>ACTE IV</head>
         <div2 n="1" type="scene" xml:id="IV01">
-          <head>SCÈNE PREMIÈRE. Chimène, Elvire.<listPerson type="configuration" xml:id="conf24"><person corresp="#CHIMENE"/><person corresp="#ELVIRE"/></listPerson></head>
+          <head>SCÈNE PREMIÈRE. Chimène, Elvire.<listPerson type="configuration" xml:id="conf24"
+                ><person corresp="#CHIMENE"/><person corresp="#ELVIRE"/></listPerson></head>
           <sp who="CHIMENE" xml:id="IV01-1">
             <speaker>CHIMÈNE.</speaker>
             <l n="1101" xml:id="l1101">N’est-ce point un faux bruit ? Le sais-tu bien, Elvire ?</l>
@@ -2168,7 +2404,8 @@
             <l n="1103" xml:id="l1103">Et porte jusqu’au ciel, d’une commune voix,</l>
             <l n="1104" xml:id="l1104">De ce jeune héros les glorieux exploits.</l>
             <l n="1105" xml:id="l1105">Les Mores devant lui n’ont paru qu’à leur honte ;</l>
-            <l n="1106" xml:id="l1106">Leur abord fut bien prompt, leur fuite encor plus prompte.</l>
+            <l n="1106" xml:id="l1106">Leur abord fut bien prompt, leur fuite encor plus
+              prompte.</l>
             <l n="1107" xml:id="l1107">Trois heures de combat laissent à nos guerriers</l>
             <l n="1108" xml:id="l1108">Une victoire entière et deux rois prisonniers.</l>
             <l n="1109" xml:id="l1109">La valeur de leur chef ne trouvait point d’obstacles.</l>
@@ -2227,7 +2464,9 @@
             <l n="1134" xml:id="l1134">Ici tous les objets me parlent de son crime.</l>
             <l n="1135" xml:id="l1135">Vous qui rendez la force à mes ressentiments,</l>
             <l n="1136" xml:id="l1136">Voiles, crêpes, habits, lugubres ornements,</l>
-            <note type="L">Pompe : Somptuosité ; appareil superbe ; dépense magnifique qu’on fait pour rendre quelque action plus recommandable, plus solennelle, et plus éclatante. [F]</note>
+            <note type="L">Pompe : Somptuosité ; appareil superbe ; dépense magnifique qu’on fait
+              pour rendre quelque action plus recommandable, plus solennelle, et plus éclatante.
+              [F]</note>
             <l n="1137" xml:id="l1137">Pompe que me prescrit sa première victoire,</l>
             <l n="1138" xml:id="l1138">Contre ma passion soutenez bien ma gloire ;</l>
             <l n="1139" xml:id="l1139">Et lorsque mon amour prendra trop de pouvoir,</l>
@@ -2240,7 +2479,9 @@
           </sp>
         </div2>
         <div2 n="2" type="scene" xml:id="IV02">
-          <head>SCÈNE II. L’Infante, Chimène, Léonor, Elvire.<listPerson type="configuration" xml:id="conf25"><person corresp="#INFANTE"/><person corresp="#CHIMENE"/><person corresp="#LEONOR"/><person corresp="#ELVIRE"/></listPerson></head>
+          <head>SCÈNE II. L’Infante, Chimène, Léonor, Elvire.<listPerson type="configuration"
+              xml:id="conf25"><person corresp="#INFANTE"/><person corresp="#CHIMENE"/><person
+                corresp="#LEONOR"/><person corresp="#ELVIRE"/></listPerson></head>
           <sp who="INFANTE" xml:id="IV02-1">
             <speaker>L’INFANTE.</speaker>
             <l n="1143" xml:id="l1143">Je ne viens pas ici consoler tes douleurs ;</l>
@@ -2282,7 +2523,8 @@
             <l n="1163" xml:id="l1163">On aigrit ma douleur en l’élevant si haut :</l>
             <l n="1164" xml:id="l1164">Je vois ce que je perds quand je vois ce qu’il vaut.</l>
             <l n="1165" xml:id="l1165">Ah ! Cruels déplaisirs à l’esprit d’une amante !</l>
-            <note type="L">Feu : On dit aussi d’un homme amoureux qu’il brûle d’un beau feu, qu’il nourrit un feu discret, un feu caché sous la cendre, un feu qui le dévore. [F]</note>
+            <note type="L">Feu : On dit aussi d’un homme amoureux qu’il brûle d’un beau feu, qu’il
+              nourrit un feu discret, un feu caché sous la cendre, un feu qui le dévore. [F]</note>
             <l n="1166" xml:id="l1166">Plus j’apprends son mérite, et plus mon feu s’augmente :</l>
             <l n="1167" xml:id="l1167">Cependant mon devoir est toujours le plus fort,</l>
             <l n="1168" xml:id="l1168">Et malgré mon amour, va poursuivre sa mort.</l>
@@ -2325,8 +2567,10 @@
             <l n="1193" xml:id="l1193">Quoique pour ce vainqueur mon amour s’intéresse,</l>
             <l n="1194" xml:id="l1194">Quoiqu’un peuple l’adore et qu’un roi le caresse,</l>
             <l n="1195" xml:id="l1195">Qu’il soit environné des plus vaillants guerriers,</l>
-            <note type="L">Cyprès : Nom d’un arbre assez connu. Les poètes emploient figurément le mot cyprès, pour signifier la mort, le tombeau. [F]</note>
-            <note type="L">Laurier : Arbre dont le tige est unie et sans noeud. Se dit figurément en morale, pour signifier la gloire d’un triomphe, d’une conquête. [F]</note>
+            <note type="L">Cyprès : Nom d’un arbre assez connu. Les poètes emploient figurément le
+              mot cyprès, pour signifier la mort, le tombeau. [F]</note>
+            <note type="L">Laurier : Arbre dont le tige est unie et sans noeud. Se dit figurément en
+              morale, pour signifier la gloire d’un triomphe, d’une conquête. [F]</note>
             <l n="1196" xml:id="l1196">J’irai sous mes cyprès accabler ses lauriers.</l>
           </sp>
           <sp who="INFANTE" xml:id="IV02-11">
@@ -2355,7 +2599,10 @@
           </sp>
         </div2>
         <div2 n="3" type="scene" xml:id="IV03">
-          <head>SCÈNE III. Don Fernand, Don Diègue, Don Arias, Don Rodrigue, Don Sanche.<listPerson type="configuration" xml:id="conf26"><person corresp="#FERNAND"/><person corresp="#RODRIGUE"/><person corresp="#DIEGUE"/><person corresp="#SANCHE"/><person corresp="#ARIAS"/></listPerson></head>
+          <head>SCÈNE III. Don Fernand, Don Diègue, Don Arias, Don Rodrigue, Don Sanche.<listPerson
+              type="configuration" xml:id="conf26"><person corresp="#FERNAND"/><person
+                corresp="#RODRIGUE"/><person corresp="#DIEGUE"/><person corresp="#SANCHE"/><person
+                corresp="#ARIAS"/></listPerson></head>
           <sp who="FERNAND" xml:id="IV03-1">
             <speaker>DON FERNAND.</speaker>
             <l n="1209" xml:id="l1209">Généreux héritier d’une illustre famille,</l>
@@ -2499,7 +2746,10 @@
           </sp>
         </div2>
         <div2 n="4" type="scene" xml:id="IV04">
-          <head>SCÈNE IV. Don Fernand, Don Diègue, Don Rodrigue, Don Arias, Don Alonse, Don Sanche.<listPerson type="configuration" xml:id="conf27"><person corresp="#ALONSE"/><person corresp="#FERNAND"/><person corresp="#DIEGUE"/><person corresp="#RODRIGUE"/><person corresp="#SANCHE"/><person corresp="#ARIAS"/></listPerson></head>
+          <head>SCÈNE IV. Don Fernand, Don Diègue, Don Rodrigue, Don Arias, Don Alonse, Don
+              Sanche.<listPerson type="configuration" xml:id="conf27"><person corresp="#ALONSE"
+                /><person corresp="#FERNAND"/><person corresp="#DIEGUE"/><person corresp="#RODRIGUE"
+                /><person corresp="#SANCHE"/><person corresp="#ARIAS"/></listPerson></head>
           <sp who="ALONSE" xml:id="IV04-1">
             <speaker>DON ALONSE.</speaker>
             <l n="1330" xml:id="l1330">Sire, Chimène vient vous demander justice.</l>
@@ -2522,7 +2772,11 @@
           </sp>
         </div2>
         <div2 n="5" type="scene" xml:id="IV05">
-          <head>SCÈNE V. Don Fernand, Don Diègue, Don Arias, Don Sanche, Don Alonse, Chimène, Elvire.<listPerson type="configuration" xml:id="conf28"><person corresp="#FERNAND"/><person corresp="#DIEGUE"/><person corresp="#CHIMENE"/><person corresp="#SANCHE"/><person corresp="#ARIAS"/><person corresp="#ALONSE"/><person corresp="#ELVIRE"/></listPerson></head>
+          <head>SCÈNE V. Don Fernand, Don Diègue, Don Arias, Don Sanche, Don Alonse, Chimène,
+              Elvire.<listPerson type="configuration" xml:id="conf28"><person corresp="#FERNAND"
+                /><person corresp="#DIEGUE"/><person corresp="#CHIMENE"/><person corresp="#SANCHE"
+                /><person corresp="#ARIAS"/><person corresp="#ALONSE"/><person corresp="#ELVIRE"
+              /></listPerson></head>
           <sp who="FERNAND" xml:id="IV05-1">
             <speaker>DON FERNAND.</speaker>
             <l part="F">Enfin soyez contente,</l>
@@ -2728,10 +2982,13 @@
       <div1 n="5" type="act" xml:id="V">
         <head>ACTE V</head>
         <div2 n="1" type="scene" xml:id="V01">
-          <head>SCÈNE PREMIÈRE. Don Rodrigue, Chimène.<listPerson type="configuration" xml:id="conf30"><person corresp="#CHIMENE"/><person corresp="#RODRIGUE"/></listPerson></head>
+          <head>SCÈNE PREMIÈRE. Don Rodrigue, Chimène.<listPerson type="configuration"
+              xml:id="conf30"><person corresp="#CHIMENE"/><person corresp="#RODRIGUE"
+            /></listPerson></head>
           <sp who="CHIMENE" xml:id="V01-1">
             <speaker>CHIMÈNE.</speaker>
-            <l n="1465" xml:id="l1465">Quoi ! Rodrigue, en plein jour ! D’où te vient cette audace ?</l>
+            <l n="1465" xml:id="l1465">Quoi ! Rodrigue, en plein jour ! D’où te vient cette audace
+              ?</l>
             <l n="1466" xml:id="l1466">Va, tu me perds d’honneur ; retire-toi, de grâce.</l>
           </sp>
           <sp who="RODRIGUE" xml:id="V01-2">
@@ -2862,7 +3119,8 @@
           </sp>
         </div2>
         <div2 n="2" type="scene" xml:id="V02">
-          <head>SCÈNE II.<listPerson type="configuration" xml:id="conf31"><person corresp="#INFANTE"/></listPerson></head>
+          <head>SCÈNE II.<listPerson type="configuration" xml:id="conf31"><person corresp="#INFANTE"
+              /></listPerson></head>
           <sp who="INFANTE" xml:id="V02-1">
             <speaker>L’INFANTE.</speaker>
             <lg type="stances">
@@ -2910,7 +3168,8 @@
           </sp>
         </div2>
         <div2 n="3" type="scene" xml:id="V03">
-          <head>SCÈNE III. L’Infante, Léonor.<listPerson type="configuration" xml:id="conf32"><person corresp="#INFANTE"/><person corresp="#LEONOR"/></listPerson></head>
+          <head>SCÈNE III. L’Infante, Léonor.<listPerson type="configuration" xml:id="conf32"
+                ><person corresp="#INFANTE"/><person corresp="#LEONOR"/></listPerson></head>
           <sp who="INFANTE" xml:id="V03-1">
             <speaker>L’INFANTE.</speaker>
             <l n="1597" part="I" xml:id="l1597">Où viens-tu, Léonor ?</l>
@@ -2996,7 +3255,8 @@
           </sp>
         </div2>
         <div2 n="4" type="scene" xml:id="V04">
-          <head>SCÈNE IV. Chimène, Elvire.<listPerson type="configuration" xml:id="conf33"><person corresp="#CHIMENE"/><person corresp="#ELVIRE"/></listPerson></head>
+          <head>SCÈNE IV. Chimène, Elvire.<listPerson type="configuration" xml:id="conf33"><person
+                corresp="#CHIMENE"/><person corresp="#ELVIRE"/></listPerson></head>
           <sp who="CHIMENE" xml:id="V04-1">
             <speaker>CHIMÈNE.</speaker>
             <l n="1645" xml:id="l1645">Elvire, que je souffre, et que je suis à plaindre !</l>
@@ -3080,7 +3340,9 @@
           </sp>
         </div2>
         <div2 n="5" type="scene" xml:id="V05">
-          <head>SCÈNE V. Don Sanche, Chimène, Elvire.<listPerson type="configuration" xml:id="conf34"><person corresp="#SANCHE"/><person corresp="#CHIMENE"/><person corresp="#ELVIRE"/></listPerson></head>
+          <head>SCÈNE V. Don Sanche, Chimène, Elvire.<listPerson type="configuration"
+              xml:id="conf34"><person corresp="#SANCHE"/><person corresp="#CHIMENE"/><person
+                corresp="#ELVIRE"/></listPerson></head>
           <sp who="SANCHE" xml:id="V05-1">
             <speaker>DON SANCHE.</speaker>
             <l n="1705" xml:id="l1705">Obligé d’apporter à vos pieds cette épée…</l>
@@ -3120,7 +3382,11 @@
           </sp>
         </div2>
         <div2 n="6" type="scene" xml:id="V06">
-          <head>SCÈNE VI. Don Fernand, Don Diègue, Don Arias, Don Sanche, Don Alonse, Chimène, Elvire.<listPerson type="configuration" xml:id="conf35"><person corresp="#CHIMENE"/><person corresp="#DIEGUE"/><person corresp="#FERNAND"/><person corresp="#SANCHE"/><person corresp="#ARIAS"/><person corresp="#ALONSE"/><person corresp="#ELVIRE"/></listPerson></head>
+          <head>SCÈNE VI. Don Fernand, Don Diègue, Don Arias, Don Sanche, Don Alonse, Chimène,
+              Elvire.<listPerson type="configuration" xml:id="conf35"><person corresp="#CHIMENE"
+                /><person corresp="#DIEGUE"/><person corresp="#FERNAND"/><person corresp="#SANCHE"
+                /><person corresp="#ARIAS"/><person corresp="#ALONSE"/><person corresp="#ELVIRE"
+              /></listPerson></head>
           <sp who="CHIMENE" xml:id="V06-1">
             <speaker>CHIMÈNE.</speaker>
             <l n="1723" xml:id="l1723">Sire, il n’est plus besoin de vous dissimuler</l>
@@ -3188,7 +3454,12 @@
           </sp>
         </div2>
         <div2 n="7" type="scene" xml:id="V07">
-          <head>SCÈNE VII. Don Fernand, Don Diègue, Don Arias, Don Rodrigue, Don ALonse, Don Sanche, L’Infante, Chimène, Léonor, Elvire.<listPerson type="configuration" xml:id="conf36"><person corresp="#INFANTE"/><person corresp="#RODRIGUE"/><person corresp="#CHIMENE"/><person corresp="#FERNAND"/><person corresp="#DIEGUE"/><person corresp="#SANCHE"/><person corresp="#ARIAS"/><person corresp="#ALONSE"/><person corresp="#LEONOR"/><person corresp="#ELVIRE"/></listPerson></head>
+          <head>SCÈNE VII. Don Fernand, Don Diègue, Don Arias, Don Rodrigue, Don ALonse, Don Sanche,
+            L’Infante, Chimène, Léonor, Elvire.<listPerson type="configuration" xml:id="conf36"
+                ><person corresp="#INFANTE"/><person corresp="#RODRIGUE"/><person corresp="#CHIMENE"
+                /><person corresp="#FERNAND"/><person corresp="#DIEGUE"/><person corresp="#SANCHE"
+                /><person corresp="#ARIAS"/><person corresp="#ALONSE"/><person corresp="#LEONOR"
+                /><person corresp="#ELVIRE"/></listPerson></head>
           <sp who="INFANTE" xml:id="V07-1">
             <speaker>L’INFANTE.</speaker>
             <l n="1773" xml:id="l1773">Sèche tes pleurs, Chimène, et reçois sans tristesse</l>
@@ -3219,7 +3490,8 @@
             <l n="1795" xml:id="l1795">Mais du moins que ma mort suffise à me punir :</l>
             <l n="1796" xml:id="l1796">Ne me bannissez point de votre souvenir ;</l>
             <l n="1797" xml:id="l1797">Et puisque mon trépas conserve votre gloire,</l>
-            <note type="L">Revancher : Quelques uns disent revenger ; Se défendre contre quelqu’un, lui rendre des coups. Signifie aussi rendre la pareille, s’acquitter. [F]</note>
+            <note type="L">Revancher : Quelques uns disent revenger ; Se défendre contre quelqu’un,
+              lui rendre des coups. Signifie aussi rendre la pareille, s’acquitter. [F]</note>
             <l n="1798" xml:id="l1798">Pour vous en revancher conservez ma mémoire,</l>
             <l n="1799" xml:id="l1799">Et dites quelquefois, en déplorant mon sort :</l>
             <l n="1800" xml:id="l1800">« S’il ne m’avait aimée, il ne serait pas mort. »</l>
@@ -3280,8 +3552,179 @@
       </div1>
     </body>
     <back>
-      <div1 n="A" type="résumé"><head>Résumé de la pièce </head><div2 n="1"><head>ACTE I</head><p>Chimène aime Rodrique et reçoit d’Elvire, sa gouvernante, la confirmation de l’amour réciproque de Rodrigue. Toutefois, elle se garde de faire paraître sa préférence entre Rodrigue et Don Sanche qui est un autre prétendant. Malgré cela, Chimène est inquiète (scène I, v. 1 à 58). L’Infante, fille du roi, confie, elle aussi, son amour pour Rodrigue à Léonor, sa gouvernante. Malheureusement, elle est fille du Roi de Castille et Rodrigue simple chevalier et ne peut l’aimer. Pour cette raison, elle soutient l’amour de Chimène et Rodrigue... mais elle en souffre. Elle part rejoindre Chimène (scène II v. 59 à 150). Le Comte, Don Gomès, félicite avec amertume Don Diègue, père de Rodrigue, de sa nomination au poste de gouverneur du Prince de Castille. Jaloux de Don Diègue, il lui dit qu’il est trop vieux et que lui représente le présent. Malgré leur accord, il refuse la proposition de mariage entre sa fille Chimène et de fils de Don Diègue, Rodrigue. Les deux hommes se querellent sur leur mérite propre. Le Comte gifle Don Rodrigue, celui-ci tire son épée mais la perd : il est humilié. (Scène III, v. 151 à 236). Don Rodrigue se désole seul de la honte d’avoir perdu son épée (Scène IV, v.237 à 260). Son fils Rodrigue arrive et demande à celui-ci de de venger cet affront malgré son amour pour Chimène (Scène V, v. 261 à 290). Seul, Rodrigue se plaint de son sort. Après avoir hésité, il choisit de venger son père. (Scène VI, v. 291 à 350 - Stances).</p></div2><div2 n="2"><head>ACTE II</head><p>Le Comte confie à Don Arias qu’il est allé trop loin. Don Arias lui fait savoir que le Roi souhaite des excuses. Le Comte pense que le roi a trop besoin de lui et envisage de lui désobéir. (Scène I, v. 351 à 396) Rodrigue rencontre le Comte et le défie. Le Comte tente de le dissuader de combattre mais s’y résout devant la résolution de Rodrigue. Ils sortent pour se battre. (Scène II, v. 397 à 442). L’Infante tente de rassurer Chimène sur la querelle entre Le Comte et Don Diègue : le roi et elle-même veulent accommoder les choses (Scène III, v. 443 à 499). Un page vient annoncer que Le Comte et Rodrigue se battent (Scène IV, v. 500 à 505). L’Infante, folle d’amour, se confie à Léonor : elle espère que la victoire de Rodrigue lui ouvre la gloire et qu’ainsi elle puisse l’épouser. (Scène V, v. 506 à 556) Le Roi apprend par Don Sanche que Le Comte ne veut pas s’excuser ce qui le met en colère. Mais les Maures approchent par la mer, il faut les contenir (Scène VI, v. 557 à 632). Don Alonse entre pour annoncer au roi la mort du Comte. Chimène réclame vengeance mais la Roi a besoin de Rodrigue contre les Maures. (Scène VII, v. 633 à 646). Don Diègue entre et avec Chimène implorent l’un la clémence, l’autre la vengeance : Chimène raconte avec douleur la mort de son père, Don Diègue demande à ce que la vengeance tombe sur lui et non sur son fils. Le Roi renvoie chacun pour délibérer (Scène VIII, v. 646 à 740).</p></div2><div2 n="3"><head>ACTE III</head><p>Rodrigue vient devant la demeure de Chimène. Elvire l’arrête et lui demande de partir, lui ne veut que mourir et veut la voir. Elle le supplie de partir, il sort (Scène I, v. 740 à 772). Don Sanche arrive avec Chimène. Il lui propose de venger son père et d’accepter son amour. Elle ne veut de justice que du roi mais demande à Don Sanche de patienter (Scène II, v. 773 à 792). Chimène seule avec Elvire s’épanche sur son désir de vengeance et son amour pour Rodrigue. Chimène conclue par la volonté de voir mourir Rodrigue et mourir après lui (Scène III, v. 793 à 848). Rodrigue arrive soudain, propose à Chimène de le tuer avec l’épée qui a tué son père. Elle refuse par amour, il insiste pour laver leur honneur. Elle veut obtenir vengeance d’autrui pour ne pas tuer son amour. Elle le chasse, il s’enfuit (Scène IV, v. 849 à 1000). Don Diègue, seul, heureux que son fils l’ait vengé le cherche. Il arrive enfin (Scène V, v. 1001 à 1024). Don Diègue embrasse son fils de joie, Rodrigue lui fait part de son désespoir d’avoir perdu son amour. Les Maures sont au portes de la ville, Don Diègue envoie son fils au combat pour reconquérir tous les cours (Scène VI, v. 1025 à 1100).</p></div2><div2 n="4"><head>ACTE IV</head><p>Elvire raconte à Chimène la bataille de la nuit et la victoire glorieuse de Rodrigue. Chimène se retient d’éprouver quelque joie et se rappelle son devoir envers son père (Scène I, v. 1101 à 1142). L’Infante entre et propose à Chimène de se réjouir de la victoire. Cette dernière reste dans sa colère. L’Infante lui fait comprendre que la poursuite d’une vengeance personnelle peut nuire au bonheur de tout un peuple puis lui dit que l’indifférence envers Rodrigue lui suffira pour se venger de lui. Chimène ne renonce pas. Elle sortent (Scène II, v. 1143 à 1208). Le Roi arrive pour féliciter Rodrigue. Ce dernier raconte longuement son combat (Scène III, v. 1209 à 1329). Chimème est annoncée, le Roi écarte Rodrigue (Scène IV v. 1330 à 1337). Par feinte, le Roi annonce à Chimène la mort de Rodrigue, elle s’évanouit. On croit y déceler de l’amour. Elle se reprend et dit que son trouble vient qu’elle ne peut ainsi obtenir justice. Le Roi veut arrêter la querelle. Chimène insiste et obtient un combat singulier entre Don Sanche et Rodrigue : le vainqueur épousera Chimène (Scène V, v. 1338 à 1464).</p></div2><div2 n="5"><head>ACTE V</head><p>Rodrigue vient se présenter à Chimène, seule : il lui fait ses adieux. Rodrigue veut se laisser mourir au combat, Chimène l’incite à ne pas renoncer en provoquant sa fierté, en vain. Puis, elle lui dit l’enjeu du combat : un mariage avec elle. Rodrigue est de nouveau prêt à se battre (Scène I, v. 1465 à 1564). L’Infante, seule, s’épanche sur son propre sort : elle ne peut épouser l’homme qu’elle aime parce qu’il n’est pas de son rang et parce qu’il est à Chimène (Scène II, v. 1565 à 1596). Léonor vient interrompre cette rêverie. L’infante dit qu’elle va pousser, mieux encrore, le mariage de Rodrigue qui est presque déjà acquis. Elle renonce à son amour (Scène III, v. 1597 à 1644). Chimène a rejoint Elvire et se plaint que quelque soit le vainqueur, il aura du sang sur les mains : Rodrigue de son père ou Don Sanche de son amour. Elvire retourne l’argument ; avance que cela résoudra un problème elle sera vengée ou elle sera heureuse (Scène IV, v. 1645 à 1704). Don Sanche de présente devant elles : il est interrompu à chaque fois par Chimène qui déclare son amour pour Rodrigue mort (Scène V, v. 1705 à 1722). Le Roi et Don Diègue entrent. Chimène demande à partir dans un couvent pour pleurer son amour. Le Roi annonce que Rodrigue n’est pas mort. Don Sanche raconte son combat perdu. Le Roi incite Chimène à faire quelque chose pour elle-même : aimer (Scène VI, v. 1723 à 1772). L’Infante entre et appuie la recommandation de son père. Rodrigue s’agenouille devant Chimène et met sa vie entre ses mains. Chimène demande du temps car elle n’aime pas être le salaire d’un combat. Le Roi lui accorde un an de deuil et commande à Rodrigue d’aller faire des conquêtes pour son roi. Rodrigue accepte. (Scène VII, v. 1773 à 1840).</p></div2></div1>
-      <div1 n="2"><head>Vers connus et remarquables </head><div2 n="1"><head>ACTE I</head><p>Scène IV, Don Diègue, v. 237-240 :</p><l>Ô rage ! Ô désespoir ! Ô vieillesse ennemie !</l><l>N’ai-je donc tant vécu que pour cette infamie ?</l><l>Et ne suis-je blanchi dans les travaux guerriers</l><l>Que pour voir en un jour flétrir tant de lauriers ?</l><p>Scène V, Don Diègue, Rodrigue, v. 261 à 267 :</p><p>DON DIÈGUE.</p><l>Rodrigue, as-tu du coeur ?</l><p>DON RODRIGUE.</p><l>Tout autre que mon père</l><l>L’éprouverait sur l’heure.</l><p>DON DIÈGUE.</p><l>Agréable colère !</l><l>Digne ressentiment à ma douleur bien doux !</l><l>Je reconnais mon sang à ce noble courroux ;</l><l>Ma jeunesse revit en cette ardeur si prompte.</l><l>Viens, mon fils, viens, mon sang, viens réparer ma honte ;</l><l>Viens me venger.</l></div2><div2 n="2"><head>ACTE II</head><p>Scène 2, Rodrique, v. 405 et 406 : </p><l>Je suis jeune, il est vrai ; mais aux âmes bien nées</l><l>La valeur n’attend point le nombre des années.</l><p>Scène 2, Le Comte, v. 434 :</p><l>À vaincre sans péril, on triomphe sans gloire.</l><p>Scène 3, Chimène, v. 479 et 480 :</p><l>Je sens couler des pleurs que je veux retenir ;</l><l>Le passé me tourmente, et je crains l’avenir.</l></div2><div2 n="3"><head>ACTE III</head><p>Scène 3, Chimène, v. 799 et 802 :</p><l>Pleurez, pleurez, mes yeux, et fondez-vous en eau !</l><l>La moitié de ma vie a mis l’autre au tombeau,</l><l>Et m’oblige à venger, après ce coup funeste,</l><l>Celle que je n’ai plus sur celle qui me reste.</l><p>Scène 4, Chimène, Rodrigue, v.957 à 963.</p><p>DON RODRIGUE.</p><l>Ton malheureux amant aura bien moins de peine</l><l>À mourir par ta main qu’à vivre avec ta haine.</l><p>CHIMÈNE.</p><l>Va, je ne te hais point.</l><p>DON RODRIGUE.</p><l>Tu le dois.</l><p>CHIMÈNE.</p><l>Je ne puis.</l></div2><div2 n="4"><head>ACTE IV</head><p>Scène 2, Chimène, v. 1196 :</p><l>J’irai sous mes cyprès accabler ses lauriers.</l><p>Scène 3, Rodrigue, v. 1257 à 1262 :</p><l>Sous moi donc cette troupe s’avance,</l><l>Et porte sur le front une mâle assurance.</l><l>Nous partîmes cinq cents ; mais par un prompt renfort</l><l>Nous nous vîmes trois mille en arrivant au port,</l><l>Tant, à nous voir marcher avec un tel visage,</l><l>Les plus épouvantés reprenaient de courage !</l><p>Puis v. 1273 et 1274 :</p><l>Cette obscure clarté qui tombe des étoiles</l><l>Enfin avec le flux nous fait voir trente voiles ;</l><p>Puis v. 1301 et 1302 :</p><l>Ô combien d’actions, combien d’exploits célèbres</l><l>Sont demeurés sans gloire au milieu des ténèbres,</l><p>font penser aux vers de Victor Hugo : Combien de marins, combien de capitaines</p><p>Puis le vers 1328 : </p><l>Et le combat cessa faute de combattants.</l></div2></div1>
+      <div1 n="A" type="résumé">
+        <head>Résumé de la pièce </head>
+        <div2 n="1">
+          <head>ACTE I</head>
+          <p>Chimène aime Rodrique et reçoit d’Elvire, sa gouvernante, la confirmation de l’amour
+            réciproque de Rodrigue. Toutefois, elle se garde de faire paraître sa préférence entre
+            Rodrigue et Don Sanche qui est un autre prétendant. Malgré cela, Chimène est inquiète
+            (scène I, v. 1 à 58). L’Infante, fille du roi, confie, elle aussi, son amour pour
+            Rodrigue à Léonor, sa gouvernante. Malheureusement, elle est fille du Roi de Castille et
+            Rodrigue simple chevalier et ne peut l’aimer. Pour cette raison, elle soutient l’amour
+            de Chimène et Rodrigue... mais elle en souffre. Elle part rejoindre Chimène (scène II v.
+            59 à 150). Le Comte, Don Gomès, félicite avec amertume Don Diègue, père de Rodrigue, de
+            sa nomination au poste de gouverneur du Prince de Castille. Jaloux de Don Diègue, il lui
+            dit qu’il est trop vieux et que lui représente le présent. Malgré leur accord, il refuse
+            la proposition de mariage entre sa fille Chimène et de fils de Don Diègue, Rodrigue. Les
+            deux hommes se querellent sur leur mérite propre. Le Comte gifle Don Rodrigue, celui-ci
+            tire son épée mais la perd : il est humilié. (Scène III, v. 151 à 236). Don Rodrigue se
+            désole seul de la honte d’avoir perdu son épée (Scène IV, v.237 à 260). Son fils
+            Rodrigue arrive et demande à celui-ci de de venger cet affront malgré son amour pour
+            Chimène (Scène V, v. 261 à 290). Seul, Rodrigue se plaint de son sort. Après avoir
+            hésité, il choisit de venger son père. (Scène VI, v. 291 à 350 - Stances).</p>
+        </div2>
+        <div2 n="2">
+          <head>ACTE II</head>
+          <p>Le Comte confie à Don Arias qu’il est allé trop loin. Don Arias lui fait savoir que le
+            Roi souhaite des excuses. Le Comte pense que le roi a trop besoin de lui et envisage de
+            lui désobéir. (Scène I, v. 351 à 396) Rodrigue rencontre le Comte et le défie. Le Comte
+            tente de le dissuader de combattre mais s’y résout devant la résolution de Rodrigue. Ils
+            sortent pour se battre. (Scène II, v. 397 à 442). L’Infante tente de rassurer Chimène
+            sur la querelle entre Le Comte et Don Diègue : le roi et elle-même veulent accommoder
+            les choses (Scène III, v. 443 à 499). Un page vient annoncer que Le Comte et Rodrigue se
+            battent (Scène IV, v. 500 à 505). L’Infante, folle d’amour, se confie à Léonor : elle
+            espère que la victoire de Rodrigue lui ouvre la gloire et qu’ainsi elle puisse
+            l’épouser. (Scène V, v. 506 à 556) Le Roi apprend par Don Sanche que Le Comte ne veut
+            pas s’excuser ce qui le met en colère. Mais les Maures approchent par la mer, il faut
+            les contenir (Scène VI, v. 557 à 632). Don Alonse entre pour annoncer au roi la mort du
+            Comte. Chimène réclame vengeance mais la Roi a besoin de Rodrigue contre les Maures.
+            (Scène VII, v. 633 à 646). Don Diègue entre et avec Chimène implorent l’un la clémence,
+            l’autre la vengeance : Chimène raconte avec douleur la mort de son père, Don Diègue
+            demande à ce que la vengeance tombe sur lui et non sur son fils. Le Roi renvoie chacun
+            pour délibérer (Scène VIII, v. 646 à 740).</p>
+        </div2>
+        <div2 n="3">
+          <head>ACTE III</head>
+          <p>Rodrigue vient devant la demeure de Chimène. Elvire l’arrête et lui demande de partir,
+            lui ne veut que mourir et veut la voir. Elle le supplie de partir, il sort (Scène I, v.
+            740 à 772). Don Sanche arrive avec Chimène. Il lui propose de venger son père et
+            d’accepter son amour. Elle ne veut de justice que du roi mais demande à Don Sanche de
+            patienter (Scène II, v. 773 à 792). Chimène seule avec Elvire s’épanche sur son désir de
+            vengeance et son amour pour Rodrigue. Chimène conclue par la volonté de voir mourir
+            Rodrigue et mourir après lui (Scène III, v. 793 à 848). Rodrigue arrive soudain, propose
+            à Chimène de le tuer avec l’épée qui a tué son père. Elle refuse par amour, il insiste
+            pour laver leur honneur. Elle veut obtenir vengeance d’autrui pour ne pas tuer son
+            amour. Elle le chasse, il s’enfuit (Scène IV, v. 849 à 1000). Don Diègue, seul, heureux
+            que son fils l’ait vengé le cherche. Il arrive enfin (Scène V, v. 1001 à 1024). Don
+            Diègue embrasse son fils de joie, Rodrigue lui fait part de son désespoir d’avoir perdu
+            son amour. Les Maures sont au portes de la ville, Don Diègue envoie son fils au combat
+            pour reconquérir tous les cours (Scène VI, v. 1025 à 1100).</p>
+        </div2>
+        <div2 n="4">
+          <head>ACTE IV</head>
+          <p>Elvire raconte à Chimène la bataille de la nuit et la victoire glorieuse de Rodrigue.
+            Chimène se retient d’éprouver quelque joie et se rappelle son devoir envers son père
+            (Scène I, v. 1101 à 1142). L’Infante entre et propose à Chimène de se réjouir de la
+            victoire. Cette dernière reste dans sa colère. L’Infante lui fait comprendre que la
+            poursuite d’une vengeance personnelle peut nuire au bonheur de tout un peuple puis lui
+            dit que l’indifférence envers Rodrigue lui suffira pour se venger de lui. Chimène ne
+            renonce pas. Elle sortent (Scène II, v. 1143 à 1208). Le Roi arrive pour féliciter
+            Rodrigue. Ce dernier raconte longuement son combat (Scène III, v. 1209 à 1329). Chimème
+            est annoncée, le Roi écarte Rodrigue (Scène IV v. 1330 à 1337). Par feinte, le Roi
+            annonce à Chimène la mort de Rodrigue, elle s’évanouit. On croit y déceler de l’amour.
+            Elle se reprend et dit que son trouble vient qu’elle ne peut ainsi obtenir justice. Le
+            Roi veut arrêter la querelle. Chimène insiste et obtient un combat singulier entre Don
+            Sanche et Rodrigue : le vainqueur épousera Chimène (Scène V, v. 1338 à 1464).</p>
+        </div2>
+        <div2 n="5">
+          <head>ACTE V</head>
+          <p>Rodrigue vient se présenter à Chimène, seule : il lui fait ses adieux. Rodrigue veut se
+            laisser mourir au combat, Chimène l’incite à ne pas renoncer en provoquant sa fierté, en
+            vain. Puis, elle lui dit l’enjeu du combat : un mariage avec elle. Rodrigue est de
+            nouveau prêt à se battre (Scène I, v. 1465 à 1564). L’Infante, seule, s’épanche sur son
+            propre sort : elle ne peut épouser l’homme qu’elle aime parce qu’il n’est pas de son
+            rang et parce qu’il est à Chimène (Scène II, v. 1565 à 1596). Léonor vient interrompre
+            cette rêverie. L’infante dit qu’elle va pousser, mieux encrore, le mariage de Rodrigue
+            qui est presque déjà acquis. Elle renonce à son amour (Scène III, v. 1597 à 1644).
+            Chimène a rejoint Elvire et se plaint que quelque soit le vainqueur, il aura du sang sur
+            les mains : Rodrigue de son père ou Don Sanche de son amour. Elvire retourne l’argument
+            ; avance que cela résoudra un problème elle sera vengée ou elle sera heureuse (Scène IV,
+            v. 1645 à 1704). Don Sanche de présente devant elles : il est interrompu à chaque fois
+            par Chimène qui déclare son amour pour Rodrigue mort (Scène V, v. 1705 à 1722). Le Roi
+            et Don Diègue entrent. Chimène demande à partir dans un couvent pour pleurer son amour.
+            Le Roi annonce que Rodrigue n’est pas mort. Don Sanche raconte son combat perdu. Le Roi
+            incite Chimène à faire quelque chose pour elle-même : aimer (Scène VI, v. 1723 à 1772).
+            L’Infante entre et appuie la recommandation de son père. Rodrigue s’agenouille devant
+            Chimène et met sa vie entre ses mains. Chimène demande du temps car elle n’aime pas être
+            le salaire d’un combat. Le Roi lui accorde un an de deuil et commande à Rodrigue d’aller
+            faire des conquêtes pour son roi. Rodrigue accepte. (Scène VII, v. 1773 à 1840).</p>
+        </div2>
+      </div1>
+      <div1 n="2">
+        <head>Vers connus et remarquables </head>
+        <div2 n="1">
+          <head>ACTE I</head>
+          <p>Scène IV, Don Diègue, v. 237-240 :</p>
+          <l>Ô rage ! Ô désespoir ! Ô vieillesse ennemie !</l>
+          <l>N’ai-je donc tant vécu que pour cette infamie ?</l>
+          <l>Et ne suis-je blanchi dans les travaux guerriers</l>
+          <l>Que pour voir en un jour flétrir tant de lauriers ?</l>
+          <p>Scène V, Don Diègue, Rodrigue, v. 261 à 267 :</p>
+          <p>DON DIÈGUE.</p>
+          <l>Rodrigue, as-tu du coeur ?</l>
+          <p>DON RODRIGUE.</p>
+          <l>Tout autre que mon père</l>
+          <l>L’éprouverait sur l’heure.</l>
+          <p>DON DIÈGUE.</p>
+          <l>Agréable colère !</l>
+          <l>Digne ressentiment à ma douleur bien doux !</l>
+          <l>Je reconnais mon sang à ce noble courroux ;</l>
+          <l>Ma jeunesse revit en cette ardeur si prompte.</l>
+          <l>Viens, mon fils, viens, mon sang, viens réparer ma honte ;</l>
+          <l>Viens me venger.</l>
+        </div2>
+        <div2 n="2">
+          <head>ACTE II</head>
+          <p>Scène 2, Rodrique, v. 405 et 406 : </p>
+          <l>Je suis jeune, il est vrai ; mais aux âmes bien nées</l>
+          <l>La valeur n’attend point le nombre des années.</l>
+          <p>Scène 2, Le Comte, v. 434 :</p>
+          <l>À vaincre sans péril, on triomphe sans gloire.</l>
+          <p>Scène 3, Chimène, v. 479 et 480 :</p>
+          <l>Je sens couler des pleurs que je veux retenir ;</l>
+          <l>Le passé me tourmente, et je crains l’avenir.</l>
+        </div2>
+        <div2 n="3">
+          <head>ACTE III</head>
+          <p>Scène 3, Chimène, v. 799 et 802 :</p>
+          <l>Pleurez, pleurez, mes yeux, et fondez-vous en eau !</l>
+          <l>La moitié de ma vie a mis l’autre au tombeau,</l>
+          <l>Et m’oblige à venger, après ce coup funeste,</l>
+          <l>Celle que je n’ai plus sur celle qui me reste.</l>
+          <p>Scène 4, Chimène, Rodrigue, v.957 à 963.</p>
+          <p>DON RODRIGUE.</p>
+          <l>Ton malheureux amant aura bien moins de peine</l>
+          <l>À mourir par ta main qu’à vivre avec ta haine.</l>
+          <p>CHIMÈNE.</p>
+          <l>Va, je ne te hais point.</l>
+          <p>DON RODRIGUE.</p>
+          <l>Tu le dois.</l>
+          <p>CHIMÈNE.</p>
+          <l>Je ne puis.</l>
+        </div2>
+        <div2 n="4">
+          <head>ACTE IV</head>
+          <p>Scène 2, Chimène, v. 1196 :</p>
+          <l>J’irai sous mes cyprès accabler ses lauriers.</l>
+          <p>Scène 3, Rodrigue, v. 1257 à 1262 :</p>
+          <l>Sous moi donc cette troupe s’avance,</l>
+          <l>Et porte sur le front une mâle assurance.</l>
+          <l>Nous partîmes cinq cents ; mais par un prompt renfort</l>
+          <l>Nous nous vîmes trois mille en arrivant au port,</l>
+          <l>Tant, à nous voir marcher avec un tel visage,</l>
+          <l>Les plus épouvantés reprenaient de courage !</l>
+          <p>Puis v. 1273 et 1274 :</p>
+          <l>Cette obscure clarté qui tombe des étoiles</l>
+          <l>Enfin avec le flux nous fait voir trente voiles ;</l>
+          <p>Puis v. 1301 et 1302 :</p>
+          <l>Ô combien d’actions, combien d’exploits célèbres</l>
+          <l>Sont demeurés sans gloire au milieu des ténèbres,</l>
+          <p>font penser aux vers de Victor Hugo : Combien de marins, combien de capitaines</p>
+          <p>Puis le vers 1328 : </p>
+          <l>Et le combat cessa faute de combattants.</l>
+        </div2>
+      </div1>
     </back>
   </text>
 </TEI>
