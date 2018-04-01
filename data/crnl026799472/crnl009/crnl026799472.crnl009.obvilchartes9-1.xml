@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../Teinte/teinte.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="../Teinte/teinte.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="fr">
+<?xml-model href="../Teinte/teinte.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="../Teinte/teinte.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="fr">
   <teiHeader>
     <fileDesc>
       <titleStmt>
         <title>Le Cid</title>
-        <title type="sub">, tragi-comédie</title>
-        <author academie="1647" born="1606" born_location="Rouen" death="1684" death_location="Paris" key="Corneille, Pierre (1606-1684)"> <surname>Corneille, Pierre</surname> <forename> Pierre</forename> </author>
+        <title type="sub">tragi-comédie</title>
+        <author academie="1647" born="1606" born_location="Rouen" death="1684"
+          death_location="Paris" key="Corneille, Pierre (1606-1684)">
+          <surname>Corneille, Pierre</surname>
+          <forename> Pierre</forename>
+        </author>
       </titleStmt>
       <publicationStmt>
         <publisher>Théâtre Classique</publisher>
@@ -43,9 +48,7 @@
     </profileDesc>
     <encodingDesc>
       <refsDecl n="CTS">
-        <cRefPattern 
-          n="level1"
-          matchPattern="(\w+)"
+        <cRefPattern n="level1" matchPattern="(\w+)"
           replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div1/tei:div2//tei:l[@n='$1'])">
           <p>level1 récupère les vers</p>
         </cRefPattern>
@@ -62,38 +65,85 @@
         <docDate value="1637">M. DC. XXXVII.</docDate>
         <docAuthor bio="corneillep" id="CORNEILLE, Pierre"/>
         <docImprint>
-          <privilege date="1637-01-21"> <head>Extrait du privil[èg]e du Roi.</head> <p>Par grâce et privilège du roi, il est permis à Augustin Courbé, marchand libraire à Paris, d’imprimer ou faire imprimer, et exposer en vente, un livre intitulé "Le Cid tragi-comédie" Par Mr CORNEILLE, et défenses sont faites à tous imprimeurs, libraires et autres, d’imprimer, ni faire imprimer ledit livre sans sa permission, et de ceux qui auront droit de lui, et cependant le temps de vingt ans à compter du jour que ledit livre sera achevé d’imprimer pour la première fois, à peine aux contrevenants, de quinze cent livres d’amende, confiscation des exemplaires qui se trouverons contrefaits, et de tous dépens, dommages et intérêts, ainsi qu’il est contenu plus au long aux dites lettres de privilège. donné à Paris le vingt et unième janvier mille six cent trente-sept.</p> <p>Et ledit Courbé associé avec lui audit privilège, François Targa, suivant le contrat passé entre eux par devant notaire du Châtelet de Paris.</p> </privilege>
-          <acheveImprime id="1637-03-23">Achevé d’imprimé ce 23 mars 1637. Les exemplaires ont été fournis ainsi qu’il est porté par le privilège.</acheveImprime>
-          <printer id="COURBÉ">À Paris, chez Augustin Courbé, imprimeur et libraire de Monseigneur frère du roi, dans le petite salle du Palais, à la Palme.</printer>
+          <privilege date="1637-01-21">
+            <head>Extrait du privil[èg]e du Roi.</head>
+            <p>Par grâce et privilège du roi, il est permis à Augustin Courbé, marchand libraire à
+              Paris, d’imprimer ou faire imprimer, et exposer en vente, un livre intitulé "Le Cid
+              tragi-comédie" Par Mr CORNEILLE, et défenses sont faites à tous imprimeurs, libraires
+              et autres, d’imprimer, ni faire imprimer ledit livre sans sa permission, et de ceux
+              qui auront droit de lui, et cependant le temps de vingt ans à compter du jour que
+              ledit livre sera achevé d’imprimer pour la première fois, à peine aux contrevenants,
+              de quinze cent livres d’amende, confiscation des exemplaires qui se trouverons
+              contrefaits, et de tous dépens, dommages et intérêts, ainsi qu’il est contenu plus au
+              long aux dites lettres de privilège. donné à Paris le vingt et unième janvier mille
+              six cent trente-sept.</p>
+            <p>Et ledit Courbé associé avec lui audit privilège, François Targa, suivant le contrat
+              passé entre eux par devant notaire du Châtelet de Paris.</p>
+          </privilege>
+          <acheveImprime id="1637-03-23">Achevé d’imprimé ce 23 mars 1637. Les exemplaires ont été
+            fournis ainsi qu’il est porté par le privilège.</acheveImprime>
+          <printer id="COURBÉ">À Paris, chez Augustin Courbé, imprimeur et libraire de Monseigneur
+            frère du roi, dans le petite salle du Palais, à la Palme.</printer>
         </docImprint>
         <performance>
-        <premiere date="1637-01-04" location="Théâtre du Marais">Représentée pour la première fois le 4 janvier 1637 au Théâtre du Marais.</premiere>
-      </performance>
+          <premiere date="1637-01-04" location="Théâtre du Marais">Représentée pour la première fois
+            le 4 janvier 1637 au Théâtre du Marais.</premiere>
+        </performance>
       </titlePage>
       <div type="dedication">
         <salute>À Madame de Combalet.</salute>
         <head>Madame,</head>
-        <p>Ce portrait vivant que je vous offre, représente un héros assez reconnaissable aux lauriers dont il est couvert. Sa vie a été une suite continuelle de victoires, son corps porté dans son armée a gagné des batailles après sa mort, et son nom au bout de six cent ans vient encore triompher en France. Il y a trouvé une réception trop favorable pour se repentir d’être sorti de son pays, et d’avoir appris à parler une autre langue que la sienne. Ce succès a passé mes plus ambitieuses espérances, et m’a surpris d’abord, mais il a cessé de m’étonner depuis que j’ai vu la satisfaction que vous avez témoignée, quand il a paru devant vous ; alors j’ai osé me promettre de lui tout ce qui en est arrivé, et j’ai cru qu’après les éloges dont vous l’avez honoré, cet applaudissement universel ne lui pouvait manquer. Et véritablement, MADAME, on ne peut douter avec raison de ce que vaut une chose qui a le bonheur de vous plaire : le jugement que vous en faites est la marque assurée de son prix ; et comme vous donnez toujours libéralement aux véritables beautés l’estime qu’elles méritent, les fausses n’ont jamais le pouvoir de vous éblouir. Mais votre générosité ne s’arrête pas à des louanges stériles pour les ouvrages qui vous agréent, elle prend plaisir à s’étendre utilement sur ceux qui les produisent, et ne dédaigne point d’employer en leur faveur ce grand crédit que votre qualité et vos vertus vous ont acquis. J’en ai ressenti des effets qui me sont trop avantageux pour m’en taire, et je ne vous dois pas moins de remerciements pour moi que pour le CID. C’est une reconnaissance qui m’est glorieuse, puisqu’il m’est impossible de publier que je vous ai de grands obligations, sans publier en même temps que vous m’avez assez estimé pour vouloir que je vous en eusse. Aussi, MADAME, si je souhaite quelque durée pour cet heureux effort de ma plume, ce n’est point pour apprendre mon nom à la postérité, mais seulement pour laisser des marques éternelles de ce que je dois, et faire lire à ceux qui naîtront dans les autres siècles la protestation que je fais d’être toute ma vie, Madame,</p>
+        <p>Ce portrait vivant que je vous offre, représente un héros assez reconnaissable aux
+          lauriers dont il est couvert. Sa vie a été une suite continuelle de victoires, son corps
+          porté dans son armée a gagné des batailles après sa mort, et son nom au bout de six cent
+          ans vient encore triompher en France. Il y a trouvé une réception trop favorable pour se
+          repentir d’être sorti de son pays, et d’avoir appris à parler une autre langue que la
+          sienne. Ce succès a passé mes plus ambitieuses espérances, et m’a surpris d’abord, mais il
+          a cessé de m’étonner depuis que j’ai vu la satisfaction que vous avez témoignée, quand il
+          a paru devant vous ; alors j’ai osé me promettre de lui tout ce qui en est arrivé, et j’ai
+          cru qu’après les éloges dont vous l’avez honoré, cet applaudissement universel ne lui
+          pouvait manquer. Et véritablement, MADAME, on ne peut douter avec raison de ce que vaut
+          une chose qui a le bonheur de vous plaire : le jugement que vous en faites est la marque
+          assurée de son prix ; et comme vous donnez toujours libéralement aux véritables beautés
+          l’estime qu’elles méritent, les fausses n’ont jamais le pouvoir de vous éblouir. Mais
+          votre générosité ne s’arrête pas à des louanges stériles pour les ouvrages qui vous
+          agréent, elle prend plaisir à s’étendre utilement sur ceux qui les produisent, et ne
+          dédaigne point d’employer en leur faveur ce grand crédit que votre qualité et vos vertus
+          vous ont acquis. J’en ai ressenti des effets qui me sont trop avantageux pour m’en taire,
+          et je ne vous dois pas moins de remerciements pour moi que pour le CID. C’est une
+          reconnaissance qui m’est glorieuse, puisqu’il m’est impossible de publier que je vous ai
+          de grands obligations, sans publier en même temps que vous m’avez assez estimé pour
+          vouloir que je vous en eusse. Aussi, MADAME, si je souhaite quelque durée pour cet heureux
+          effort de ma plume, ce n’est point pour apprendre mon nom à la postérité, mais seulement
+          pour laisser des marques éternelles de ce que je dois, et faire lire à ceux qui naîtront
+          dans les autres siècles la protestation que je fais d’être toute ma vie, Madame,</p>
         <p>Votre très humble et très obéissant serviteur.</p>
         <signed>CORNEILLE.</signed>
       </div>
       <div xml:id="castList">
         <castList>
           <head>ACTEURS</head>
-          <castItem><role xml:id="FERNAND" rend="male superior">DON FERNAND</role>, premier roi de Castille. </castItem>
-          <castItem><role xml:id="INFANTE" rend="female junior">DONA URRAQUE</role>, infante de Castille. </castItem>
+          <castItem><role xml:id="FERNAND" rend="male superior">DON FERNAND</role>, premier roi de
+            Castille. </castItem>
+          <castItem><role xml:id="INFANTE" rend="female junior">DONA URRAQUE</role>, infante de
+            Castille. </castItem>
           <castItem><role xml:id="DIEGUE" rend="male">DON DIÈGUE</role>, père de Don Rodrigue. </castItem>
-          <castItem><role xml:id="COMTE" rend="male">DON GOMES</role>, comte de Gormas, père de Chimène. </castItem>
-          <castItem><role xml:id="RODRIGUE" rend="male junior">DON RODRIGUE</role>, amant de Chimène. </castItem>
+          <castItem><role xml:id="COMTE" rend="male">DON GOMES</role>, comte de Gormas, père de
+            Chimène. </castItem>
+          <castItem><role xml:id="RODRIGUE" rend="male junior">DON RODRIGUE</role>, amant de
+            Chimène. </castItem>
           <castItem><role xml:id="SANCHE" rend="male junior">DON SANCHE</role>, amoureux de Chimène. </castItem>
           <castItem><role xml:id="ARIAS" rend="male">DON ARIAS</role>, gentilhomme castillan. </castItem>
           <castItem><role xml:id="ALONSE" rend="male">DON ALONSE</role>, gentilhomme castillan. </castItem>
-          <castItem><role xml:id="CHIMENE" rend="female junior">CHIMÈNE</role>, maîtresse de Don Rodrigue, et de Don Sanche. </castItem>
-          <castItem><role xml:id="LEONOR" rend="female inferior">LÉONOR</role>, gouvernante de l’Infante. </castItem>
+          <castItem><role xml:id="CHIMENE" rend="female junior">CHIMÈNE</role>, maîtresse de Don
+            Rodrigue, et de Don Sanche. </castItem>
+          <castItem><role xml:id="LEONOR" rend="female inferior">LÉONOR</role>, gouvernante de
+            l’Infante. </castItem>
           <castItem><role xml:id="ELVIRE" rend="female inferior">ELVIRE</role>, suivante de Chimène. </castItem>
           <castItem><role xml:id="PAGE" rend="male inferior">UN PAGE</role> de l’Infante.</castItem>
         </castList>
-        <set country="Espagne" link="" location="Séville" periode="XIème">La scène est à Séville.</set>
+        <set country="Espagne" link="" location="Séville" periode="XIème">La scène est à
+          Séville.</set>
       </div>
     </front>
     <body>
@@ -101,8 +151,8 @@
         <head>ACTE I</head>
         <div2 n="1" type="scene" xml:id="I01">
           <head>SCÈNE PREMIÈRE. Le Comte, Elvire.<listPerson type="configuration" xml:id="conf1">
-            <person corresp="#ELVIRE"/>
-            <person corresp="#COMTE"/>
+              <person corresp="#ELVIRE"/>
+              <person corresp="#COMTE"/>
             </listPerson></head>
           <sp who="ELVIRE" xml:id="I01-1">
             <speaker>ELVIRE.</speaker>
@@ -145,8 +195,8 @@
         </div2>
         <div2 n="2" type="scene" xml:id="I02">
           <head>SCÈNE II. Chimène, Elvire<listPerson type="configuration" xml:id="conf2">
-            <person corresp="#ELVIRE"/>
-            <person corresp="#CHIMENE"/>
+              <person corresp="#ELVIRE"/>
+              <person corresp="#CHIMENE"/>
             </listPerson></head>
           <sp who="ELVIRE" xml:id="I02-1">
             <speaker>ELVIRE, seule.</speaker>
@@ -194,10 +244,11 @@
           </sp>
         </div2>
         <div2 n="3" type="scene" xml:id="I03">
-          <head>SCÈNE III. L’Infante, Léonor, Le page.<listPerson type="configuration" xml:id="conf3">
-            <person corresp="#INFANTE"/>
-            <person corresp="#LEONOR"/>
-            <person corresp="#PAGE"/>
+          <head>SCÈNE III. L’Infante, Léonor, Le page.<listPerson type="configuration"
+              xml:id="conf3">
+              <person corresp="#INFANTE"/>
+              <person corresp="#LEONOR"/>
+              <person corresp="#PAGE"/>
             </listPerson></head>
           <sp who="INFANTE" xml:id="I03-1">
             <speaker>L’INFANTE, au Page.</speaker>
@@ -343,8 +394,8 @@
         </div2>
         <div2 n="4" type="scene" xml:id="I04">
           <head>SCÈNE IV. Le Comte, Don Diègue.<listPerson type="configuration" xml:id="conf4">
-            <person corresp="#COMTE"/>
-            <person corresp="#DIEGUE"/>
+              <person corresp="#COMTE"/>
+              <person corresp="#DIEGUE"/>
             </listPerson></head>
           <sp who="COMTE" xml:id="I04-1">
             <speaker>LE COMTE.</speaker>
@@ -360,7 +411,8 @@
           </sp>
           <sp who="COMTE" xml:id="I04-3">
             <speaker>LE COMTE.</speaker>
-            <l n="151" xml:id="l151">Pour grands que soient les Rois, ils sont ce que nous sommes,</l>
+            <l n="151" xml:id="l151">Pour grands que soient les Rois, ils sont ce que nous
+              sommes,</l>
             <l n="152" xml:id="l152">Ils peuvent se tromper comme les autres hommes,</l>
             <l n="153" xml:id="l153">Et ce choix sert de preuve à tous les courtisans</l>
             <l n="154" xml:id="l154">Qu’ils savent mal payer les services présents.</l>
@@ -412,8 +464,12 @@
             <l n="188" xml:id="l188">Que ne puisse égaler une de mes journées ?</l>
             <l n="189" xml:id="l189">Si vous fûtes vaillant, je le suis aujourd’hui,</l>
             <l n="190" xml:id="l190">Et ce bras du Royaume est le plus ferme appui ;</l>
-            <note type="L">Aragon : grande province d’Espagne, une des douze capitaineries du royaume, est située entre celle de Vieille-Castille et de Navarre à l’Ouest, de Catalogne à l’Est, de Nouvelle-Castille au Sud, et touche à la France par sa frontière septentrionale ; Saragosse en est la capitale. [B]</note>
-            <note type="L">Grenade : ville d’Espagne (...) à 400 km au sud de Madrid, près du confluent de Xénil et du Darro, au milieu d’une vaste et riche plaine. [B]</note>
+            <note type="L">Aragon : grande province d’Espagne, une des douze capitaineries du
+              royaume, est située entre celle de Vieille-Castille et de Navarre à l’Ouest, de
+              Catalogne à l’Est, de Nouvelle-Castille au Sud, et touche à la France par sa frontière
+              septentrionale ; Saragosse en est la capitale. [B]</note>
+            <note type="L">Grenade : ville d’Espagne (...) à 400 km au sud de Madrid, près du
+              confluent de Xénil et du Darro, au milieu d’une vaste et riche plaine. [B]</note>
             <l n="191" xml:id="l191">Grenade et l’Aragon tremblent quand ce fer brille ;</l>
             <l n="192" xml:id="l192">Mon nom sert de rempart à toute la Castille,</l>
             <l n="193" xml:id="l193">Sans moi, vous passeriez bientôt sous d’autres lois,</l>
@@ -534,7 +590,7 @@
         </div2>
         <div2 n="5" type="scene" xml:id="I05">
           <head>SCÈNE V.<listPerson type="configuration" xml:id="conf5">
-            <person corresp="#DIEGUE"/>
+              <person corresp="#DIEGUE"/>
             </listPerson></head>
           <sp who="DIEGUE" xml:id="I05-1">
             <speaker>DON DIÈGUE.</speaker>
@@ -570,8 +626,8 @@
         </div2>
         <div2 n="6" type="scene" xml:id="I06">
           <head>SCÈNE VI. Don Diègue, Don Rodrigue.<listPerson type="configuration" xml:id="conf6">
-            <person corresp="#DIEGUE"/>
-            <person corresp="#RODRIGUE"/>
+              <person corresp="#DIEGUE"/>
+              <person corresp="#RODRIGUE"/>
             </listPerson></head>
           <sp who="DIEGUE" xml:id="I06-1">
             <speaker>DON DIÈGUE.</speaker>
@@ -646,7 +702,7 @@
         </div2>
         <div2 n="7" type="scene" xml:id="I07">
           <head>SCÈNE VII.<listPerson type="configuration" xml:id="conf7">
-            <person corresp="#RODRIGUE"/>
+              <person corresp="#RODRIGUE"/>
             </listPerson></head>
           <sp who="RODRIGUE" xml:id="I07-1">
             <speaker>DON RODRIGUE, seul.</speaker>
@@ -732,8 +788,8 @@
         <head>ACTE II</head>
         <div2 n="1" type="scene" xml:id="II01">
           <head>SCÈNE PREMIÈRE. Don Arias, Le Comte.<listPerson type="configuration" xml:id="conf9">
-            <person corresp="#COMTE"/>
-            <person corresp="#ARIAS"/>
+              <person corresp="#COMTE"/>
+              <person corresp="#ARIAS"/>
             </listPerson></head>
           <sp who="COMTE" xml:id="II01-1">
             <speaker>LE COMTE.</speaker>
@@ -828,9 +884,11 @@
           </sp>
           <sp who="ARIAS" xml:id="II01-18">
             <speaker>DON ARIAS.</speaker>
-            <note type="L">Résoudre : Expliquer une difficulté, décider une question, trouver un problème. Signifie aussi conclure après avoir délibéré. [F]</note>
+            <note type="L">Résoudre : Expliquer une difficulté, décider une question, trouver un
+              problème. Signifie aussi conclure après avoir délibéré. [F]</note>
             <l n="391" xml:id="l391">Adieu donc, puisqu’en vain je tâche à vous résoudre ;</l>
-            <note type="L">Foudre : (sens figuré masculin) Se dit de la colère de Dieu ou des rois. [L]</note>
+            <note type="L">Foudre : (sens figuré masculin) Se dit de la colère de Dieu ou des rois.
+              [L]</note>
             <l n="392" xml:id="l392">Avec tous vos lauriers, craignez encor la foudre.</l>
           </sp>
           <sp who="COMTE" xml:id="II01-19">
@@ -853,8 +911,8 @@
         </div2>
         <div2 n="2" type="scene" xml:id="II02">
           <head>SCÈNE II. Le Comte, Don Rodrigue.<listPerson type="configuration" xml:id="conf10">
-            <person corresp="#RODRIGUE"/>
-            <person corresp="#COMTE"/>
+              <person corresp="#RODRIGUE"/>
+              <person corresp="#COMTE"/>
             </listPerson></head>
           <sp who="RODRIGUE" xml:id="II02-1">
             <speaker>DON RODRIGUE.</speaker>
@@ -939,7 +997,8 @@
             <l n="424" xml:id="l424">Mon âme avec plaisir te destinait ma fille.</l>
             <l n="425" xml:id="l425">Je sais ta passion, et suis ravi de voir</l>
             <l n="426" xml:id="l426">Que tous ses mouvements cèdent à ton devoir,</l>
-            <note type="L">Magnanime : Qui a une grandeur d’âme et de courage, qui l’élève au dessus du commun des hommes. Il signifie beaucoup plus que brave et vaillant. [F]</note>
+            <note type="L">Magnanime : Qui a une grandeur d’âme et de courage, qui l’élève au dessus
+              du commun des hommes. Il signifie beaucoup plus que brave et vaillant. [F]</note>
             <l n="427" xml:id="l427">Qu’ils n’ont point affaibli cette ardeur magnanime,</l>
             <l n="428" xml:id="l428">Que ta haute vertu répond à mon estime,</l>
             <l n="429" xml:id="l429">Et que voulant pour gendre un chevalier parfait</l>
@@ -981,10 +1040,11 @@
           </sp>
         </div2>
         <div2 n="3" type="scene" xml:id="II03">
-          <head>SCÈNE III. L’Infante, Chimène, Léonor.<listPerson type="configuration" xml:id="conf11">
-            <person corresp="#INFANTE"/>
-            <person corresp="#CHIMENE"/>
-            <person corresp="#LEONOR"/>
+          <head>SCÈNE III. L’Infante, Chimène, Léonor.<listPerson type="configuration"
+              xml:id="conf11">
+              <person corresp="#INFANTE"/>
+              <person corresp="#CHIMENE"/>
+              <person corresp="#LEONOR"/>
             </listPerson></head>
           <sp who="INFANTE" xml:id="II03-1">
             <speaker>L’INFANTE.</speaker>
@@ -997,7 +1057,8 @@
           <sp who="CHIMENE" xml:id="II03-2">
             <speaker>CHIMÈNE.</speaker>
             <l n="450" xml:id="l450">Mon coeur outré d’ennuis n’ose rien espérer,</l>
-            <note type="L">Bonace : Calme de la mer, qui se dit quand le vent est abattu, ou a cessé. La bonace trompe souvent le Pilote. [F]</note>
+            <note type="L">Bonace : Calme de la mer, qui se dit quand le vent est abattu, ou a
+              cessé. La bonace trompe souvent le Pilote. [F]</note>
             <l n="451" xml:id="l451">Un orage si prompt qui trouble une bonace,</l>
             <l n="452" xml:id="l452">D’un naufrage certain nous porte la menace.</l>
             <l n="453" xml:id="l453">Je n’en saurais douter, je péris dans le port,</l>
@@ -1034,7 +1095,8 @@
             <l n="475" xml:id="l475">Le saint noeud qui joindra Don Rodrigue et Chimène,</l>
             <l n="476" xml:id="l476">Des pères ennemis dissipera la haine,</l>
             <l n="477" xml:id="l477">Et nous verrons bientôt votre amour le plus fort</l>
-            <note type="L">Discord : désunion, dispute , querelle. Il est vieux et hors d’usage. [F]</note>
+            <note type="L">Discord : désunion, dispute , querelle. Il est vieux et hors d’usage.
+              [F]</note>
             <l n="478" xml:id="l478">Par un heureux hymen étouffer ce discord.</l>
           </sp>
           <sp who="CHIMENE" xml:id="II03-6">
@@ -1091,11 +1153,12 @@
           </sp>
         </div2>
         <div2 n="4" type="scene" xml:id="II04">
-          <head>SCÈNE IV. L’Infante, Chimène, Léonor, Le page.<listPerson type="configuration" xml:id="conf12">
-            <person corresp="#INFANTE"/>
-            <person corresp="#PAGE"/>
-            <person corresp="#CHIMENE"/>
-            <person corresp="#LEONOR"/>
+          <head>SCÈNE IV. L’Infante, Chimène, Léonor, Le page.<listPerson type="configuration"
+              xml:id="conf12">
+              <person corresp="#INFANTE"/>
+              <person corresp="#PAGE"/>
+              <person corresp="#CHIMENE"/>
+              <person corresp="#LEONOR"/>
             </listPerson></head>
           <sp who="INFANTE" xml:id="II04-1">
             <speaker>L’INFANTE.</speaker>
@@ -1133,8 +1196,8 @@
         </div2>
         <div2 n="5" type="scene" xml:id="II05">
           <head>SCÈNE V. L’Infante, Léonor.<listPerson type="configuration" xml:id="conf13">
-            <person corresp="#INFANTE"/>
-            <person corresp="#LEONOR"/>
+              <person corresp="#INFANTE"/>
+              <person corresp="#LEONOR"/>
             </listPerson></head>
           <sp who="INFANTE" xml:id="II05-1">
             <speaker>L’INFANTE.</speaker>
@@ -1189,7 +1252,9 @@
             <l n="538" xml:id="l538">Les royaumes entiers tomberont sous ses lois ;</l>
             <l n="539" xml:id="l539">Et mon amour flatteur déjà me persuade</l>
             <l n="540" xml:id="l540">Que je le vois assis au trône de Grenade,</l>
-            <note type="L">Mores (maures) : Homme noir ou femme noire, nés en une région d’Afrique appelée la Mauritanie [F]. Othello, le personnage de la pièce du même nom de Shakespeare est un maure.</note>
+            <note type="L">Mores (maures) : Homme noir ou femme noire, nés en une région d’Afrique
+              appelée la Mauritanie [F]. Othello, le personnage de la pièce du même nom de
+              Shakespeare est un maure.</note>
             <l n="541" xml:id="l541">Les Mores subjugués trembler en l’adorant,</l>
             <l n="542" xml:id="l542">L’Aragon recevoir ce nouveau conquérant,</l>
             <l n="543" xml:id="l543">Le Portugal se rendre, et ses nobles journées</l>
@@ -1223,11 +1288,12 @@
           </sp>
         </div2>
         <div2 n="6" type="scene" xml:id="II06">
-          <head>SCÈNE VI. Don Fernand, Don Arias, Don Sanche.<listPerson type="configuration" xml:id="conf14">
-            <person corresp="#FERNAND"/>
-            <person corresp="#ARIAS"/>
-            <person corresp="#SANCHE"/>
-            <person corresp="#ALONSE"/>
+          <head>SCÈNE VI. Don Fernand, Don Arias, Don Sanche.<listPerson type="configuration"
+              xml:id="conf14">
+              <person corresp="#FERNAND"/>
+              <person corresp="#ARIAS"/>
+              <person corresp="#SANCHE"/>
+              <person corresp="#ALONSE"/>
             </listPerson></head>
           <sp who="FERNAND" xml:id="II06-1">
             <speaker>LE ROI.</speaker>
@@ -1296,7 +1362,8 @@
             <l n="595" xml:id="l595">Vous perdez le respect, mais je pardonne à l’âge,</l>
             <l n="596" xml:id="l596">Et j’estime l’ardeur en un jeune courage ;</l>
             <l n="597" xml:id="l597">Un Roi dont la prudence a de meilleurs objets</l>
-            <note type="L">Ménager : Bon économe de son bien ; qui épargne, qui ne fait point de dépense superflue ; qui fait bien valoir ce qu’on lui donne à manier. [F]</note>
+            <note type="L">Ménager : Bon économe de son bien ; qui épargne, qui ne fait point de
+              dépense superflue ; qui fait bien valoir ce qu’on lui donne à manier. [F]</note>
             <l n="598" xml:id="l598">Est meilleur ménager du sang de ses sujets,</l>
             <l n="599" xml:id="l599">Je veille pour les miens, mes soucis les conservent,</l>
             <l n="600" xml:id="l600">Comme le chef a soin des membres qui le servent :</l>
@@ -1388,13 +1455,14 @@
           </sp>
         </div2>
         <div2 n="7" type="scene" xml:id="II07">
-          <head>SCÈNE VII. Don Fernand, Don Diègue, Chimène, Don Sanche, Don Arias, Don Alonse.<listPerson type="configuration" xml:id="conf15">
-            <person corresp="#CHIMENE"/>
-            <person corresp="#DIEGUE"/>
-            <person corresp="#FERNAND"/>
-            <person corresp="#SANCHE"/>
-            <person corresp="#ARIAS"/>
-            <person corresp="#ALONSE"/>
+          <head>SCÈNE VII. Don Fernand, Don Diègue, Chimène, Don Sanche, Don Arias, Don
+              Alonse.<listPerson type="configuration" xml:id="conf15">
+              <person corresp="#CHIMENE"/>
+              <person corresp="#DIEGUE"/>
+              <person corresp="#FERNAND"/>
+              <person corresp="#SANCHE"/>
+              <person corresp="#ARIAS"/>
+              <person corresp="#ALONSE"/>
             </listPerson></head>
           <sp who="CHIMENE" xml:id="II07-1">
             <speaker>CHIMÈNE.</speaker>
@@ -1530,7 +1598,8 @@
             <l n="718" xml:id="l718">L’orgueil dans votre coeur la fait presque à vos yeux,</l>
             <l n="719" xml:id="l719">Et souillé sans respect l’honneur de ma vieillesse,</l>
             <l n="720" xml:id="l720">Avantagé de l’âge, et fort de ma faiblesse.</l>
-            <note type="L">Harnois : Armure complète, la cuirasse, la casque, et tout l’équipage des armes d’un cavalier pesamment armé. [F]</note>
+            <note type="L">Harnois : Armure complète, la cuirasse, la casque, et tout l’équipage des
+              armes d’un cavalier pesamment armé. [F]</note>
             <l n="721" xml:id="l721">Sire, ainsi ces cheveux blanchis sous le harnois,</l>
             <l n="722" xml:id="l722">Ce sang pour vous servir prodigué tant de fois,</l>
             <l n="723" xml:id="l723">Ce bras jadis l’effroi d’une armée ennemie,</l>
@@ -1580,8 +1649,8 @@
         <head>ACTE III</head>
         <div2 n="1" type="scene" xml:id="III01">
           <head>SCÈNE I. Don Rodrigue, Elvire.<listPerson type="configuration" xml:id="conf17">
-            <person corresp="#ELVIRE"/>
-            <person corresp="#RODRIGUE"/>
+              <person corresp="#ELVIRE"/>
+              <person corresp="#RODRIGUE"/>
             </listPerson></head>
           <sp who="ELVIRE" xml:id="III01-1">
             <speaker>ELVIRE.</speaker>
@@ -1646,10 +1715,11 @@
           </sp>
         </div2>
         <div2 n="2" type="scene" xml:id="III02">
-          <head>SCÈNE II. Don Sanche, Chimène, Elvire.<listPerson type="configuration" xml:id="conf18">
-            <person corresp="#SANCHE"/>
-            <person corresp="#CHIMENE"/>
-            <person corresp="#ELVIRE"/>
+          <head>SCÈNE II. Don Sanche, Chimène, Elvire.<listPerson type="configuration"
+              xml:id="conf18">
+              <person corresp="#SANCHE"/>
+              <person corresp="#CHIMENE"/>
+              <person corresp="#ELVIRE"/>
             </listPerson></head>
           <sp who="SANCHE" xml:id="III02-1">
             <speaker>DON SANCHE.</speaker>
@@ -1696,8 +1766,8 @@
         </div2>
         <div2 n="3" type="scene" xml:id="III03">
           <head>SCÈNE III. Chimène, Elvire.<listPerson type="configuration" xml:id="conf19">
-            <person corresp="#CHIMENE"/>
-            <person corresp="#ELVIRE"/>
+              <person corresp="#CHIMENE"/>
+              <person corresp="#ELVIRE"/>
             </listPerson></head>
           <sp who="CHIMENE" xml:id="III03-1">
             <speaker>CHIMÈNE.</speaker>
@@ -1766,7 +1836,8 @@
           <sp who="CHIMENE" xml:id="III03-9">
             <speaker>CHIMÈNE.</speaker>
             <l n="841" xml:id="l841">Quoi ? J’aurai vu mourir mon père entre mes bras,</l>
-            <note type="C">Orrai : future du verbe ouïr. Le verbe oeïr est maintenant défectif.</note>
+            <note type="C">Orrai : future du verbe ouïr. Le verbe oeïr est maintenant
+              défectif.</note>
             <l n="842" xml:id="l842">Son sang criera vengeance, et je ne l’orrai pas !</l>
             <l n="843" xml:id="l843">Mon coeur honteusement surpris par d’autres charmes</l>
             <l n="844" xml:id="l844">Croira ne lui devoir que d’impuissantes larmes !</l>
@@ -1806,10 +1877,11 @@
           </sp>
         </div2>
         <div2 n="4" type="scene" xml:id="III04">
-          <head>SCÈNE IV. Don Rodrigue, Chimène, Elvire.<listPerson type="configuration" xml:id="conf20">
-            <person corresp="#RODRIGUE"/>
-            <person corresp="#CHIMENE"/>
-            <person corresp="#ELVIRE"/>
+          <head>SCÈNE IV. Don Rodrigue, Chimène, Elvire.<listPerson type="configuration"
+              xml:id="conf20">
+              <person corresp="#RODRIGUE"/>
+              <person corresp="#CHIMENE"/>
+              <person corresp="#ELVIRE"/>
             </listPerson></head>
           <sp who="RODRIGUE" xml:id="III04-1">
             <speaker>DON RODRIGUE.</speaker>
@@ -2118,7 +2190,7 @@
         </div2>
         <div2 n="5" type="scene" xml:id="III05">
           <head>SCÈNE V.<listPerson type="configuration" xml:id="conf21">
-            <person corresp="#DIEGUE"/>
+              <person corresp="#DIEGUE"/>
             </listPerson></head>
           <sp who="DIEGUE" xml:id="III05-1">
             <speaker>DON DIÈGUE, seul.</speaker>
@@ -2150,8 +2222,8 @@
         </div2>
         <div2 n="6" type="scene" xml:id="III06">
           <head>SCÈNE VI. Don Diègue, Don Rodrigue.<listPerson type="configuration" xml:id="conf22">
-            <person corresp="#DIEGUE"/>
-            <person corresp="#RODRIGUE"/>
+              <person corresp="#DIEGUE"/>
+              <person corresp="#RODRIGUE"/>
             </listPerson></head>
           <sp who="DIEGUE" xml:id="III06-1">
             <speaker>DON DIÈGUE.</speaker>
@@ -2264,8 +2336,8 @@
         <head>ACTE IV</head>
         <div2 n="1" type="scene" xml:id="IV01">
           <head>SCÈNE PREMIÈRE. Chimène, Elvire.<listPerson type="configuration" xml:id="conf24">
-            <person corresp="#CHIMENE"/>
-            <person corresp="#ELVIRE"/>
+              <person corresp="#CHIMENE"/>
+              <person corresp="#ELVIRE"/>
             </listPerson></head>
           <sp who="CHIMENE" xml:id="IV01-1">
             <speaker>CHIMÈNE.</speaker>
@@ -2277,7 +2349,8 @@
             <l n="1113" xml:id="l1113">Et porte jusqu’au ciel, d’une commune voix</l>
             <l n="1114" xml:id="l1114">De ce jeune héros les glorieux exploits.</l>
             <l n="1115" xml:id="l1115">Les Mores devant lui n’ont paru qu’à leur honte,</l>
-            <l n="1116" xml:id="l1116">Leur abord fut bien prompt, leur fuite encor plus prompte,</l>
+            <l n="1116" xml:id="l1116">Leur abord fut bien prompt, leur fuite encor plus
+              prompte,</l>
             <l n="1117" xml:id="l1117">Trois heures de combat laissent à nos guerriers</l>
             <l n="1118" xml:id="l1118">Une victoire entière et deux rois prisonniers,</l>
             <l n="1119" xml:id="l1119">La valeur de leur chef ne trouvait point d’obstacles.</l>
@@ -2336,7 +2409,9 @@
             <l n="1144" xml:id="l1144">Ici tous les objets me parlent de son crime.</l>
             <l n="1145" xml:id="l1145">Vous qui rendez la force à mes ressentiments,</l>
             <l n="1146" xml:id="l1146">Voiles, crêpes, habits, lugubres ornements,</l>
-            <note type="L">Pompe : Somptuosité ; appareil superbe ; dépense magnifique qu’on fait pour rendre quelque action plus recommandable, plus solennelle, et plus éclatante. [F]</note>
+            <note type="L">Pompe : Somptuosité ; appareil superbe ; dépense magnifique qu’on fait
+              pour rendre quelque action plus recommandable, plus solennelle, et plus éclatante.
+              [F]</note>
             <l n="1147" xml:id="l1147">Pompe, où m’ensevelit sa première victoire,</l>
             <l n="1148" xml:id="l1148">Contre ma passion soutenez bien ma gloire</l>
             <l n="1149" xml:id="l1149">Et lorsque mon amour prendra trop de pouvoir</l>
@@ -2349,11 +2424,12 @@
           </sp>
         </div2>
         <div2 n="2" type="scene" xml:id="IV02">
-          <head>SCÈNE II. L’Infante, Chimène, Léonor, Elvire.<listPerson type="configuration" xml:id="conf25">
-            <person corresp="#INFANTE"/>
-            <person corresp="#CHIMENE"/>
-            <person corresp="#LEONOR"/>
-            <person corresp="#ELVIRE"/>
+          <head>SCÈNE II. L’Infante, Chimène, Léonor, Elvire.<listPerson type="configuration"
+              xml:id="conf25">
+              <person corresp="#INFANTE"/>
+              <person corresp="#CHIMENE"/>
+              <person corresp="#LEONOR"/>
+              <person corresp="#ELVIRE"/>
             </listPerson></head>
           <sp who="INFANTE" xml:id="IV02-1">
             <speaker>L’INFANTE.</speaker>
@@ -2396,7 +2472,8 @@
             <l n="1173" xml:id="l1173">On aigrit ma douleur en l’élevant si haut,</l>
             <l n="1174" xml:id="l1174">Je vois ce que je perds, quand je vois ce qu’il vaut.</l>
             <l n="1175" xml:id="l1175">Ah ! Cruels déplaisirs à l’esprit d’une amante !</l>
-            <note type="L">Feu : On dit aussi d’un homme amoureux qu’il brûle d’un beau feu, qu’il nourrit un feu discret, un feu caché sous la cendre, un feu qui le dévore. [F]</note>
+            <note type="L">Feu : On dit aussi d’un homme amoureux qu’il brûle d’un beau feu, qu’il
+              nourrit un feu discret, un feu caché sous la cendre, un feu qui le dévore. [F]</note>
             <l n="1176" xml:id="l1176">Plus j’apprends son mérite, et plus mon feu s’augmente,</l>
             <l n="1177" xml:id="l1177">Cependant mon devoir est toujours le plus fort</l>
             <l n="1178" xml:id="l1178">Et malgré mon amour, va poursuivre sa mort.</l>
@@ -2439,8 +2516,10 @@
             <l n="1203" xml:id="l1203">Quoique mon coeur pour lui contre moi s’intéresse,</l>
             <l n="1204" xml:id="l1204">Quoiqu’un peuple l’adore et qu’un roi le caresse,</l>
             <l n="1205" xml:id="l1205">Qu’il soit environné des plus vaillants guerriers,</l>
-            <note type="L">Cyprès : Nom d’un arbre assez connu. Les poètes emploient figurément le mot cyprès, pour signifier la mort, le tombeau. [F]</note>
-            <note type="L">Laurier : Arbre dont le tige est unie et sans noeud. Se dit figurément en morale, pour signifier la gloire d’un triomphe, d’une conquête. [F]</note>
+            <note type="L">Cyprès : Nom d’un arbre assez connu. Les poètes emploient figurément le
+              mot cyprès, pour signifier la mort, le tombeau. [F]</note>
+            <note type="L">Laurier : Arbre dont le tige est unie et sans noeud. Se dit figurément en
+              morale, pour signifier la gloire d’un triomphe, d’une conquête. [F]</note>
             <l n="1206" xml:id="l1206">J’irai sous mes cyprès accabler ses lauriers.</l>
           </sp>
           <sp who="INFANTE" xml:id="IV02-11">
@@ -2469,12 +2548,13 @@
           </sp>
         </div2>
         <div2 n="3" type="scene" xml:id="IV03">
-          <head>SCÈNE III. Le Roi, Don Diègue, Don Arias, Don Rodrigue, Don Sanche.<listPerson type="configuration" xml:id="conf26">
-            <person corresp="#FERNAND"/>
-            <person corresp="#RODRIGUE"/>
-            <person corresp="#DIEGUE"/>
-            <person corresp="#SANCHE"/>
-            <person corresp="#ARIAS"/>
+          <head>SCÈNE III. Le Roi, Don Diègue, Don Arias, Don Rodrigue, Don Sanche.<listPerson
+              type="configuration" xml:id="conf26">
+              <person corresp="#FERNAND"/>
+              <person corresp="#RODRIGUE"/>
+              <person corresp="#DIEGUE"/>
+              <person corresp="#SANCHE"/>
+              <person corresp="#ARIAS"/>
             </listPerson></head>
           <sp who="FERNAND" xml:id="IV03-1">
             <speaker>LE ROI.</speaker>
@@ -2618,13 +2698,14 @@
           </sp>
         </div2>
         <div2 n="4" type="scene" xml:id="IV04">
-          <head>SCÈNE IV. Le Roi, Don Diègue, Don Rodrigue, Don Arias, Don Alonse, Don Sanche.<listPerson type="configuration" xml:id="conf27">
-            <person corresp="#ALONSE"/>
-            <person corresp="#FERNAND"/>
-            <person corresp="#DIEGUE"/>
-            <person corresp="#RODRIGUE"/>
-            <person corresp="#SANCHE"/>
-            <person corresp="#ARIAS"/>
+          <head>SCÈNE IV. Le Roi, Don Diègue, Don Rodrigue, Don Arias, Don Alonse, Don
+              Sanche.<listPerson type="configuration" xml:id="conf27">
+              <person corresp="#ALONSE"/>
+              <person corresp="#FERNAND"/>
+              <person corresp="#DIEGUE"/>
+              <person corresp="#RODRIGUE"/>
+              <person corresp="#SANCHE"/>
+              <person corresp="#ARIAS"/>
             </listPerson></head>
           <sp who="ALONSE" xml:id="IV04-1">
             <speaker>DON ALONSE.</speaker>
@@ -2649,14 +2730,15 @@
           </sp>
         </div2>
         <div2 n="5" type="scene" xml:id="IV05">
-          <head>SCÈNE V. Don Fernand, Don Diègue, Don Arias, Don Sanche, Don Alonse, Chimène, Elvire.<listPerson type="configuration" xml:id="conf28">
-            <person corresp="#FERNAND"/>
-            <person corresp="#DIEGUE"/>
-            <person corresp="#CHIMENE"/>
-            <person corresp="#SANCHE"/>
-            <person corresp="#ARIAS"/>
-            <person corresp="#ALONSE"/>
-            <person corresp="#ELVIRE"/>
+          <head>SCÈNE V. Don Fernand, Don Diègue, Don Arias, Don Sanche, Don Alonse, Chimène,
+              Elvire.<listPerson type="configuration" xml:id="conf28">
+              <person corresp="#FERNAND"/>
+              <person corresp="#DIEGUE"/>
+              <person corresp="#CHIMENE"/>
+              <person corresp="#SANCHE"/>
+              <person corresp="#ARIAS"/>
+              <person corresp="#ALONSE"/>
+              <person corresp="#ELVIRE"/>
             </listPerson></head>
           <sp who="FERNAND" xml:id="IV05-1">
             <speaker>LE ROI.</speaker>
@@ -2864,13 +2946,15 @@
       <div1 n="5" type="act" xml:id="V">
         <head>ACTE V</head>
         <div2 n="1" type="scene" xml:id="V01">
-          <head>SCÈNE PREMIÈRE. Don Rodrigue, Chimène.<listPerson type="configuration" xml:id="conf30">
-            <person corresp="#CHIMENE"/>
-            <person corresp="#RODRIGUE"/>
+          <head>SCÈNE PREMIÈRE. Don Rodrigue, Chimène.<listPerson type="configuration"
+              xml:id="conf30">
+              <person corresp="#CHIMENE"/>
+              <person corresp="#RODRIGUE"/>
             </listPerson></head>
           <sp who="CHIMENE" xml:id="V01-1">
             <speaker>CHIMÈNE.</speaker>
-            <l n="1475" xml:id="l1475">Quoi ! Rodrigue, en plein jour ! D’où te vient cette audace ?</l>
+            <l n="1475" xml:id="l1475">Quoi ! Rodrigue, en plein jour ! D’où te vient cette audace
+              ?</l>
             <l n="1476" xml:id="l1476">Va, tu me perds d’honneur, retire-toi, de grâce.</l>
           </sp>
           <sp who="RODRIGUE" xml:id="V01-2">
@@ -3002,7 +3086,7 @@
         </div2>
         <div2 n="2" type="scene" xml:id="V02">
           <head>SCÈNE II.<listPerson type="configuration" xml:id="conf31">
-            <person corresp="#INFANTE"/>
+              <person corresp="#INFANTE"/>
             </listPerson></head>
           <sp who="INFANTE" xml:id="V02-1">
             <speaker>L’INFANTE.</speaker>
@@ -3052,8 +3136,8 @@
         </div2>
         <div2 n="3" type="scene" xml:id="V03">
           <head>SCÈNE III. L’Infante, Léonor.<listPerson type="configuration" xml:id="conf32">
-            <person corresp="#INFANTE"/>
-            <person corresp="#LEONOR"/>
+              <person corresp="#INFANTE"/>
+              <person corresp="#LEONOR"/>
             </listPerson></head>
           <sp who="INFANTE" xml:id="V03-1">
             <speaker>L’INFANTE.</speaker>
@@ -3141,8 +3225,8 @@
         </div2>
         <div2 n="4" type="scene" xml:id="V04">
           <head>SCÈNE IV. Chimène, Elvire.<listPerson type="configuration" xml:id="conf33">
-            <person corresp="#CHIMENE"/>
-            <person corresp="#ELVIRE"/>
+              <person corresp="#CHIMENE"/>
+              <person corresp="#ELVIRE"/>
             </listPerson></head>
           <sp who="CHIMENE" xml:id="V04-1">
             <speaker>CHIMÈNE.</speaker>
@@ -3227,10 +3311,11 @@
           </sp>
         </div2>
         <div2 n="5" type="scene" xml:id="V05">
-          <head>SCÈNE V. Don Sanche, Chimène, Elvire.<listPerson type="configuration" xml:id="conf34">
-            <person corresp="#SANCHE"/>
-            <person corresp="#CHIMENE"/>
-            <person corresp="#ELVIRE"/>
+          <head>SCÈNE V. Don Sanche, Chimène, Elvire.<listPerson type="configuration"
+              xml:id="conf34">
+              <person corresp="#SANCHE"/>
+              <person corresp="#CHIMENE"/>
+              <person corresp="#ELVIRE"/>
             </listPerson></head>
           <sp who="SANCHE" xml:id="V05-1">
             <speaker>DON SANCHE.</speaker>
@@ -3294,14 +3379,15 @@
           </sp>
         </div2>
         <div2 n="6" type="scene" xml:id="V06">
-          <head>SCÈNE VI. Le Roi, Don Diègue, Don Arias, Don Sanche, Don Alonse, Chimène, Elvire.<listPerson type="configuration" xml:id="conf35">
-            <person corresp="#CHIMENE"/>
-            <person corresp="#DIEGUE"/>
-            <person corresp="#FERNAND"/>
-            <person corresp="#SANCHE"/>
-            <person corresp="#ARIAS"/>
-            <person corresp="#ALONSE"/>
-            <person corresp="#ELVIRE"/>
+          <head>SCÈNE VI. Le Roi, Don Diègue, Don Arias, Don Sanche, Don Alonse, Chimène,
+              Elvire.<listPerson type="configuration" xml:id="conf35">
+              <person corresp="#CHIMENE"/>
+              <person corresp="#DIEGUE"/>
+              <person corresp="#FERNAND"/>
+              <person corresp="#SANCHE"/>
+              <person corresp="#ARIAS"/>
+              <person corresp="#ALONSE"/>
+              <person corresp="#ELVIRE"/>
             </listPerson></head>
           <sp who="CHIMENE" xml:id="V06-1">
             <speaker>CHIMÈNE.</speaker>
@@ -3370,17 +3456,18 @@
           </sp>
         </div2>
         <div2 n="7" type="scene" xml:id="V07">
-          <head>SCÈNE VII. Le Roi, Don Diègue, Don Arias, Don Rodrigue, Don ALonse, Don Sanche, L’Infante, Chimène, Léonor, Elvire.<listPerson type="configuration" xml:id="conf36">
-            <person corresp="#INFANTE"/>
-            <person corresp="#RODRIGUE"/>
-            <person corresp="#CHIMENE"/>
-            <person corresp="#FERNAND"/>
-            <person corresp="#DIEGUE"/>
-            <person corresp="#SANCHE"/>
-            <person corresp="#ARIAS"/>
-            <person corresp="#ALONSE"/>
-            <person corresp="#LEONOR"/>
-            <person corresp="#ELVIRE"/>
+          <head>SCÈNE VII. Le Roi, Don Diègue, Don Arias, Don Rodrigue, Don ALonse, Don Sanche,
+            L’Infante, Chimène, Léonor, Elvire.<listPerson type="configuration" xml:id="conf36">
+              <person corresp="#INFANTE"/>
+              <person corresp="#RODRIGUE"/>
+              <person corresp="#CHIMENE"/>
+              <person corresp="#FERNAND"/>
+              <person corresp="#DIEGUE"/>
+              <person corresp="#SANCHE"/>
+              <person corresp="#ARIAS"/>
+              <person corresp="#ALONSE"/>
+              <person corresp="#LEONOR"/>
+              <person corresp="#ELVIRE"/>
             </listPerson></head>
           <sp who="INFANTE" xml:id="V07-1">
             <speaker>L’INFANTE.</speaker>
@@ -3412,7 +3499,8 @@
             <l n="1821" xml:id="l1821">Mais du moins que ma mort suffise à me punir,</l>
             <l n="1822" xml:id="l1822">Ne me bannissez point de votre souvenir,</l>
             <l n="1823" xml:id="l1823">Et puisque mon trépas conserve votre gloire,</l>
-            <note type="L">Revancher : Quelques uns disent revenger ; Se défendre contre quelqu’un, lui rendre des coups. Signifie aussi rendre la pareille, s’acquitter. [F]</note>
+            <note type="L">Revancher : Quelques uns disent revenger ; Se défendre contre quelqu’un,
+              lui rendre des coups. Signifie aussi rendre la pareille, s’acquitter. [F]</note>
             <l n="1824" xml:id="l1824">Pour vous en revancher conservez ma mémoire,</l>
             <l n="1825" xml:id="l1825">Et dites quelquefois, en songeant à ma mort,</l>
             <l n="1826" xml:id="l1826">S’il ne m’avait aimée il ne serait pas mort.</l>
