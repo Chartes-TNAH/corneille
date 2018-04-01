@@ -51,7 +51,7 @@
         <cRefPattern 
           n="level1"
           matchPattern="(\w+)"
-          replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div//tei:p)">
+          replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div1/tei:div2//tei:l[@n='$1'])">
           <p>level1 récupère les vers</p>
         </cRefPattern>
       </refsDecl>
