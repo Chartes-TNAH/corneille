@@ -31,6 +31,16 @@
       </sourceDesc>
     </fileDesc>
     <profileDesc>
+<encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern 
+          n="level1"
+          matchPattern="(\w+)"
+          replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div1/tei:div2//tei:l[@n='$1'])">
+          <p>level1 récupère les vers</p>
+        </cRefPattern>
+      </refsDecl>
+</encodingDesc>
       <creation>
         <date type="created" when="1635"/>
         <date type="issued" when="1639"/>
@@ -45,7 +55,7 @@
       </textClass>
     </profileDesc>
   </teiHeader>
-  <text>
+  <text xml:base="urn:cts:freLit:crnl026799472.crnl007.obvilchartes7-1" xml:lang="fr">
     <front>
       <titlePage>
         <docTitle>
